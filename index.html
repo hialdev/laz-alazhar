@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="src/css/al-slider.min.css">
+    <link rel="stylesheet" href="src/css/al-slider-theme.min.css">
+
+</head>
+
+<body>
+    
+    <header>
+        <div class="header">
+            <div class="logo-box"><a href="index.html"><img src="src/img/logo-white.png" alt="" class="logo"></a></div>
+            <div class="menu-toggle">
+                <input type="checkbox" name="" class="check">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-box">
+                <nav class="menu">
+                    <ul>
+                        <li class="dropdown"><a href="#!">Ziswaf</a>
+                            <ul class="sub-menu">
+                                <li><a href="#!">Zakat</a></li>
+                                <li><a href="#!">Infaq</a></li>
+                                <li><a href="#!">Wakaf</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown"><a href="#!">Tentang</a>
+                            <ul class="sub-menu">
+                                <li><a href="#!">Profil</a></li>
+                                <li><a href="#!">Visi & Misi</a></li>
+                                <li><a href="#!">Pengurus</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown"><a href="#!">Program</a>
+                            <ul class="sub-menu">
+                                <li><a href="#!">Indonesia Gemilang</a></li>
+                                <li><a href="#!">Rumah Gemilang Indonesia</a></li>
+                                <li><a href="#!">Formula Tanggap Bencana</a></li>
+                                <li><a href="#!">Zakat Pride</a></li>
+                                <li><a href="#!">Sejuta Berdaya</a></li>
+                                <li><a href="#!">Infralink</a></li>
+                                <li><a href="#!">My Heart for Yatim</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown"><a href="#!">Layanan</a>
+                            <ul class="sub-menu">
+                                <li><a href="#!">Zakat</a></li>
+                                <li><a href="#!">Infaq</a></li>
+                                <li><a href="#!">Wakaf</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Panduan</a></li>
+                    </ul>
+                </nav>
+                <div class="icon-btn">
+                    <div class="icon-head">
+                        <li class="icon-box"><img src="src/img/logo-wkflaz.jpg" alt="" class="icon"></li>
+                        <li class="icon-box"><img src="src/img/logo-icon.png" alt="" class="icon"></li>
+                        <li class="icon-box"><img src="src/img/logo-indo.png" alt="" class="icon"></li>
+                    </div>
+                    <div class="btn-box">
+                        <a href="#" class="btn btn-sec" onclick="location.href='login.html'" type="a">Masuk</a>
+                        <a href="#" class="btn btn-prm" onclick="location.href='login.html'" type="a">Daftar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <img src="src/img/homepage/hero.jpg" alt="" class="img-hero">
+        <div class="zakat">
+            <h1 class="light">#Berkah Berkelanjutan</h1>
+            <div class="zakat-hitung">
+                <div class="zakat-hitung-col1">
+                    <h3 class="blue center">Yuk Hitung Zakat Kamu!</h3>
+                    <div class="zakat-tabs">
+                        <ul id="tabs-nav">
+                            <li><a href="#zakat"><img src="src/img/zakat.png" alt=""> Zakat</a></li>
+                            <li><a href="#infaq"><img src="src/img/infaq.png" alt="">Infaq</a></li>
+                            <li><a href="#wakaf"><img src="src/img/wakaf.png" alt="">Wakaf</a></li>
+                        </ul><!-- END tabs-nav -->
+                        <div id="tabs-content">
+                            <div id="zakat" class="tab-content">
+                                <p>Kami akan menghitung jumlah zakat anda.</p>
+                                    <br><i>*masukkan angka tanpa titik</i><br>
+                                    <br><span class="blue">Total kekayaan anda dalam 1 tahun :</span>
+                                    <fieldset>
+                                        <div>
+                                            <span><strong>Rp</strong></span>
+                                            <input type="number" name="kekayaan" id="kekayaan">
+                                        </div>
+                                        <select class="jenis-zakat" name="zakat">
+                                            <option value="1" selected>Mall</option>
+                                            <option value="2">Profesi</option>
+                                            <option value="3">Pertambangan</option>
+                                            <option value="4">Perniagaan</option>
+                                            <option value="5">Pertanian</option>
+                                        </select>
+                                    </fieldset>
+                            </div>
+                            <div id="infaq" class="tab-content">
+                                <h2>Berinfaqlah, dan Saling Membantu</h2>
+                                <p>
+                                    (لَن تَنَالُوا۟ ٱلۡبِرَّ حَتَّىٰ تُنفِقُوا۟ مِمَّا تُحِبُّونَۚ وَمَا تُنفِقُوا۟ مِن شَیۡءࣲ فَإِنَّ ٱللَّهَ بِهِۦ عَلِیمࣱ)
+
+                                    <br>
+                                    <q>
+                                        Kamu tidak akan memperoleh kebajikan, sebelum kamu menginfakkan sebagian harta yang kamu cintai. Dan apa pun yang kamu infakkan, tentang hal itu sungguh, Allah Maha Mengetahui.
+                                    </q>
+                                    <br>[Surat Ali ‘Imran 92]
+                                </p>
+                                <a href="#" class="btn btn-sec">Infaq Sekarang!</a>
+                            </div>
+                            <div id="wakaf" class="tab-content">
+                                <h2>Dapatkan Kebaikan Tak Terbatas</h2>
+                                <p>
+                                    عن أبي هريرة رضي الله عنه: أن النبي صلى الله عليه وسلم قال: إذَا مَاتَ الإِنْسَانُ انْقَطَعَ عَمَلُهُ إلاَّ مِنْ ثَلاَثَةِ: إِلاَّ مِنْ صَدَقَةٍ جَارِيَةٍ، أَوْ عِلْمٍ يُنْتَفَعُ بِهِ، أَوْ وَلَدٍ صَالِحٍ يَدْعُو لَهُ
+
+                                    <br>
+                                    Dari Abu Hurairah RA berkata: Rasulullah bersabda: "Apabila manusia itu meninggal dunia maka terputuslah segala amalnya kecuali tiga: yaitu sedekah jariyah, ilmu yang bermanfaat atau anak sholeh yang mendoakan kepadanya." (HR Muslim).
+                                </p>
+                                <a href="#" class="btn btn-sec">Wakaf Sekarang!</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="div"></div>
+                <div class="zakat-hitung-col2">
+                    <p>Zakat anda sebesar</p>
+                    <h2>Rp. 520.000</h2>
+                    <a href="#" class="btn btn-prm">Zakat sekarang</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="donasi">
+        <h2>Ayo Bantu Mereka</h2>
+        <hr class="divider">
+        <div class="control">
+            <div class="prev"><span class="iconify" data-icon="bi:arrow-left" data-inline="false"></span></div>
+            <div class="next"><span class="iconify" data-icon="bi:arrow-right" data-inline="false"></span></div>
+        </div>
+        <div class="donasi-box owl-carousel owl-theme">
+
+            <div class="donasi-item">
+                <div class="img-donasi">
+                    <img src="src/img/bantu1.JPG" alt="">
+                    <a class="img-content">
+                        <span class="iconify" data-icon="radix-icons:reader" data-inline="false"></span>
+                        <p><strong>Lihat Kronologi Selengkapnya</strong></p>
+                    </a>
+                </div>
+                <div class="content-donasi">
+                    <a href=""><h3>DARURAT! Banjir Melanda Jabodetabek & Sekitarnya</h3></a>
+                    <p>Hujan deras yang terjadi sejak 31 Desember 2019 hingga 1 Desember membuat jabodetabek dan sekitarnya lumpuh...</p>
+                    <div class="stat-donasi">
+                        <div class="terkumpul">
+                            <p class="txt-sm">Terkumpul</p>
+                            <p class="green"><strong>Rp 94.205.931</strong></p>
+                        </div>
+                        <div class="tempo">
+                            <p class="txt-sm">Sisa Waktu</p>
+                            <p><strong>50 Hari</strong></p>
+                        </div>
+                    </div>
+                    <div class="progress"><div class="bar"></div></div>
+                    <a href="#" class="btn btn-donasi">Donasi</a>
+                </div>
+            </div>
+
+            <div class="donasi-item">
+                <div class="img-donasi">
+                    <img src="src/img/bantu1.JPG" alt="">
+                    <a class="img-content">
+                        <span class="iconify" data-icon="radix-icons:reader" data-inline="false"></span>
+                        <p><strong>Lihat Kronologi Selengkapnya</strong></p>
+                    </a>
+                </div>
+                <div class="content-donasi">
+                    <a href=""><h3>DARURAT! Banjir Melanda Jabodetabek & Sekitarnya</h3></a>
+                    <p>Hujan deras yang terjadi sejak 31 Desember 2019 hingga 1 Desember membuat jabodetabek dan sekitarnya lumpuh...</p>
+                    <div class="stat-donasi">
+                        <div class="terkumpul">
+                            <p class="txt-sm">Terkumpul</p>
+                            <p class="green"><strong>Rp 94.205.931</strong></p>
+                        </div>
+                        <div class="tempo">
+                            <p class="txt-sm">Sisa Waktu</p>
+                            <p><strong>50 Hari</strong></p>
+                        </div>
+                    </div>
+                    <div class="progress"><div class="bar"></div></div>
+                    <a href="#" class="btn btn-donasi">Donasi</a>
+                </div>
+            </div>
+
+            <div class="donasi-item">
+                <div class="img-donasi">
+                    <img src="src/img/bantu1.JPG" alt="">
+                    <a class="img-content">
+                        <span class="iconify" data-icon="radix-icons:reader" data-inline="false"></span>
+                        <p><strong>Lihat Kronologi Selengkapnya</strong></p>
+                    </a>
+                </div>
+                <div class="content-donasi">
+                    <a href=""><h3>DARURAT! Banjir Melanda Jabodetabek & Sekitarnya</h3></a>
+                    <p>Hujan deras yang terjadi sejak 31 Desember 2019 hingga 1 Desember membuat jabodetabek dan sekitarnya lumpuh...</p>
+                    <div class="stat-donasi">
+                        <div class="terkumpul">
+                            <p class="txt-sm">Terkumpul</p>
+                            <p class="green"><strong>Rp 94.205.931</strong></p>
+                        </div>
+                        <div class="tempo">
+                            <p class="txt-sm">Sisa Waktu</p>
+                            <p><strong>50 Hari</strong></p>
+                        </div>
+                    </div>
+                    <div class="progress"><div class="bar"></div></div>
+                    <a href="#" class="btn btn-donasi">Donasi</a>
+                </div>
+            </div>
+
+            <div class="donasi-item">
+                <div class="img-donasi">
+                    <img src="src/img/bantu1.JPG" alt="">
+                    <a class="img-content">
+                        <span class="iconify" data-icon="radix-icons:reader" data-inline="false"></span>
+                        <p><strong>Lihat Kronologi Selengkapnya</strong></p>
+                    </a>
+                </div>
+                <div class="content-donasi">
+                    <a href=""><h3>DARURAT! Banjir Melanda Jabodetabek & Sekitarnya</h3></a>
+                    <p>Hujan deras yang terjadi sejak 31 Desember 2019 hingga 1 Desember membuat jabodetabek dan sekitarnya lumpuh...</p>
+                    <div class="stat-donasi">
+                        <div class="terkumpul">
+                            <p class="txt-sm">Terkumpul</p>
+                            <p class="green"><strong>Rp 94.205.931</strong></p>
+                        </div>
+                        <div class="tempo">
+                            <p class="txt-sm">Sisa Waktu</p>
+                            <p><strong>50 Hari</strong></p>
+                        </div>
+                    </div>
+                    <div class="progress"><div class="bar"></div></div>
+                    <a href="#" class="btn btn-donasi">Donasi</a>
+                </div>
+            </div>
+
+            <div class="donasi-item">
+                <div class="img-donasi">
+                    <img src="src/img/bantu1.JPG" alt="">
+                    <a class="img-content">
+                        <span class="iconify" data-icon="radix-icons:reader" data-inline="false"></span>
+                        <p><strong>Lihat Kronologi Selengkapnya</strong></p>
+                    </a>
+                </div>
+                <div class="content-donasi">
+                    <a href=""><h3>DARURAT! Banjir Melanda Jabodetabek & Sekitarnya</h3></a>
+                    <p>Hujan deras yang terjadi sejak 31 Desember 2019 hingga 1 Desember membuat jabodetabek dan sekitarnya lumpuh...</p>
+                    <div class="stat-donasi">
+                        <div class="terkumpul">
+                            <p class="txt-sm">Terkumpul</p>
+                            <p class="green"><strong>Rp 94.205.931</strong></p>
+                        </div>
+                        <div class="tempo">
+                            <p class="txt-sm">Sisa Waktu</p>
+                            <p><strong>50 Hari</strong></p>
+                        </div>
+                    </div>
+                    <div class="progress"><div class="bar"></div></div>
+                    <a href="#" class="btn btn-donasi">Donasi</a>
+                </div>
+            </div>
+        </div>
+        <div class="centering">
+            <a href="#" class="btn btn-sec">Selengkapnya</a>
+        </div>
+    </section>
+
+    <section class="berita">
+        <h2>Berita</h2>
+        <hr class="divider">
+        <div class="berita-box">
+
+            <div class="berita-item">
+                <div class="berita-img"><img src="src/img/bantu1.JPG" alt=""></div>
+                <div class="berita-content">
+                    <a href=""><h3 class="blue">LAZ Al Azhar Kirimkan Tenaga Medis Untuk Korban Banjir Lebak</h3></a>
+                    <div class="tags">
+                        <span class="iconify" data-icon="fluent:tag-24-filled" data-inline="false"></span>
+                        <a href="" class="tag">kesehatan</a>
+                        <a href="" class="tag">sosial</a>
+                    </div>
+                    <div class="date txt-sm">
+                       7 Mei 2021
+                    </div>
+                </div>
+            </div>
+
+            <div class="berita-item">
+                <div class="berita-img"><img src="src/img/bantu1.JPG" alt=""></div>
+                <div class="berita-content">
+                    <a href=""><h3 class="blue">LAZ Al Azhar Kirimkan Tenaga Medis Untuk Korban Banjir Lebak</h3></a>
+                    <div class="tags">
+                        <span class="iconify" data-icon="fluent:tag-24-filled" data-inline="false"></span>
+                        <a href="" class="tag">kesehatan</a>
+                        <a href="" class="tag">sosial</a>
+                    </div>
+                    <div class="date txt-sm">
+                       7 Mei 2021
+                    </div>
+                </div>
+            </div>
+
+            <div class="berita-item">
+                <div class="berita-img"><img src="src/img/bantu1.JPG" alt=""></div>
+                <div class="berita-content">
+                    <a href=""><h3 class="blue">LAZ Al Azhar Kirimkan Tenaga Medis Untuk Korban Banjir Lebak</h3></a>
+                    <div class="tags">
+                        <span class="iconify" data-icon="fluent:tag-24-filled" data-inline="false"></span>
+                        <a href="" class="tag">kesehatan</a>
+                        <a href="" class="tag">sosial</a>
+                    </div>
+                    <div class="date txt-sm">
+                       7 Mei 2021
+                    </div>
+                </div>
+            </div>
+
+            <div class="berita-item">
+                <div class="berita-img"><img src="src/img/bantu1.JPG" alt=""></div>
+                <div class="berita-content">
+                    <a href=""><h3 class="blue">LAZ Al Azhar Kirimkan Tenaga Medis Untuk Korban Banjir Lebak</h3></a>
+                    <div class="tags">
+                        <span class="iconify" data-icon="fluent:tag-24-filled" data-inline="false"></span>
+                        <a href="" class="tag">kesehatan</a>
+                        <a href="" class="tag">sosial</a>
+                    </div>
+                    <div class="date txt-sm">
+                       7 Mei 2021
+                    </div>
+                </div>
+            </div>
+
+            <div class="centering">
+                <a href="#" class="btn btn-sec">Berita Lainnya</a>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="video">
+        <iframe class="video-item" src="https://www.youtube.com/embed/Dyf6vVMj-TA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div class="video-content">
+            <h2 class="blue">Cegah Covid-19 oleh Tim Formula</h2>
+            <p>Cegah Virus Covid-19 Tim Formula LAZ Al Azhar lakukan penyemprotan desinfectan di sejumlah Fasilitas Publik, Sarana Ibadah dan sejumlah lokasi kegiatan Belajar Mengajar.</p>
+        </div>
+    </section>
+
+    <section class="download">
+        <div class="down-item">
+            <div class="down-img">
+                <img src="src/img/down1.jpg" alt="">
+            </div>
+            <div class="down-content">
+                <h3>Care edisi September 2020 sudah hadir!</h3>
+                <p>Anda dapat langsung mendownload E-Booknya di link yang telah kami sediakan dibawah ini.</p>
+                <a href="" class="btn btn-donasi">Download</a>
+            </div>
+        </div>
+        <div class="down-item">
+            <div class="down-img">
+                <img src="src/img/down2.jpg" alt="">
+            </div>
+            <div class="down-content">
+                <h3>Care edisi September 2020 sudah hadir!</h3>
+                <p>Anda dapat langsung mendownload E-Booknya di link yang telah kami sediakan dibawah ini.</p>
+                <a href="" class="btn btn-donasi">Download</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="galeri">
+        <div class="indent">
+            <h2>Galeri</h2>
+            <div class="divider"></div>
+        </div>
+        <div class="owl-carousel owl-theme galeri-box">
+            <div class="galeri-item">
+                <img src="src/img/galeri (3).jpg" alt="">
+                <a href="" class="galeri-content">
+                    <span class="iconify" data-icon="clarity:image-gallery-solid" data-inline="false"></span>
+                    <p>Lihat Galeri Selengkapnya</p>
+                </a>
+            </div>
+
+            <div class="galeri-item">
+                <img src="src/img/galeri (4).jpg" alt="">
+                <a href="" class="galeri-content">
+                    <span class="iconify" data-icon="clarity:image-gallery-solid" data-inline="false"></span>
+                    <p>Lihat Galeri Selengkapnya</p>
+                </a>
+            </div>
+
+            <div class="galeri-item">
+                <img src="src/img/galeri (5).jpg" alt="">
+                <a href="" class="galeri-content">
+                    <span class="iconify" data-icon="clarity:image-gallery-solid" data-inline="false"></span>
+                    <p>Lihat Galeri Selengkapnya</p>
+                </a>
+            </div>
+
+            <div class="galeri-item">
+                <img src="src/img/galeri (6).jpg" alt="">
+                <a href="" class="galeri-content">
+                    <span class="iconify" data-icon="clarity:image-gallery-solid" data-inline="false"></span>
+                    <p>Lihat Galeri Selengkapnya</p>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="brand owl-carousel owl-theme">
+            <div><img src="src/img/logo-bottom (1).png" alt=""></div>
+            <div><img src="src/img/logo-bottom (2).png" alt=""></div>
+            <div><img src="src/img/logo-bottom (3).png" alt=""></div>
+            <div><img src="src/img/logo-bottom (4).png" alt=""></div>
+            <div><img src="src/img/logo-bottom (5).png" alt=""></div>
+            <div><img src="src/img/logo-bottom (6).png" alt=""></div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-box">
+            <div class="footer-item">
+                <img src="src/img/logo-white.png" alt="">
+                <ul>
+                    <li><a href="">Syarat dan Ketentuan</a></li>
+                    <li><a href="">Tentang Kami</a></li>
+                    <li><a href="">Kebijakan Privasi</a></li>
+                    <li><a href="">Tim Kami</a></li>
+                </ul>
+            </div>
+            <div class="footer-item">
+                <ul>
+                    <li><strong>Donasi</strong></li>
+                    <li><a href="">Cara Donasi</a></li>
+                    <li><a href="">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-item">
+                <ul>
+                    <li><strong>Program</strong></li>
+                    <li><a href="">Indonesia Gemilang</a></li>
+                    <li><a href="">Zakat Pride</a></li>
+                    <li><a href="">My Heart for Yatim</a></li>
+                    <li><a href="">Rumah Gemilang Indonesia</a></li>
+                    <li><a href="">Infralink</a></li>
+                    <li><a href="">Formula</a></li>
+                    <li><a href="">Sejuta Berdaya</a></li>
+                </ul>
+            </div>
+            <div class="footer-item">
+                <strong>Alamat</strong>
+                <ul>
+                    <li class="icon-box"><a href="">
+                        <div class="src"><span class="iconify" data-icon="ic:outline-home-work" data-inline="false"></span></div>
+                        <div class="content">
+                            <p><strong>Kantor Pusat</strong>
+                            <br>
+                                Jl. Sisingamangaraja <br>
+                                Kebayoran Baru, Jakarta Selatan <br>
+                                Telp. (021) 722 1504, Fax (021) 726 5241
+                            </p>
+                        </div>
+                    </a></li>
+                    <li class="icon-box"><a href="">
+                        <div class="src"><span class="iconify" data-icon="heroicons-outline:office-building" data-inline="false"></span></div>
+                        <div class="content">
+                            <p><strong>Kantor Operasional</strong>
+                            <br>
+                                Jl. RS. Fatmawati no. 7 <br>
+                                Fatmawati, Jakarta Selatan <br>
+                                Telp. (021) 722 1504, Fax (021) 726 5241
+                            </p>
+                        </div>
+                    </a></li>
+                    <li class="kanper"><a href="">Kantor Perwakilan</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-icon">
+            <a href="" class="icon"><span class="iconify" data-icon="cib:facebook-f" data-inline="false"></span></a>
+            <a href="" class="icon"><span class="iconify" data-icon="cib:twitter" data-inline="false"></span></a>
+            <a href="" class="icon"><span class="iconify" data-icon="cib:instagram" data-inline="false"></span></a>
+            <a href="" class="icon"><span class="iconify" data-icon="cib:youtube" data-inline="false"></span></a>
+        </div>
+        <div class="footer-credit">
+            Copyright 2020 | <strong>LAZ Al Azhar</strong>
+        </div>
+    </footer>
+
+</body>
+
+<script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+<script src="src/js/jquery.min.js"></script>
+<script src="src/js/al-slider.min.js"></script>
+
+<script src="src/js/script.js"></script>
+
+</html>

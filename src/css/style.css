@@ -844,6 +844,7 @@ Home Page Section
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 1em;
 }
 
 @media only screen and (max-width: 760px) {
@@ -979,6 +980,7 @@ Home Page Section
   border: 1px solid #393939;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
+  width: 10em;
 }
 
 .hero .zakat-hitung .zakat-tabs #tabs-content fieldset input[type=number]::-webkit-inner-spin-button {
@@ -1188,6 +1190,14 @@ Home Page Section
           flex: 0 0 25%;
 }
 
+@media only screen and (max-width: 760px) {
+  .berita .berita-item .berita-img {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 15%;
+            flex: 0 0 15%;
+  }
+}
+
 .berita .berita-item .berita-img img {
   width: 15em;
   height: 100%;
@@ -1195,8 +1205,20 @@ Home Page Section
      object-fit: cover;
 }
 
+@media only screen and (max-width: 760px) {
+  .berita .berita-item .berita-img img {
+    width: 10em;
+  }
+}
+
 .berita .berita-content {
   padding: 1.5em;
+}
+
+@media only screen and (max-width: 760px) {
+  .berita .berita-content a h3 {
+    font-size: 14px;
+  }
 }
 
 .berita .berita-content a {

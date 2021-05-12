@@ -833,6 +833,7 @@ footer .footer-credit {
       -ms-flex-direction: column;
           flex-direction: column;
   margin-bottom: -2.5em;
+  width: 90%;
 }
 
 .lightbox .form-box .close {
@@ -858,7 +859,6 @@ footer .footer-credit {
 
 .lightbox .form {
   background-color: #fff;
-  width: 90%;
   max-width: 30em;
   border-radius: 15px;
   padding: 1.5em;
@@ -893,6 +893,7 @@ footer .footer-credit {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  text-align: center;
   margin: 1em 0px;
 }
 

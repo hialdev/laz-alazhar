@@ -656,6 +656,8 @@ footer{
         display: flex;
         flex-direction: column;
         margin-bottom: -2.5em;
+        width: 90%;
+
         .close{
             align-self: flex-start;
             color: $light;
@@ -674,7 +676,6 @@ footer{
 
     .form{
         background-color: $light;
-        width: 90%;
         max-width: 30em;
         border-radius: $bd-rad;
         padding: 1.5em;
@@ -701,6 +702,7 @@ footer{
             display: flex;
             justify-content: center;
             align-items: center;
+            text-align: center;
             margin: 1em 0px;
             hr{
                 display: block;

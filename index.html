@@ -69,13 +69,59 @@
                         <li class="icon-box"><img src="src/img/logo-indo.png" alt="" class="icon"></li>
                     </div>
                     <div class="btn-box">
-                        <a href="#" class="btn btn-sec" onclick="location.href='login.html'" type="a">Masuk</a>
-                        <a href="#" class="btn btn-prm" onclick="location.href='login.html'" type="a">Daftar</a>
+                        <a href="#" class="btn btn-sec" id="masuk">Masuk</a>
+                        <a href="#" class="btn btn-prm" id="daftar">Daftar</a>
                     </div>
                 </div>
             </div>
         </div>
     </header>
+
+    <div class="lightbox">
+        <div class="form-box">
+            <div class="close"><span class="iconify" data-icon="eva:close-circle-outline" data-inline="false"></span>Tutup</div>
+        
+            <div class="form">
+                <form class="daftar-form" id="daftar">
+                    <h3 class="blue">Daftar</h3>
+                    <input type="text" placeholder="Nama Lengkap" required/>
+                    <input type="number" placeholder="No. HP / WhatsApp" required/>
+                    <input type="email" placeholder="Email" required/>
+                    <input type="password" placeholder="Kata Sandi" required/>
+                    <input type="password" placeholder="Konfirmasi Kata Sandi" required/>
+                    <a href="" class="btn btn-full">Daftar</a>
+                    <p class="message txt-sm">Sudah Memiliki Akun? <a href="#masuk" class="txt-sm blue" id="masuk">Masuk</a></p>
+                    <div class="div-form">
+                        <hr>
+                        atau daftar dengan
+                        <hr>
+                    </div>
+                    <div class="more-opsi">
+                        <a href="" class="btn google icon-opsi"><span class="iconify" data-icon="grommet-icons:google" data-inline="false"></span></a>
+                        <a href="" class="btn facebook icon-opsi"><span class="iconify" data-icon="cib:facebook-f" data-inline="false"></span></a>
+                    </div>
+                </form>
+                <form class="masuk-form" id="masuk">
+                    <h3 class="blue">Masuk</h3>
+                    <input type="text" placeholder="username" required/>
+                    <input type="password" placeholder="password" required/>
+                    <a href="" class="btn btn-full">Masuk</a>
+                    <p class="txt-sm"><a href="" class="blue txt-sm">Lupa password?</a></p>
+                    <p class="message txt-sm">Belum Terdaftar? <a href="#daftar" class="txt-sm blue" id="daftar">Daftarkan Akun</a></p>
+                    <div class="div-form">
+                        <hr>
+                        atau masuk dengan
+                        <hr>
+                    </div>
+                    <div class="more-opsi">
+                        <a href="" class="btn google icon-opsi"><span class="iconify" data-icon="grommet-icons:google" data-inline="false"></span></a>
+                        <a href="" class="btn facebook icon-opsi"><span class="iconify" data-icon="cib:facebook-f" data-inline="false"></span></a>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
 
     <section class="hero">
         <img src="src/img/homepage/hero.jpg" alt="" class="img-hero">
@@ -156,7 +202,7 @@
 
             <div class="donasi-item">
                 <div class="img-donasi">
-                    <img src="src/img/bantu1.JPG" alt="">
+                    <img src="src/img/bantu1.jpg" alt="">
                     <a class="img-content">
                         <span class="iconify" data-icon="radix-icons:reader" data-inline="false"></span>
                         <p><strong>Lihat Kronologi Selengkapnya</strong></p>
@@ -176,13 +222,13 @@
                         </div>
                     </div>
                     <div class="progress"><div class="bar"></div></div>
-                    <a href="#" class="btn btn-donasi">Donasi</a>
+                    <a href="#" class="btn btn-full">Donasi</a>
                 </div>
             </div>
 
             <div class="donasi-item">
                 <div class="img-donasi">
-                    <img src="src/img/bantu1.JPG" alt="">
+                    <img src="src/img/bantu1.jpg" alt="">
                     <a class="img-content">
                         <span class="iconify" data-icon="radix-icons:reader" data-inline="false"></span>
                         <p><strong>Lihat Kronologi Selengkapnya</strong></p>
@@ -202,13 +248,13 @@
                         </div>
                     </div>
                     <div class="progress"><div class="bar"></div></div>
-                    <a href="#" class="btn btn-donasi">Donasi</a>
+                    <a href="#" class="btn btn-full">Donasi</a>
                 </div>
             </div>
 
             <div class="donasi-item">
                 <div class="img-donasi">
-                    <img src="src/img/bantu1.JPG" alt="">
+                    <img src="src/img/bantu1.jpg" alt="">
                     <a class="img-content">
                         <span class="iconify" data-icon="radix-icons:reader" data-inline="false"></span>
                         <p><strong>Lihat Kronologi Selengkapnya</strong></p>
@@ -228,13 +274,13 @@
                         </div>
                     </div>
                     <div class="progress"><div class="bar"></div></div>
-                    <a href="#" class="btn btn-donasi">Donasi</a>
+                    <a href="#" class="btn btn-full">Donasi</a>
                 </div>
             </div>
 
             <div class="donasi-item">
                 <div class="img-donasi">
-                    <img src="src/img/bantu1.JPG" alt="">
+                    <img src="src/img/bantu1.jpg" alt="">
                     <a class="img-content">
                         <span class="iconify" data-icon="radix-icons:reader" data-inline="false"></span>
                         <p><strong>Lihat Kronologi Selengkapnya</strong></p>
@@ -254,13 +300,13 @@
                         </div>
                     </div>
                     <div class="progress"><div class="bar"></div></div>
-                    <a href="#" class="btn btn-donasi">Donasi</a>
+                    <a href="#" class="btn btn-full">Donasi</a>
                 </div>
             </div>
 
             <div class="donasi-item">
                 <div class="img-donasi">
-                    <img src="src/img/bantu1.JPG" alt="">
+                    <img src="src/img/bantu1.jpg" alt="">
                     <a class="img-content">
                         <span class="iconify" data-icon="radix-icons:reader" data-inline="false"></span>
                         <p><strong>Lihat Kronologi Selengkapnya</strong></p>
@@ -280,7 +326,7 @@
                         </div>
                     </div>
                     <div class="progress"><div class="bar"></div></div>
-                    <a href="#" class="btn btn-donasi">Donasi</a>
+                    <a href="#" class="btn btn-full">Donasi</a>
                 </div>
             </div>
         </div>
@@ -295,7 +341,7 @@
         <div class="berita-box">
 
             <div class="berita-item">
-                <div class="berita-img"><img src="src/img/bantu1.JPG" alt=""></div>
+                <div class="berita-img"><img src="src/img/bantu1.jpg" alt=""></div>
                 <div class="berita-content">
                     <a href=""><h3 class="blue">LAZ Al Azhar Kirimkan Tenaga Medis Untuk Korban Banjir Lebak</h3></a>
                     <div class="tags">
@@ -310,7 +356,7 @@
             </div>
 
             <div class="berita-item">
-                <div class="berita-img"><img src="src/img/bantu1.JPG" alt=""></div>
+                <div class="berita-img"><img src="src/img/bantu1.jpg" alt=""></div>
                 <div class="berita-content">
                     <a href=""><h3 class="blue">LAZ Al Azhar Kirimkan Tenaga Medis Untuk Korban Banjir Lebak</h3></a>
                     <div class="tags">
@@ -325,7 +371,7 @@
             </div>
 
             <div class="berita-item">
-                <div class="berita-img"><img src="src/img/bantu1.JPG" alt=""></div>
+                <div class="berita-img"><img src="src/img/bantu1.jpg" alt=""></div>
                 <div class="berita-content">
                     <a href=""><h3 class="blue">LAZ Al Azhar Kirimkan Tenaga Medis Untuk Korban Banjir Lebak</h3></a>
                     <div class="tags">
@@ -340,7 +386,7 @@
             </div>
 
             <div class="berita-item">
-                <div class="berita-img"><img src="src/img/bantu1.JPG" alt=""></div>
+                <div class="berita-img"><img src="src/img/bantu1.jpg" alt=""></div>
                 <div class="berita-content">
                     <a href=""><h3 class="blue">LAZ Al Azhar Kirimkan Tenaga Medis Untuk Korban Banjir Lebak</h3></a>
                     <div class="tags">
@@ -377,7 +423,7 @@
             <div class="down-content">
                 <h3>Care edisi September 2020 sudah hadir!</h3>
                 <p>Anda dapat langsung mendownload E-Booknya di link yang telah kami sediakan dibawah ini.</p>
-                <a href="" class="btn btn-donasi">Download</a>
+                <a href="" class="btn btn-full">Download</a>
             </div>
         </div>
         <div class="down-item">
@@ -387,7 +433,7 @@
             <div class="down-content">
                 <h3>Care edisi September 2020 sudah hadir!</h3>
                 <p>Anda dapat langsung mendownload E-Booknya di link yang telah kami sediakan dibawah ini.</p>
-                <a href="" class="btn btn-donasi">Download</a>
+                <a href="" class="btn btn-full">Download</a>
             </div>
         </div>
     </section>

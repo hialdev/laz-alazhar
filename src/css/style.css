@@ -142,21 +142,21 @@ h3 {
 }
 
 .btn.btn-sec:hover {
-  background-color: #fff;
-  color: #02B3E5;
-  border-width: 1px;
+  background-color: #02B3E5;
+  color: #fff;
+  border-width: 2px;
   -webkit-box-shadow: 5px 20px 60px -10px rgba(0, 112, 255, 0.4);
           box-shadow: 5px 20px 60px -10px rgba(0, 112, 255, 0.4);
 }
 
-.btn.btn-donasi {
+.btn.btn-full {
   width: 100%;
   color: #02B3E5;
   border-radius: 15px;
   border: 2px solid #02B3E5;
 }
 
-.btn.btn-donasi:hover {
+.btn.btn-full:hover {
   background-color: #02B3E5;
   color: #fff;
   border-radius: 15px;
@@ -219,6 +219,7 @@ header {
   border-width: 0px;
   -webkit-box-shadow: 5px 20px 60px -10px rgba(0, 112, 255, 0.4);
           box-shadow: 5px 20px 60px -10px rgba(0, 112, 255, 0.4);
+  background-color: #fff;
   color: #02B3E5;
 }
 
@@ -243,6 +244,10 @@ header {
 }
 
 .header.active .btn-box .btn-sec {
+  color: #02B3E5;
+}
+
+.header.active .btn-box .btn-sec:hover {
   color: #02B3E5;
 }
 
@@ -311,7 +316,7 @@ header {
 }
 
 .header .menu-box.slide-menu .btn-box .btn-sec {
-  color: #02B3E5;
+  color: #fff;
 }
 
 .header nav.menu {
@@ -708,7 +713,7 @@ footer .footer-item ul li a {
 }
 
 footer .footer-item ul li a:hover {
-  text-decoration: underline;
+  color: #02B3E5;
 }
 
 footer .footer-item ul li.icon-box a {
@@ -741,8 +746,17 @@ footer .footer-item li.kanper {
   text-align: center;
 }
 
-footer .footer-item li.kanper a {
+footer .footer-item li.kanper:hover {
+  background-color: #02B3E5;
+  color: #fff;
+}
+
+footer .footer-item li.kanper > a {
   text-decoration: none;
+}
+
+footer .footer-item li.kanper > a:hover {
+  color: #fff;
 }
 
 footer .footer-icon {
@@ -776,6 +790,10 @@ footer .footer-icon a.icon {
   margin-right: 0.4em;
 }
 
+footer .footer-icon a.icon:hover {
+  background-color: #02B3E5;
+}
+
 footer .footer-icon a.icon .iconify {
   color: #fff !important;
   font-size: 18px;
@@ -787,6 +805,139 @@ footer .footer-credit {
   color: #fff;
   padding: 0.9em 5%;
   text-align: center;
+}
+
+.lightbox {
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 100;
+  height: 100vh;
+  background-color: #02b4e5d7;
+}
+
+.lightbox .form-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: -2.5em;
+}
+
+.lightbox .form-box .close {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: bold;
+  margin: 0.5em 0px;
+  cursor: pointer;
+}
+
+.lightbox .form-box .close .iconify {
+  color: #fff;
+  font-size: 22px;
+  margin-right: 0.3em;
+}
+
+.lightbox .form {
+  background-color: #fff;
+  width: 90%;
+  max-width: 30em;
+  border-radius: 15px;
+  padding: 1.5em;
+}
+
+.lightbox .form input {
+  background-color: #fff;
+  margin: 0.3em 0px;
+  padding: 0.8em;
+  border: 1px solid #f0f0f0;
+  width: 100%;
+  border-radius: 15px;
+  color: #393939;
+}
+
+.lightbox .form input:focus {
+  border-color: #02B3E5;
+  color: #02B3E5;
+}
+
+.lightbox .form input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.lightbox .form .div-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1em 0px;
+}
+
+.lightbox .form .div-form hr {
+  display: block;
+  height: 1px;
+  width: 20%;
+  margin: 0.7em;
+  background-color: #02B3E5;
+}
+
+.lightbox .form .more-opsi {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.lightbox .form .more-opsi .icon-opsi {
+  border-radius: 5px;
+  text-align: center;
+  border: 1px solid #02B3E5;
+}
+
+.lightbox .form .more-opsi .icon-opsi .iconify {
+  font-size: 22px;
+  margin-bottom: -3px;
+}
+
+.lightbox .form .more-opsi .facebook .iconify {
+  color: #2D67B1;
+}
+
+.lightbox .form form.daftar-form {
+  display: none;
+}
+
+.lightbox .form form.masuk-form {
+  display: none;
+}
+
+.lightbox .form .message {
+  text-align: right;
 }
 
 /* ---------------------------------

@@ -27,6 +27,51 @@ $('.menu-toggle').click(function(){
     $('.menu-box').toggleClass('slide-menu');
 });
 
+//Form
+var btnX = $('.close');
+var masuk = $('#masuk');
+var daftar = $('#daftar');
+var amasuk = $('a#masuk');
+var adaftar = $('a#daftar');
+var lightbox = $('.lightbox');
+var masukform = $('.masuk-form');
+var daftarform = $('.daftar-form');
+
+btnX.click(function(){
+    lightbox.hide();
+});
+
+masuk.click(function(){
+    lightbox.css('display','flex');
+    if(masukform.css('display') == 'none'){
+        masukform.css('display','block');
+        daftarform.css('display','none');
+    }
+});
+
+daftar.click(function(){
+    lightbox.css('display','flex');
+    if(daftarform.css('display') == 'none'){
+        daftarform.css('display','block');
+        masukform.css('display','none');
+    }
+});
+
+amasuk.click(function(){
+    lightbox.css('display','flex');
+    if(masukform.css('display') == 'none'){
+        masukform.slideDown(900);
+        daftarform.slideUp(900);
+    }
+});
+
+adaftar.click(function(){
+    lightbox.css('display','flex');
+    if(daftarform.css('display') == 'none'){
+        daftarform.slideDown(900);
+        masukform.slideUp(900);
+    }
+});
 //-------------------------------
 // End Components
 //-------------------------------
@@ -85,11 +130,9 @@ $(".galeri-box").owlCarousel({
     autoplay: true,
     lazyLoad: true,
     dots:false,
-    loop: false,
+    loop: true,
     margin: 0,
     responsiveClass: true,
-    autoplayTimeout: 7000,
-    smartSpeed: 800,
     nav: false,
     responsive: {
         0: {

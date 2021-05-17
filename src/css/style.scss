@@ -64,7 +64,13 @@ Reset
     font-size: $txt;
     font-family: $font2;
     border: 0px solid transparent;
-    transition: all 0.2s;
+    transition: all 0.1s;
+}
+
+.a-reset {
+    text-decoration: none;
+    display: inline-block;
+    color: $darken;
 }
 
 /* ---------------------------------
@@ -223,6 +229,11 @@ h3{
 }
 
 //color
+.bg-blue{
+    background-color: $blue;
+    color: $light;
+    padding: 0.2em 0.5em;
+}
 .blue{
     color: $blue;
 }
@@ -647,7 +658,7 @@ footer{
 
     .footer-item{
         color: $light;
-        margin-bottom: 3em;
+        margin-bottom: 1.6em;
         @media only screen and (max-width: $w-lg) {
             flex: 0 0 47%;
         }
@@ -1379,4 +1390,188 @@ Tentang Page Section
 
 /* ---------------------------------
 End Tentang Page Section
+--------------------------------- */
+
+/* ---------------------------------
+Program Page Section
+--------------------------------- */
+.program{
+    padding: 1em $side;
+    padding-bottom: 6em;
+
+    .head-program{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1em 0px;
+
+        @media only screen and (max-width: $w-sm) {
+            flex-direction: column;
+        }
+
+        .content{
+            margin-bottom: 0.8em;
+            >strong{
+                margin-right: 0.3em;
+                margin-bottom: 0.4em;
+            }
+            > a span.bg-blue{
+                margin-right: 0.3em;
+            }
+        }
+        .btn-program{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            > a {
+                padding: 0.4em;
+                text-align: center;
+                background-color: $gray;
+                color: $blue;
+                margin: 0.2em;
+                &:hover{
+                    background-color: $blue;
+                    color: $light;
+                }
+
+                .iconify{
+                    margin-bottom: -3px;
+                    font-size: 18px;
+                }
+            }
+
+            .box-sosmed{
+                background-color: $blue;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-left: 0.2em;
+                padding: 0.3em;
+                
+                .icon{
+                    display: inline-block;
+                    color: $light;
+                    &:not(:last-child){
+                        margin-right: 0.4em;
+                    }
+                    .iconify{
+                        border: 1.2px solid $light;
+                        border-radius: 50px;
+                        padding: 0.2em;
+                        font-size: 20px;
+                        margin-bottom: -4px;
+                        
+                        &:hover{
+                            background-color: $light;
+                            color: $blue;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .div-program{
+        height: 2px;
+        background-color: $gray;
+        width: 100%;
+        margin-bottom: 1.3em;
+    }
+    .img-banner{
+        display: block;
+
+        img{
+            width: 100%;
+            margin: 0px auto;
+        }
+    }
+
+    .program-box{
+        display: flex;
+        justify-content: space-between;
+        margin:3em 0px;
+        align-items: flex-start;
+
+        .content-program{
+            border: 0px solid $dark;
+            border-radius: $bd-rad;
+            box-shadow: $box-shad;
+            padding: 5%;
+            flex: 0 0 70%;
+            @media only screen and (max-width: $w-sm) {
+                flex: 0 0 100%;
+            }
+
+            img.header-img{
+                width: 100%;
+            }
+            .tag-box{
+                margin: 1em 0px;
+                .tag{
+                    padding: 0.1em 0.5em;
+                    background-color: $green;
+                    color: $light;
+                    border-radius: 5px;
+                }
+            }
+            .meta{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 0.4em;
+            }
+            .sosmed-box{
+                display: flex;
+                
+                .sosmed-icon{
+                    color:$light;
+                    padding:0.8em 1.1em;
+
+                    &.fb{background-color: $darkblue;}
+                    &.tw{background-color: $blue;}
+                    &.mail{background-color: rgb(230, 16, 62);}
+                    &.wa{background-color: rgb(36, 163, 85);}
+                    &.tele{background-color: rgb(0, 102, 255);}
+                    
+                    .iconify{font-size: 18px;margin-bottom: -3px;}
+                }
+            }
+
+            .content .mobile-banner{
+                display: none;
+                margin: 2em 0px;
+                @media only screen and (max-width: $w-sm) {
+                    display: block;
+                }
+                a img{
+                    margin: 0.4em auto;
+                }
+                .hori{
+                    width: 100%;
+                    max-height: 10em;
+                }
+                
+                .vertic{
+                    width: 100%;
+                    max-width: 10em;
+                }
+            }
+        }
+        .sidebar-program{
+            padding: 0px 2em;
+
+            @media only screen and (max-width: $w-sm) {
+                display: none;
+            }
+
+            > img{
+                width: 100%;
+                margin-bottom: 2em;
+            }
+        }
+    }
+
+}
+
+/* ---------------------------------
+End Program Page Section
 --------------------------------- */

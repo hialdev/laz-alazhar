@@ -73,6 +73,23 @@ Reset
     color: $darken;
 }
 
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 10px;
+}
+ 
+::-webkit-scrollbar-track {
+    background-color: #f8f9ff;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #e7e7e7;
+    max-height: 2em;
+}
 /* ---------------------------------
 end Reset
 --------------------------------- */
@@ -186,7 +203,7 @@ section{
 
 //spacing
 .spacing{
-    height: 8em;
+    height: 5.5em;
     @media only screen and (max-width: $w-sm) {
         height: 5em;
     }
@@ -200,19 +217,19 @@ h1,h2,h3{
     line-height: 115%;
     margin: 0.6em 0px;
 }
-h1{
+h1,.h1,.h1 *{
     font-size: $h1;
     @media only screen and (max-width: $w-sm) {
         font-size: $h1-w2;
     }
 }
-h2{
+h2,.h2,.h2 *{
     font-size: $h2;
     @media only screen and (max-width: $w-sm) {
         font-size: $h2-w2;
     }
 }
-h3{
+h3,.h3,.h3 *{
     font-size: $h3;
     @media only screen and (max-width: $w-sm) {
         font-size: $h3-w2;
@@ -225,7 +242,14 @@ h3{
         font-size: $txt-sm-w2;
     }
 }
-
+//warning
+.notice{
+    padding: 1.5em;
+    background-color: rgb(255, 236, 60);
+    border-radius: 10px;
+    margin-bottom: 2em;
+    // border: 2px solid rgb(255, 230, 6);
+}
 //color
 .bg-blue{
     background-color: $blue;
@@ -241,6 +265,9 @@ h3{
 .darkblue{
     color: $darkblue;
 }
+.gray{
+    color: $gray
+}
 .light{
     color: $light;
 }
@@ -253,7 +280,55 @@ h3{
     border-radius: $bd-rad;
     margin-bottom: 1.5em;
 }
+.div-post{
+    height: 2px;
+    background-color: $gray;
+    width: 100%;
+    margin-bottom: 1.3em;
+}
 
+//search
+.search-container {
+    width: 90%;
+    max-width: 50em;
+    margin: 1.3em auto;
+    background-color: $light;
+    padding: 0px;
+    overflow: hidden;
+    border-radius: 55px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    input[type=text] {
+        padding: 1em 1.5em;
+        border: none;
+        width: 100%;
+    }
+
+    button {
+        background: rgb(240, 240, 240);
+        padding: 1.15em 1.2em;
+        border: none;
+        cursor: pointer;
+        
+        .iconify{
+            font-size: 24px;
+            color: $blue;
+            margin-bottom: -4px;
+            
+        }
+        &:hover {
+            background: $blue;
+            color: $light;
+            border-radius: 55px;
+            box-shadow: $box-shad;
+            .iconify{
+                color: $light;
+            }
+        }
+    }
+}
 //button
 .btn{
     padding: $btn-pad;
@@ -296,8 +371,36 @@ h3{
             box-shadow: $box-shad;
         }
     }
+    &.btn-confirm{
+        width: 100%;
+        color: $green !important;
+        border-radius: $bd-rad;
+        border: $bd-wid solid $green;
+        &:hover{
+            background-color: $green;
+            color: $light !important;
+        }
+    }
     &:hover{
         transform: scale(1.03,1.03);
+    }
+}
+
+//Sosmed
+.sosmed-box{
+    display: flex;
+    
+    .sosmed-icon{
+        color:$light;
+        padding:0.8em 1.1em;
+
+        &.fb{background-color: $darkblue;}
+        &.tw{background-color: $blue;}
+        &.mail{background-color: rgb(230, 16, 62);}
+        &.wa{background-color: rgb(36, 163, 85);}
+        &.tele{background-color: rgb(0, 102, 255);}
+        &.more{background-color: $blue;}
+        .iconify{font-size: 18px;margin-bottom: -3px;}
     }
 }
 
@@ -823,6 +926,7 @@ footer{
         flex-direction: column;
         margin-bottom: -2.5em;
         width: 90%;
+        max-width: 30em;
 
         .close{
             align-self: flex-start;
@@ -940,6 +1044,44 @@ footer{
     }
 }
 
+//Donasi
+.stat-donasi{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.5em;
+    p.txt-sm{
+        color: #b9b9b9;
+    }
+    .right{
+        text-align: right;
+    }
+}
+@media only screen and (max-width: $w-sm) {
+    .stat-donasi{
+        .right *, .left *{
+            font-size: 10px !important;
+        }
+    }
+    .stat-donasi .txt-sm{
+        font-size: $txt-sm-w2;
+    }
+}
+
+.progress{
+    background-color: $gray;
+    border-radius: $bd-rad;
+    height: 5px;
+    width: 100%;
+    margin: 0.5em 0px;
+    overflow: hidden;
+
+    .bar{
+        background-color: $green;
+        width: 63%;
+        height: 100%;
+    }
+}
+
 /* 
 post Page
 --------------------------------- */
@@ -1018,12 +1160,7 @@ post Page
             }
         }
     }
-    .div-post{
-        height: 2px;
-        background-color: $gray;
-        width: 100%;
-        margin-bottom: 1.3em;
-    }
+    
     .img-banner{
         display: block;
 
@@ -1382,7 +1519,7 @@ Home Page Section
 
 //Berita
 
-.berita{
+.berita, .berita-slip{
     padding: 2em $side;
     background-color: #f8f9ff;
 
@@ -1461,6 +1598,11 @@ Home Page Section
             }
         }
     }
+}
+
+.berita-slip{
+    padding: 0px;
+    background-color: $light;
 }
 
 
@@ -1647,9 +1789,492 @@ Tentang Page Section
             
         }
     }
+
+    .pengurus-box{
+        margin:2em 0px;
+        .pengurus-item{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow: hidden;
+            .pengurus-img{
+                display: block;
+                border-radius: 99px;
+                width: 10em;
+                height: 10em;
+                object-fit: cover;
+                overflow: hidden;
+                img{
+                    width: 100%;
+                }
+            }
+            .pengurus-content{
+                text-align: center;
+            }
+        }
+    }
+
 }
 
 /* ---------------------------------
 End Tentang Page Section
 --------------------------------- */
 
+/* ---------------------------------
+Donate Page Section
+--------------------------------- */
+
+.donate{
+    display: flex;
+    flex-direction: column;
+
+    padding: 4em $side;
+
+    .back{
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: #c5c5c5;
+        &:hover{
+            color: $blue;
+            text-decoration: underline;
+            .iconify{
+                color: $blue;
+            }
+        }
+        .iconify{
+            font-size: 32px;
+            color: #c5c5c5;
+            margin-right: 0.4em;
+        }
+    }
+
+    .donate-box{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: 3em 0px;
+
+        @media only screen and (max-width: $w-lg) {
+            flex-direction: column;
+        }
+
+        .donate-gallery{
+            width: 55%;
+            margin-right: 2em;
+
+            @media only screen and (max-width: $w-lg) {
+                width: 100%;
+                margin: 3em 0px;
+            }
+            @media only screen and (max-width: $w-sm) {
+                width: 100%;
+                margin: 1em 0px;
+            }
+
+            img{
+                width: 100%;
+                border-radius: $bd-rad;
+
+                &.item{
+                    border-radius: 5px;
+                    width: 7.5em;
+                    height: 7.5em;
+                    cursor: pointer;
+                    object-fit: cover;
+                    margin: 5px;
+                    
+                    @media only screen and (max-width: $w-lg) {
+                        width: 4em;
+                        height: 4em;
+                        margin: 2px;
+                    }
+
+                    &.active{
+                        border: 2px solid $blue;
+                    }
+                }
+                &.main{
+                    display: block;
+                    box-shadow: $box-shad;
+                    margin-bottom: 1.3em;
+                }
+            }            
+        }
+        .donate-content{
+            .share{
+                margin-top: 3em;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+        }
+        .donate-user{
+            margin: 3em 0px;
+            .user{
+                display: flex;
+                align-items: center;
+                padding: 0.8em 1.5em;
+                margin-top: 1em;
+                border-radius: 15px;
+                box-shadow: $card-shad;
+                max-width: 18em;
+                border: 1px solid $gray;
+                &-img{
+                    width: 6em;
+
+                    img{
+                        width: 100%;
+                    }
+                }
+                .user-content{
+                    .iconify{
+                        color: $green;
+                        margin-left: 0.3em;
+                    }
+                }
+            }
+        }
+    }
+    .donate-tab{
+        
+        .tabs-content{
+            padding: 1em;
+            background-color: #f8f9ff;
+        }
+
+        #cerita,#perkembangan{
+            padding: 5%;
+            width: 100%;
+            max-width: 60em;
+            margin: 1em auto;
+            box-shadow: $box-shad;
+            border-radius: 15px;
+            p{
+                margin: 0.8em 0px;
+            }
+            img{
+                border-radius: 5px;
+                margin: 1em 0px;
+                width: 100%;
+                max-width: 34em;
+            }
+        }
+        #donatur{
+            overflow-y: auto;
+            max-height: 20em;
+            background-color: #f8f9ff;
+            padding: 1em;
+            ul.donatur-block{
+                max-width: 23em;
+                list-style: none;
+                display: block;
+                margin: 2em auto;
+            }
+            .donatur-item{
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+                box-shadow: $card-shad;
+                padding: 1em 1.3em;
+                background-color: $light;
+                &:not(:last-child){
+                    border-bottom: 1px solid $gray;
+                }
+                .donatur-img{
+                    width: 5em;
+                    height: 5em;
+                    overflow: hidden;
+                    border-radius: 50px;
+
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                .donatur-profile *{
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+/* ---------------------------------
+End Donate Page Section
+--------------------------------- */
+/* ---------------------------------
+Galerry Page Section
+--------------------------------- */
+
+.gallery-lightbox{
+    display: none;
+    position: fixed;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    margin-top: 2.3em;
+    z-index: 10;
+    background-color: #00000050;
+    >div{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 1em auto;
+        width: 90%;
+        max-width: 50em;
+        border-radius: 15px;
+        overflow: hidden;
+
+        .content{
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-end;
+            color: $light;
+            padding: 5%;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(0deg, #000000 0%, rgba(25, 25, 25, 0.65) 42.71%, rgba(255, 255, 255, 0) 100%);
+        }
+    }
+    img{
+        display: block;
+    }
+    .close{
+        align-self: center;
+        color: $light;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        font-weight: bold;
+        margin: 0.5em 0px;
+        cursor: pointer;
+        
+        .iconify{
+            color: $light;
+            font-size: 22px;
+            margin-right: 0.3em;
+        }
+    }
+}
+.gallery{
+    padding: 2em $side;
+    background-color: #f8f9ff;
+
+    &-box{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 2em 0px;
+
+        .gallery-item{
+            position: relative;
+            overflow: hidden;
+            flex: 0 0 32%;
+            margin: 0.5em;
+            cursor: pointer;
+            border-radius: 15px;
+            height: auto;
+
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            &.active{
+                box-shadow: $box-shad;
+            }
+            &:hover{
+                box-shadow: $box-shad;
+                .gallery-hover{
+                    opacity: 1;
+                    transform: scale(1,1);
+                }
+            }
+            @media only screen and (max-width: $w-lg) {
+                flex: 0 0 48%;
+                border-radius: 10px;
+            }
+
+            @media only screen and (max-width: $w-sm) {
+                flex: 0 0 46%;
+                border-radius: 5px;
+            }
+
+            .gallery-hover{
+                position: absolute;
+                opacity: 0;
+                transform: scale(0);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                color: $light;
+                padding: 5%;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background: #02b4e5d7;
+
+                .iconify{
+                    font-size: 5em;
+                }
+            }
+        }
+    }
+}
+/* ---------------------------------
+End Gallery Page Section
+--------------------------------- */
+
+/* ---------------------------------
+Jemput Zakat Page Section
+--------------------------------- */
+.jemput-zakat{
+    position: relative;
+
+    >img{
+        width: 100%;
+        height: 60em;
+        object-fit: cover;
+    }
+}
+.jemput-zakat-box{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top:0;
+    margin: auto 5%;
+    padding-top: 17%;
+}
+/* ---------------------------------
+End Jemput Zakat Page Section
+--------------------------------- */
+/* ---------------------------------
+Rekening Page Section
+--------------------------------- */
+.rekening{
+    padding: 1em $side;
+    padding-bottom: 3em;
+
+    .rekening-box{
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-wrap: wrap;
+        
+        .rekening-item{
+            flex: 0 0 47%;
+            margin: 0.4em;
+            padding: 1em;
+            display: flex;
+            background-color: $gray;
+            justify-content: space-evenly;
+            align-items: center;
+            border-radius: 5px;
+
+            @media only screen and (max-width: $w-lg) {
+                flex-direction: column;
+            }
+            @media only screen and (max-width: $w-sm) {
+                flex:0 0 100%;
+            }
+
+            .rek-col{
+                text-align: center;
+                
+                >img{
+                    width: 10em;
+                }
+            }    
+
+            .rek-box{
+                display: flex;
+                justify-content: space-evenly;
+                
+                .rek-col{
+                    text-align: right;
+                        
+    
+                    &.guna{
+                        color: $darkblue;
+                        margin-left: 0.8em;
+                        font-weight: bold;
+                        text-align: left;
+                    }
+                }
+            }
+        }
+    }
+}
+/* ---------------------------------
+End Rekening Page Section
+--------------------------------- */
+/* ---------------------------------
+Office Page Section
+--------------------------------- */
+.office{
+    padding: 2em $side;
+    padding-bottom: 4em;
+
+    >img{
+        display: block;
+        margin: auto;
+        width: 100%;
+        max-width: 50em;
+    }
+
+    .office-box{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .office-item{
+            border: 2px solid $darken;
+            padding: 0.3em 0.8em;
+            border-radius: 5px;
+            flex: 0 0 31%;
+            margin: 0.4em;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+
+            @media only screen and (max-width: $w-lg) {
+                flex:0 0 47%;
+            }
+            @media only screen and (max-width: $w-sm) {
+                flex:0 0 100%;
+            }
+
+            .office-img .iconify{
+                font-size: 54px;
+                margin: 0.4em;
+            }
+
+            &:hover{
+                cursor: pointer;
+                border-color: $blue;
+                *{
+                color: $blue;
+                }
+            }
+
+            .office-address{
+                text-decoration: none;
+                color: black;
+            }
+        }
+    }
+}
+/* ---------------------------------
+End Office Page Section
+--------------------------------- */

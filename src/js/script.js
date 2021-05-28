@@ -101,11 +101,20 @@ adaftar.click(function(){
 // Home Page
 //-------------------------------
 
-//----- Tab Zakat
+//----- Tabs
 // Show the first tab and hide the rest
-$('#tabs-nav li:first-child').addClass('tab-active');
+
 $('.tab-content').hide();
-$('.tab-content:first').show();
+
+//Tab Content Zakat
+$('.zakat-tabs #tabs-nav li:first-child').addClass('tab-active');
+$('#zakat').show();
+//DIISI KONTEN ID NYA YANG MAU DIMUNCULIN PERTAMA
+$('.berita-tabs #tabs-nav li:first-child').addClass('tab-active');
+$('#semua').show();
+//Tab Content Donate
+$('.donate-tab #tabs-nav li:last-child').addClass('tab-active');
+$('#donatur').show();
 
 // Click function
 $('#tabs-nav li').click(function(){
@@ -198,5 +207,81 @@ $('.brand').owlCarousel({
 // End Home Page
 //-------------------------------
 
+//-------------------------------
+// Donasi Page
+//-------------------------------
+//Gallery Donasi
+var imgOn = $('.donate-gallery img.item');
+var imgMain = $('.donate-gallery img.main');
 
+$('.donate-gallery span img:first-child').addClass('active');
+imgOn.click(function(){
+    var imgLink = $(this).attr("src");
+    imgMain.attr("src",imgLink);
+    imgOn.removeClass('active');
+    $(this).addClass('active');
+
+    return false;
+})
+
+//-------------------------------
+// End Donasi Page
+//-------------------------------
+//-------------------------------
+// Tentang Page
+//-------------------------------
+var pengurus = $('.pengurus-box');
+pengurus.owlCarousel({
+    loop:true,
+    margin:10,
+    dots:false,
+    nav:false,
+    autoplay:true,
+    responsive:{
+        0:{
+            items:2
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:4
+        }
+    }
+})
+
+//-------------------------------
+// End Tentang Page
+//-------------------------------
+
+//-------------------------------
+// Gallery Page
+//-------------------------------
+
+var glrLbx = $('.gallery-lightbox');
+var glrLbxImg = $('#gallery-lightbox');
+var glrClose = $('.gallery-lightbox .close');
+var glrItem = $('.gallery-item');
+
+glrItem.click(function(){
+    var imgLink = $(this).find('img').attr("src");
+    var imgTitle = $(this).attr("title");
+    var imgAuthor = $(this).attr("author");
+    glrLbxImg.attr("src",imgLink);
+    glrLbx.find("#title").append(imgTitle);
+    glrLbx.find("#author").append(imgAuthor);
+    glrLbx.css('display','flex');
+
+    return false;
+})
+
+glrClose.click(function(){
+    glrLbx.fadeOut();
+    glrLbx.find("#title").empty();
+    glrLbx.find("#author").empty();
+});
+
+//-------------------------------
+// End Gallery Page
+//-------------------------------
 

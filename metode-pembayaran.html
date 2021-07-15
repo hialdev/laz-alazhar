@@ -9,7 +9,7 @@
     <title>LAZ Al-Azhar | Lembaga Amil Zakat 100% Amanah</title>
 
     <link rel="icon" href="src/img/favicon.png" type="image/png" sizes="32x32">
-
+    
     <link rel="stylesheet" href="src/css/style.css">
     <link rel="stylesheet" href="src/css/al-slider.min.css">
     <link rel="stylesheet" href="src/css/al-slider-theme.min.css">
@@ -19,7 +19,7 @@
 <body>
     
     <header>
-        <div class="header static">
+        <div class="header static"><!-- Ini tamplate untuk page bukan Index.html -->
             <div class="logo-box"><a href="index.html"><img src="src/img/logo-white.png" alt="" class="logo"></a></div>
             <div class="menu-toggle">
                 <input type="checkbox" name="" class="check">
@@ -129,169 +129,195 @@
         </div>
     </div>
 
-    <div class="spacing"></div>
+    <div class="spacing">
 
-    <section class="hero-slider">
-        <div class="slider-box owl-carousel owl-theme">
-            <div class="slider-item">
-                <div class="slider-img">
-                    <img src="src/img/hero-slider.jpeg" alt="">
+    </div>
+
+    <section class="payment">
+        <a href="ayo-bantu-mereka.html" class="a-reset back"><span class="iconify" data-icon="bi:arrow-left-circle-fill" data-inline="false"></a>
+            <div class="payment-box">
+                <div class="payment-col">
+                    <h2 class="txt-center blue">Pembayaran Zakat Maal</h2>
+                    <p>Jumlah Donasi</p>
+                    <fieldset class="currency">
+                        <span><strong>Rp</strong></span>
+                        <input type="number" name="jumlah-donasi" id="jumlah-donasi" placeholder="Masukan Jumlah Donasi atau Klik Refrensi">
+                    </fieldset>
+                    <div class="refrensi">
+                        <p>atau gunakan refrensi :</p>
+                        <a class="a-reset ref" nilai="10000">10.000</a>
+                        <a class="a-reset ref" nilai="100000">100.000</a>
+                        <a class="a-reset ref" nilai="1000000">1.000.000</a>
+                        <a class="a-reset ref" nilai="5000000">5.000.000</a>
+                        <a class="a-reset ref" nilai="10000000">10.000.000</a>
+                    </div>
+                    <fieldset>
+                        <input placeholder="Nama Anda" type="text" name="nama" id="Nama">
+                        <p><input type="checkbox" name="hide-nama" id="hide-nama">Tampilkan sebagai Hamba Allah</p>
+                    </fieldset>
+                    <fieldset>
+                        <input placeholder="Email Anda" type="email" name="email" id="email">
+                        <p class="blue txt-sm">* Kami akan mengirim bukti donasi dan perkembangan penyaluran donasi kepada Anda melalui email ini.</p>
+                    </fieldset>
+                    <fieldset>
+                        <input placeholder="No. HP/WA" type="number" name="no" id="no" class="number">
+                        <p><input type="checkbox" name="contactable" id="contactable">Bersedia dihubungi <span class="blue">LAZ Al-Azhar</span></p>
+                    </fieldset>
+                    <textarea placeholder="Keterangan atau Doa (optional)" name="desc" id="" rows="5"></textarea>
                 </div>
-                <a href="berita-item.html" class="slider-content">
-                    <h2>Membajak Sawah Tradisional dengan Kerbau di Desa Cilembeu</h2>
-                    <p>Maulana Sholeh / Galeri LAZ Al Azhar</p>
-                </a>
-            </div>
-
-            <div class="slider-item">
-                <div class="slider-img">
-                    <img src="src/img/hero-slider.jpeg" alt="">
-                </div>
-                <a href="berita-item.html" class="slider-content">
-                    <h2>Membajak Sawah Tradisional dengan Kerbau di Desa Cilembeu</h2>
-                    <p>Maulana Sholeh / Galeri LAZ Al Azhar</p>
-                </a>
-            </div>
-
-            <div class="slider-item">
-                <div class="slider-img">
-                    <img src="src/img/hero-slider.jpeg" alt="">
-                </div>
-                <a href="berita-item.html" class="slider-content">
-                    <h2>Membajak Sawah Tradisional dengan Kerbau di Desa Cilembeu</h2>
-                    <p>Maulana Sholeh / Galeri LAZ Al Azhar</p>
-                </a>
-            </div>
-
-            <div class="slider-item">
-                <div class="slider-img">
-                    <img src="src/img/hero-slider.jpeg" alt="">
-                </div>
-                <a href="berita-item.html" class="slider-content">
-                    <h2>Membajak Sawah Tradisional dengan Kerbau di Desa Cilembeu</h2>
-                    <p>Maulana Sholeh / Galeri LAZ Al Azhar</p>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <section class="berita">
-        <h2>Berita</h2>
-        <hr class="divider">
-
-        
-        <div class="select-dropdown">
-  
-            <button></button>
-            
-            <div class="options">
-                <input id="radio-africa" type="radio" name="region" value="africa" checked>
-                <label style="--index: 1" for="radio-africa">Semua</label>
-                
-                <input id="radio-asia" type="radio" name="region" value="asia">
-                <label style="--index: 2" for="radio-asia">Kategori 1</label>
-                
-                <input id="radio-australia" type="radio" name="region" value="australia">
-                <label style="--index: 3" for="radio-australia">Kategori 2</label>
-                
-                <input id="radio-europe" type="radio" name="region" value="europe">
-                <label style="--index: 4" for="radio-europe">Kategori 3</label>
-                
-            </div>
-            
-            <svg viewBox="0 0 24 24">
-                <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"></path>
-            </svg>
-            
-        </div>
-
-        <div class="search-container">
-              <input type="text" placeholder="Search.." name="search">
-              <button type="submit"><span class="iconify" data-icon="bx:bx-search-alt" data-inline="false"></span></button>
-        </div>
-        
-        <div class="berita-tabs">
-            <ul id="tabs-nav">
-                <li><a href="#semua">Semua</a></li>
-                <li><a href="#program">Program</a></li>
-                <li><a href="#inspirasi">Inspirasi</a></li>
-                <li><a href="#event">Event</a></li>
-            </ul>
-        
-            <span id="semua" class="!tab-content">
-                <div class="berita-box">
-                    
-                        <div class="berita-item">
-                            <div class="berita-img"><img src="src/img/bantu1.jpg" alt=""></div>
-                            <div class="berita-content">
-                                <a href="berita-item.html"><h3 class="blue">LAZ Al Azhar Kirimkan Tenaga Medis Untuk Korban Banjir Lebak</h3></a>
-                                <div class="tags">
-                                    <span class="iconify" data-icon="fluent:tag-24-filled" data-inline="false"></span>
-                                    <a href="" class="tag">kesehatan</a>
-                                    <a href="" class="tag">sosial</a>
+                <div class="payment-col">
+                    <h2 class="txt-center blue">Metode Pembayaran</h2>
+                    <div class="slide-tab">
+                        <div class="slide-title">
+                            <div class="col">
+                                <h3>Dompet Digital</h3>
+                                <p>Pembayaran dengan dompet digital</p>
+                            </div>
+                            <div class="col">
+                                <span class="iconify" data-icon="eva:arrow-ios-forward-outline" data-inline="false"></span>
+                            </div>
+                        </div>
+                        <div class="slide-content">
+                            <div class="payment-item">
+                                <input type="checkbox" name="" id="">
+                                <div class="img"><img src="src/img/payment-logo_gopay.jpg" alt=""></div>
+                                <div class="content">
+                                    <h3>Pembayaran QR</h3>
+                                    <p>Bayar dengan aplikasi pembayaran yang menerima QR</p>
                                 </div>
-                                <div class="date txt-sm">
-                                7 Mei 2021
+                            </div>
+                            <div class="payment-item">
+                                <input type="checkbox" name="" id="">
+                                <div class="img"><img src="src/img/payment-ovo.png" alt=""></div>
+                                <div class="content">
+                                    <h3>OVO</h3>
+                                    <p>Pembayaran melalui Ovo Push to Pay.</p>
+                                </div>
+                            </div>
+                            <div class="payment-item">
+                                <input type="checkbox" name="" id="">
+                                <div class="img"><img src="src/img/payment-dana.png" alt=""></div>
+                                <div class="content">
+                                    <h3>DANA</h3>
+                                    <p>Pembayaran melalui dompet digital Dana</p>
+                                </div>
+                            </div>
+                            <div class="payment-item">
+                                <input type="checkbox" name="" id="">
+                                <div class="img"><img src="src/img/payment-linkaja.png" alt=""></div>
+                                <div class="content">
+                                    <h3>Link Aja</h3>
+                                    <p>Pembayaran melalui dompet digital Link Aja.</p>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="berita-item">
-                            <div class="berita-img"><img src="src/img/bantu1.jpg" alt=""></div>
-                            <div class="berita-content">
-                                <a href="berita-item.html"><h3 class="blue">LAZ Al Azhar Kirimkan Tenaga Medis Untuk Korban Banjir Lebak</h3></a>
-                                <div class="tags">
-                                    <span class="iconify" data-icon="fluent:tag-24-filled" data-inline="false"></span>
-                                    <a href="" class="tag">kesehatan</a>
-                                    <a href="" class="tag">sosial</a>
+                        <!-- Virtual Akun -->
+                        <div class="slide-title">
+                            <div class="col">
+                                <h3>Virtual Akun</h3>
+                                <p>Bayar di ATM atau internet banking.</p>
+                            </div>
+                            <div class="col">
+                                <span class="iconify" data-icon="eva:arrow-ios-forward-outline" data-inline="false"></span>
+                            </div>
+                        </div>
+                        <div class="slide-content">
+                            <div class="payment-item">
+                                <input type="checkbox" name="" id="">
+                                <div class="img"><img src="src/img/payment-octomobile.png" alt=""></div>
+                                <div class="content">
+                                    <h3>Akun Virtual Octo Mobile</h3>
+                                    <p>Bayar dengan aplikasi OCTO Mobile.</p>
                                 </div>
-                                <div class="date txt-sm">
-                                7 Mei 2021
+                            </div>
+                            <div class="payment-item">
+                                <input type="checkbox" name="" id="">
+                                <div class="img"><img src="src/img/payment-bni_mobile.png" alt=""></div>
+                                <div class="content">
+                                    <h3>Akun Virtual BNI</h3>
+                                    <p>Bayar di ATM BNI atau internet banking.</p>
+                                </div>
+                            </div>
+                            <div class="payment-item">
+                                <input type="checkbox" name="" id="">
+                                <div class="img"><img src="src/img/payment-bca_mobile.png" alt=""></div>
+                                <div class="content">
+                                    <h3>Akun Virtual BCA</h3>
+                                    <p>Bayar M-BCA, ATM BCA, internet banking.</p>
+                                </div>
+                            </div>
+                            <div class="payment-item">
+                                <input type="checkbox" name="" id="">
+                                <div class="img"><img src="src/img/payment-atm.png" alt=""></div>
+                                <div class="content">
+                                    <h3>Jaringan ATM</h3>
+                                    <p>ATM Bersama, Prima, Alto, dll.
+                                    </p>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="berita-item">
-                            <div class="berita-img"><img src="src/img/bantu1.jpg" alt=""></div>
-                            <div class="berita-content">
-                                <a href="berita-item.html"><h3 class="blue">LAZ Al Azhar Kirimkan Tenaga Medis Untuk Korban Banjir Lebak</h3></a>
-                                <div class="tags">
-                                    <span class="iconify" data-icon="fluent:tag-24-filled" data-inline="false"></span>
-                                    <a href="" class="tag">kesehatan</a>
-                                    <a href="" class="tag">sosial</a>
+                        <!-- Transfer BANK -->
+                        <div class="slide-title">
+                            <div class="col">
+                                <h3>Transfer Manual</h3>
+                                <p>Pembayaran dengan Transfer Bank.</p>
+                            </div>
+                            <div class="col">
+                                <span class="iconify" data-icon="eva:arrow-ios-forward-outline" data-inline="false"></span>
+                            </div>
+                        </div>
+                        <div class="slide-content">
+                            <div class="payment-item">
+                                <input type="checkbox" name="" id="">
+                                <div class="img"><img src="src/img/payment-danamon_syariah.png" alt=""></div>
+                                <div class="content">
+                                    <h3>Danamon Syari'ah</h3>
+                                    <p>Bayar melalui Bank Danamon Syari'ah.</p>
                                 </div>
-                                <div class="date txt-sm">
-                                7 Mei 2021
+                            </div>
+                            <div class="payment-item">
+                                <input type="checkbox" name="" id="">
+                                <div class="img"><img src="src/img/payment-cimb_syariah.png" alt=""></div>
+                                <div class="content">
+                                    <h3>CIMB Niaga Syari'ah</h3>
+                                    <p>Bayar melalui Bank CIMB Niaga Syari'ah.</p>
+                                </div>
+                            </div>
+                            <div class="payment-item">
+                                <input type="checkbox" name="gopay" id="">
+                                <div class="img"><img src="src/img/payment-bni_syariah.png" alt=""></div>
+                                <div class="content">
+                                    <h3>BNI Syari'ah</h3>
+                                    <p>Bayar melalui Bank BNI Syari'ah.</p>
+                                </div>
+                            </div>
+                            <div class="payment-item">
+                                <input type="checkbox" name="" id="">
+                                <div class="img"><img src="src/img/payment-bca.png" alt=""></div>
+                                <div class="content">
+                                    <h3>BCA</h3>
+                                    <p>Bayar melalui Bank BCA.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="payment-item">
+                                <input type="checkbox" name="" id="">
+                                <div class="img"><img src="src/img/payment-paypal.png" alt=""></div>
+                                <div class="content">
+                                    <h3>Paypal</h3>
+                                    <p>Bayar melalui Paypal.
+                                    </p>
                                 </div>
                             </div>
                         </div>
-
-                        <div class="berita-item">
-                            <div class="berita-img"><img src="src/img/bantu1.jpg" alt=""></div>
-                            <div class="berita-content">
-                                <a href="berita-item.html"><h3 class="blue">LAZ Al Azhar Kirimkan Tenaga Medis Untuk Korban Banjir Lebak</h3></a>
-                                <div class="tags">
-                                    <span class="iconify" data-icon="fluent:tag-24-filled" data-inline="false"></span>
-                                    <a href="" class="tag">kesehatan</a>
-                                    <a href="" class="tag">sosial</a>
-                                </div>
-                                <div class="date txt-sm">
-                                7 Mei 2021
-                                </div>
-                            </div>
-                        </div>
-                    
+                    </div>
+                    <p><input type="checkbox" name="hide-nama" id="hide-nama">Saya menyetujui <a href="" class="a-reset blue">Syarat dan Ketentuan</a> yang berlaku</p>
+                    <a href="detail-pembayaran.html" class="btn btn-full btn-prm" id="lanjut-pembayaran">Lanjutkan Pembayaran</a>
                 </div>
-
-                <div class="paginate">
-                    <div class="item"><span class="iconify" data-icon="eva:arrow-ios-back-outline" data-inline="false"></span></div>
-                    <div class="item">1</div>
-                    <div class="item">2</div>
-                    <div class="item">3</div>
-                    <div class="item"><span class="iconify" data-icon="eva:arrow-ios-forward-outline" data-inline="false"></span></div>
-                </div>
-            </span>
-        </div>
+                
+            </div>
     </section>
 
     <footer>

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&family=Poppins:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap');
 
 /* ---------------------------------
 Variables
@@ -62,9 +62,13 @@ Reset
     outline: none;
     background-color: transparent;
     font-size: $txt;
-    font-family: $font2;
+    font-family: $font1;
     border: 0px solid transparent;
     transition: all 0.1s;
+}
+
+input[type=checkbox]{
+    cursor: pointer;
 }
 
 .a-reset {
@@ -191,7 +195,122 @@ section{
         transition: transform 0.1s;
     }
 }
+//Ziswaf
+.ziswaf-hitung{
+    border-radius: $bd-rad;
+    background-color: $light;
+    box-shadow: 10px 15px 75px -25px rgba(0, 103, 132, 0.38);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1em;
+    
+    @media only screen and (max-width: $w-sm) {
+        flex-direction: column;
+        width: 100%;
+    }
 
+    &-col1{
+        padding: 1.5em;
+        flex: 0 0 50%;
+    }
+    .div{
+        background-color: $blue;
+        padding: 1px;
+        border-radius: $bd-rad;
+        height: 20em;
+        max-height: 90%;
+
+        @media only screen and (max-width: $w-sm) {
+            height: 1px;
+            width: 80%;
+        }
+    }
+    &-col2{
+        padding: 1em;
+        @media only screen and (max-width: $w-sm) {
+            text-align: center;
+        }  
+    }
+
+    .ziswaf-tabs{
+        margin: 1em 0px;
+        #tabs-nav{
+            display: flex;
+            justify-content: space-evenly;
+            border-bottom: 2px solid $gray;
+
+            li{
+                list-style: none;
+                padding: 0.5em 1.3em;
+
+                &.tab-active{
+                    border-bottom: 3px solid $blue;
+                    color: $blue;
+                    a{
+                        color:$blue;
+                        font-weight: bold;
+                    }
+                }
+                a{
+                    text-decoration: none;
+                    text-align: center;
+                    color: $dark;
+                    img{
+                        width: 15px;
+                        height: 15px;
+                        margin-right: 5px;
+                    }
+                }
+            }
+        }
+        #tabs-content{
+            padding: 1em;
+            
+            fieldset{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin: 0.5em 0px;
+                @media only screen and (max-width: $w-lg) {
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
+                > div{
+                    display: flex;
+                    border: 1px solid $dark;
+                    border-radius: $bd-rad;
+                    overflow: hidden;
+                    width: 100%;
+                    span{
+                        background-color: $blue;
+                        color: $light;
+                        padding: 1em;
+                    }
+                    input[type=number]{
+                        padding: 1em;
+                        width: 100%;
+                        &::-webkit-inner-spin-button {
+                        -webkit-appearance: none;
+                        }
+                    }
+                }
+
+                select.ctg-tab{
+                    padding: 1em;
+                    border: 1px solid $dark;
+                    border-radius: $bd-rad;
+                    cursor: pointer;
+                    option{
+                        padding: 0.5em;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }           
+    }
+}
 //centering
 .center{
     margin: 0px auto;
@@ -199,6 +318,31 @@ section{
     justify-content: center;
     justify-self: center;
     align-self: center;
+}
+.txt-center{
+    text-align: center;
+}
+
+//Input Field
+
+fieldset.currency{
+    display: flex;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 1px solid $dark;
+    span,input{
+        padding: 1em;
+    }
+    span{
+        background-color: $blue;
+        color: $light;
+    }
+    input{
+        width: 100%;
+        &::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            }
+    }
 }
 
 //spacing
@@ -213,9 +357,12 @@ section{
 p{
     margin-bottom: 0.4em;
 }
-h1,h2,h3{
+h1,h2{
     line-height: 115%;
     margin: 0.6em 0px;
+}
+h3{
+    margin: 0.3em 0px;
 }
 h1,.h1,.h1 *{
     font-size: $h1;
@@ -240,6 +387,38 @@ h3,.h3,.h3 *{
     font-size: $txt-sm;
     @media only screen and (max-width: $w-sm) {
         font-size: $txt-sm-w2;
+    }
+}
+//Paginate
+.paginate{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+    .item{
+        padding: 0.3em 0.5em;
+        background-color: $light;
+        color: #bebebe;
+        cursor: pointer;
+        box-shadow: $hcard-shad;
+
+        .iconify{
+            margin-bottom: -2px;
+        }
+
+        &:first-child{
+            border-top-left-radius: $bd-rad;
+            border-bottom-left-radius: $bd-rad;
+        }
+        &:last-child{
+            border-top-right-radius: $bd-rad;
+            border-bottom-right-radius: $bd-rad;
+        }
+        &:hover{
+            background-color: $blue;
+            color: $light;
+        }
     }
 }
 //warning
@@ -296,6 +475,7 @@ h3,.h3,.h3 *{
     padding: 0px;
     overflow: hidden;
     border-radius: 55px;
+    border: 2px solid #f8f9ff;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -338,6 +518,19 @@ h3,.h3,.h3 *{
     text-decoration: none !important;
     display: inline-block;
     text-align: center;
+    &.info{
+        padding: 1em;
+        border: 1px solid $dark;
+        border-radius: $bd-rad;
+        color:$dark;
+        margin-left: 0.3em;
+        cursor: pointer;
+        &:hover{
+            color:$light;
+            background: $blue;
+            border-color: $blue;
+        }
+    }
     &.btn-prm{
         background-color: $blue;
         color: $light;
@@ -363,6 +556,9 @@ h3,.h3,.h3 *{
         color: $blue;
         border-radius: $bd-rad;
         border: $bd-wid solid $blue;
+        &.btn-prm{
+            color: $light;
+        }
         &:hover{
             background-color: $blue;
             color: $light;
@@ -373,11 +569,11 @@ h3,.h3,.h3 *{
     }
     &.btn-confirm{
         width: 100%;
-        color: $green !important;
+        color: #eb1451 !important;
         border-radius: $bd-rad;
-        border: $bd-wid solid $green;
+        border: $bd-wid solid #eb1451;
         &:hover{
-            background-color: $green;
+            background-color: #eb1451;
             color: $light !important;
         }
     }
@@ -385,6 +581,26 @@ h3,.h3,.h3 *{
         transform: scale(1.03,1.03);
     }
 }
+.back{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #c5c5c5;
+    margin-bottom: 1.2em;
+    &:hover{
+        color: $blue;
+        text-decoration: underline;
+        .iconify{
+            color: $blue;
+        }
+    }
+    .iconify{
+        font-size: 32px;
+        color: #c5c5c5;
+        margin-right: 0.4em;
+    }
+}
+
 
 //Sosmed
 .sosmed-box{
@@ -412,10 +628,10 @@ header{
     right: 0;
     left: 0;
     z-index: 1024;
-    background: transparent;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.38) 0%, rgba(0, 0, 0, 0.1) 55.25%, rgba(0, 0, 0, 0.03) 76.04%, rgba(0, 0, 0, 0) 100%);
 }
 .header{
-    padding-right: $side;
+    padding:0.8em $side;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -437,7 +653,7 @@ header{
             border-radius: $bd-rad;
             border: $bd-wid solid $blue;
             &:hover{
-                border-width: 0px;
+                border-color: $light;
                 box-shadow: $box-shad;
                 background-color: $light;
                 color: $blue;
@@ -447,19 +663,28 @@ header{
     &.active, &.static{
         background: $light;
 
-        .logo-box{
-            background: $blue;
-        }
         .menu-toggle span{
             background-color: $blue;
         }
+        
         .menu-box nav.menu ul li>a{
-            color: $blue;
-        }
-        .menu-box li.dropdown ul li>a{
-            color: $light;
+            color: #bebebe;
+            &:hover{
+                color: $blue;
+            }
         }
 
+        .menu-box nav.menu>ul>li:hover>a{
+            color: $blue;
+        }
+        
+        .menu-box li.dropdown ul li>a{
+            color: #bebebe;
+            &:hover{
+                color: $blue;
+            }
+        }
+        
         .btn-box .btn-sec{
             color: $blue;
             &:hover{
@@ -473,7 +698,6 @@ header{
     .logo-box{
         margin: 0;
         background: transparent;
-        padding: 1em 1.8em;
         position: relative;
     }
     .menu-box{
@@ -496,12 +720,28 @@ header{
             transform: translateX(100%);
             opacity: 0;
 
-            nav.menu ul li>a{
-                color: $blue;
-                border-bottom: 2px solid $blue;
+            nav.menu ul li{
+
+                a{
+                    color: #bebebe;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    &:hover{
+                        color: $blue;
+                    }
+                }
+                &:hover>a{
+                    color: $blue;
+                }
             }
-            nav.menu ul.sub-menu a{
-                color:$light;
+            nav.menu ul.sub-menu{
+                a{
+                    color: #bebebe;
+                    text-transform: capitalize;
+                    &:hover{
+                        color: $blue;
+                    }
+                }
             }
         }
         &.slide-menu{
@@ -544,33 +784,52 @@ header{
                 justify-content: center;
                 text-align: center;
             }
+
+        }
+        ul.sub-menu{
+            border-radius: 10px;
+            box-shadow: 5px 5px 30px -5px rgba(0, 175, 224, 0.18);;
+            overflow: hidden;
         }
         li{
             list-style: none;
             &:hover ul{
                 display: flex;
             }
+            
             a{
                 color: $light;
                 font-weight: bold;
                 text-decoration: none;
-                text-transform: capitalize;
+                text-transform: uppercase;
+                
             }
             > ul{
                 display: none;
                 flex-direction: column;
+                border-radius: 10px;
+                box-shadow: $hcard-shad;
+                overflow: hidden;
                 li{
                     width: 100%;
+                    &:not(:last-child){
+                        border-bottom: 1px solid $gray;
+                    }
+                    
+                    a{
+                        color: #bebebe;
+                        font-weight: 600;
+                        text-transform: capitalize;
+                        &:hover{
+                            color: $blue;
+                        }
+                    }
                 }
             }
         }
         .dropdown{
             li a{
-                background-color: $blue;
-                color: $light;
-                &:hover{
-                    background-color:$darkblue;
-                }
+                background-color: $light;
             }
         }
     }
@@ -1014,6 +1273,55 @@ footer{
     }
 }
 
+//Lightbox Ziswaf
+.lightbox-ziswaf{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top:0;
+    z-index: 100;
+    height: 100vh;
+    background-color: #0000002f;
+    .close{
+        align-self: center;
+        color: $light;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        font-weight: bold;
+        margin: 0.5em 0px;
+        cursor: pointer;
+        background-color: #eb1451;
+        padding:0.3em 0.6em;
+        width: 6em;
+        border-radius: 5px;
+        
+        .iconify{
+            color: $light;
+            font-size: 22px;
+            margin-right: 0.3em;
+        }
+    }
+    .box{
+        width: 90%;
+        max-width: 50em;
+        margin: 0px auto;
+        margin-top: 4em;
+        .content{
+            max-height: 37em;
+            overflow-y: auto;
+            background-color: $light;
+            padding: 5%;
+            border-radius: $bd-rad;
+        }
+    }
+}
+
+
+//----
 #tabs-nav{
     display: flex;
     justify-content: space-evenly;
@@ -1268,26 +1576,90 @@ End Components
 Home Page Section
 --------------------------------- */
 .hero{
-    img.img-hero{
+    .img-hero-box{
+        position: relative;
+        .arrow{
+            position: absolute;
+            z-index: 30;
+            display: flex;
+            top: 40%;
+            right: 0;
+            left: 0;
+            justify-content: space-between;
+            align-items: center;
+            margin: auto 3%;
+            >div .iconify{
+                font-size: 42px;
+                opacity: 0.75;
+                color: $blue;
+                cursor: pointer;
+                @media only screen and (max-width: $w-lg) {
+                   font-size: 32px;
+                }
+        
+                @media only screen and (max-width: $w-sm) {
+                   font-size: 24px;
+                }
+
+                &:hover{
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    .img-hero{
+        display: block;
         width: 100%;
-        height: 110vh;
-        object-fit: cover;
-        object-position: top;
-        filter: contrast(1.5) brightness(0.9) saturate(0.7) grayscale(0.06) hue-rotate(23deg);
+        position: relative;
+        padding: 0px;
+        height: 50em;
+        @media only screen and (max-width: $w-lg) {
+            max-height: 45em;
+        }
+
+        @media only screen and (max-width: $w-sm) {
+            max-height: 17em;
+        }
+        >img{
+            position: absolute;
+            top: 0;
+            margin: 0px;
+            margin-top: 0em;
+            width: 100%!important;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;            
+        }
+        >.content{
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            z-index: 10;
+            bottom: 0;
+            margin: 0px 7%;
+            margin-bottom: 70px;
+            @media only screen and (max-width: $w-lg) {
+                margin-bottom: 60px;
+            }
+    
+            @media only screen and (max-width: $w-sm) {
+                margin-bottom: 30px;
+            }
+        }
     }
     .zakat{
         width: 85%;
         margin: 0px auto;
-        margin-top: -20%;
+        margin-top: -100px;
         position: relative;
         z-index: 10;
         
         @media only screen and (max-width: $w-lg) {
-            margin-top: -40%;
+            margin-top: -80px;
         }
 
         @media only screen and (max-width: $w-sm) {
-            margin-top: -65%;
+            margin-top: -60px;
         }
 
         &-hitung{
@@ -1415,8 +1787,18 @@ Home Page Section
 
 .donasi{
     padding: 1em $side;
+    padding-bottom: 4em;
+    .donasi-container{
+        display: flex;
+        align-items: center;
+        position: relative;
 
+    }
     .control{
+        position: absolute;
+        z-index: 20;
+        right: 0;
+        left: 0;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -1426,9 +1808,22 @@ Home Page Section
         }
         .iconify{
             font-size: $h2;
+            color:#bebebe;
+            padding: 0.1em;
+            background-color: $light;
+            border-radius: 55px;
+            box-shadow: $hcard-shad;
+            &:hover{
+                color: $blue;
+            }
         }
     }
     &-box{
+        
+        @media only screen and (max-width: $w-sm) {
+            max-width: 27em;
+            margin: 0px auto;
+        }
     }
     &-item{
         width: 100%;
@@ -1612,6 +2007,7 @@ section.video{
     display: flex;
     padding: 7em $side;
     align-items: center;
+    background-color: #f8f9ff;
     @media only screen and (max-width: $w-lg) {
         flex-direction: column;
     }
@@ -1830,25 +2226,6 @@ Donate Page Section
 
     padding: 4em $side;
 
-    .back{
-        display: flex;
-        align-items: center;
-        text-decoration: none;
-        color: #c5c5c5;
-        &:hover{
-            color: $blue;
-            text-decoration: underline;
-            .iconify{
-                color: $blue;
-            }
-        }
-        .iconify{
-            font-size: 32px;
-            color: #c5c5c5;
-            margin-right: 0.4em;
-        }
-    }
-
     .donate-box{
         display: flex;
         flex-direction: row;
@@ -2019,7 +2396,7 @@ Galerry Page Section
     margin-top: 2.3em;
     z-index: 10;
     background-color: #00000050;
-    >div{
+    >div.gal{
         position: relative;
         display: flex;
         flex-direction: column;
@@ -2030,6 +2407,14 @@ Galerry Page Section
         border-radius: 15px;
         overflow: hidden;
 
+        @media only screen and (max-width: $w-sm) {
+            max-height: 23em;
+        }
+        img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
         .content{
             position: absolute;
             display: flex;
@@ -2043,6 +2428,14 @@ Galerry Page Section
             left: 0;
             right: 0;
             background: linear-gradient(0deg, #000000 0%, rgba(25, 25, 25, 0.65) 42.71%, rgba(255, 255, 255, 0) 100%);
+
+            .btn-box .iconify{
+                padding: 0.2em;
+                border-radius: 5px;
+                color: $light;
+                font-size: $h2;
+                background-color: $blue;
+            }
         }
     }
     img{
@@ -2105,7 +2498,7 @@ Galerry Page Section
             }
 
             @media only screen and (max-width: $w-sm) {
-                flex: 0 0 46%;
+                flex: 0 0 45%;
                 border-radius: 5px;
             }
 
@@ -2174,11 +2567,11 @@ Rekening Page Section
         
         .rekening-item{
             flex: 0 0 47%;
-            margin: 0.4em;
-            padding: 1em;
+            margin: 0.4em auto;
+            padding: 1em 2em;
             display: flex;
             background-color: $gray;
-            justify-content: space-evenly;
+            justify-content: flex-start;
             align-items: center;
             border-radius: 5px;
 
@@ -2188,24 +2581,19 @@ Rekening Page Section
             @media only screen and (max-width: $w-sm) {
                 flex:0 0 100%;
             }
-
-            .rek-col{
-                text-align: center;
-                
-                >img{
-                    width: 10em;
-                }
-            }    
-
             .rek-box{
                 display: flex;
-                justify-content: space-evenly;
-                
+                align-items: center;
+                justify-content: space-between;
+
                 .rek-col{
-                    text-align: right;
-                        
-    
+
+                    &.norek{
+                        text-align: center;
+                        width: 10em;
+                    }
                     &.guna{
+                        flex:0 0 auto;
                         color: $darkblue;
                         margin-left: 0.8em;
                         font-weight: bold;
@@ -2213,6 +2601,16 @@ Rekening Page Section
                     }
                 }
             }
+            >.rek-col{
+                flex:0 0 50%;
+                
+                >img{
+                    width: 10em;
+                    display: block;
+                    margin: 0px auto;
+                }
+                
+            }    
         }
     }
 }
@@ -2277,4 +2675,432 @@ Office Page Section
 }
 /* ---------------------------------
 End Office Page Section
+--------------------------------- */
+
+/* ---------------------------------
+Payment Page Section
+--------------------------------- */
+.payment{
+    padding: 4em $side;
+
+    input[type=text],input[type=email],input.number,textarea{
+        padding: 1em;
+        border: 1px solid $dark;
+        border-radius: 10px;
+        width: 100%;
+        margin: 0.4em 0px;
+    }
+    input.number::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+    }
+    input[type=checkbox]{
+        margin-right: 0.3em;
+    }
+    &-box{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        @media only screen and (max-width: $w-lg) {
+            flex-direction: column;
+        }
+        .payment-col{
+            padding: 5%;
+            box-shadow: $box-shad;
+            border-radius: $bd-rad;
+            width: 45%;
+
+            @media only screen and (max-width: $w-lg) {
+                width: 95%;
+                margin: 2em auto;
+            }
+        }
+        .refrensi{
+            margin: 1em 0px;
+            .ref{
+                padding: 0.3em 1em;
+                border-radius: 5px;
+                border: 1px solid $blue;
+                color: $blue;
+                font-weight: bold;
+                margin: 0.2em;
+                cursor: pointer;
+                
+                &.active,&:hover{
+                    background-color: $blue;
+                    color: $light;
+                }
+            }
+        }
+    }
+}
+
+.slide-tab{
+    margin: 1.4em 0px;
+    .slide-title{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        padding: 0.7em 0px;
+        &:not(:last-child){
+            border-bottom: 2px solid $gray
+        }
+
+        .col .iconify{
+            font-size: 32px;
+                transform: rotate(90deg);
+                transition: all 0.3s ease-in-out;
+        }
+    }
+
+    .slide-content{
+        display: none;
+        .payment-item{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 1em;
+            cursor: pointer;
+
+            &:hover{
+                box-shadow: $hcard-shad;
+            }
+
+            .img{
+                margin: 0px 0.8em;
+                max-width: 5em;
+
+                img{
+                    width: 100%;
+                }
+            }
+
+            .content{
+                margin-left: 0.3em;
+
+            }
+        }
+    } 
+}
+
+.detail{
+    padding: 3em $side;
+    width: 100%;
+    max-width: 50em;
+    margin:0px auto;
+    .detail-box{
+        border-radius: $bd-rad;
+        width: 100%;
+        box-shadow: $box-shad;
+        padding: 5%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        table{
+            width: 90%;
+            padding: 1.4em;
+            border: 1px solid $dark;
+            border-radius: 10px;
+            margin: 1.4em auto;
+        }
+
+        .bank{
+            display: flex;
+            align-items: center;
+            text-align: left;
+            img{
+                width: 10em;
+                margin: 0px 1.3em;
+            }
+        }
+
+        >p{
+            text-align: center;
+        }
+
+        .hr{
+            width: 100%;
+            height: 3px;
+            background-color: $gray;
+            margin-bottom: 1.4em;
+        }
+
+        span.h3{
+            margin-bottom: 1.4em;
+
+            .salin{
+                cursor: pointer;
+                margin-left: 0.5em;
+            }
+        }
+
+        p.notice{
+            margin-top: 1em;
+        }
+    }
+}
+/* ---------------------------------
+Payment Page Section
+--------------------------------- */
+
+/* ---------------------------------
+Upload Page Section
+--------------------------------- */
+
+.upload{
+    padding: 3em $side;
+
+    //Input
+    input,textarea{
+        background-color: $light;
+        margin: 0.3em 0px;
+        padding: 0.8em 1.3em;
+        border: 1px solid $dark;
+        width: 100%;
+        border-radius: 15px;
+        color: $dark;
+        &[type=number]{
+            &::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            }
+        }
+    }
+
+    .file-upload{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 1.5em;
+        >div{
+            flex: 0 0 46%;
+            &.preview{
+                display: none;
+                
+                img{
+                    height: 14em;
+                    width: 14em;
+                    object-fit: cover;
+                    border-radius: 15px;
+                    box-shadow: $box-shad;
+                }
+            }
+        }
+
+        .img-upload{
+            width: 100%;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 1.4em;
+            max-width: 25em;
+            margin: 0px auto;
+            
+    
+            input[type=file]{
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+                cursor: pointer;
+            }
+        }
+    }
+    
+}
+
+/* ---------------------------------
+end Page Section
+--------------------------------- */
+/* ---------------------------------
+Ziswaf Section
+--------------------------------- */
+.ziswaf{
+    padding: 2em $side;
+    padding-bottom: 4em;
+}
+/* ---------------------------------
+end Page Section
+--------------------------------- */
+/* ---------------------------------
+Image Map
+--------------------------------- */
+.img-map{
+    position: relative;
+    margin: 0px auto;
+    overflow-y: auto;
+    padding-top: 5em;
+    max-width: 50em;
+    
+    >img{
+        display: block;
+        max-width: 50em;
+    }
+
+    .place{
+        display: none;
+        align-items: flex-end;
+        position: absolute;
+        z-index: 10;
+        bottom: 0;
+        
+        //wilayah
+        &.kebayoran-baru{
+            margin-bottom: 6.4em;
+            margin-left: 13em;
+        }
+        &.fatmawati{
+            margin-bottom: 6.4em;
+            margin-left: 13.4em;
+        }
+        &.cakung{
+            margin-bottom: 6.8em;
+            margin-left: 13.2em;
+        }
+        &.sawangan{
+            margin-bottom: 5.8em;
+            margin-left: 12.2em;
+        }
+        &.baki{
+            margin-bottom: 5.4em;
+            margin-left: 16.2em;
+        }
+        &.gubeng{
+            margin-bottom: 5.8em;
+            margin-left: 18em;
+        }
+        &.padang{
+            margin-bottom: 13.8em;
+            margin-left: 4.2em;
+        }
+        &.semarang{
+            margin-bottom: 6.4em;
+            margin-left: 16.2em;
+        }
+        &.sleman{
+            margin-bottom: 4.8em;
+            margin-left: 16.2em;
+        }
+        &.pondok-aren{
+            margin-bottom: 6.4em;
+            margin-left: 12.2em;
+        }
+        &.cilacap{
+            margin-bottom: 5.2em;
+            margin-left: 15.2em;
+        }
+        &.lengkong{
+            margin-bottom: 5.8em;
+            margin-left: 14.2em;
+        }
+        //end Wilayah
+
+        >.iconify{
+            font-size: $h2;
+            color:$blue;
+        }
+        .content{
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: $box-shad;
+            width: 16em;
+            background-color: $light;
+            >img{
+                display: block;
+                width: 100%;
+            }
+            .date{
+                padding: 1em;
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+    }
+}
+/* ---------------------------------
+end Image Map
+--------------------------------- */
+
+/* ---------------------------------
+Panduan
+--------------------------------- */
+.panduan{
+    display: flex;
+    position: relative;
+
+    ul.box-menu{
+        list-style: none;
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 45em;
+        width: 20em;
+        padding: 1.4em;
+        background-color: $blue;
+
+        li>a{
+            text-decoration: none;
+            font-weight: bold;
+            font-weight: $h3;
+            color: $light;
+        }
+    }
+
+    .box-content{
+        margin-left: 20em;
+        padding: 2em;
+    }
+
+    
+}
+/* ---------------------------------
+End Panduan
+--------------------------------- */
+
+/* ---------------------------------
+Mitra Kami
+--------------------------------- */
+section.mitra{
+    padding: 2em $side;
+
+    #mitra-tabs-nav{
+        list-style: none;
+        border-bottom: 2px solid #f8f8f8;
+        padding: 2em 0px;
+        li{
+            display: inline-block;
+            a{
+                display: inline-block;
+                margin: 0.6em 0.2em;
+                padding: 0.8em 1.3em;
+                color: $blue;
+                border: 2px solid $blue;
+                border-radius: $bd-rad;
+                text-decoration: none;
+                font-weight: bold;
+
+
+                &:hover,&.active{
+                    background-color: $blue;
+                    color: $light;
+                }
+            }
+        }
+    }
+
+    #mitra-tabs-content{
+        padding: 2em 0px;
+        .tab-content img{
+            width: 100%;
+        }
+    }
+}
+/* ---------------------------------
+End Mitra Kami
 --------------------------------- */

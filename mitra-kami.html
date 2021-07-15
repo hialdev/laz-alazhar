@@ -9,7 +9,7 @@
     <title>LAZ Al-Azhar | Lembaga Amil Zakat 100% Amanah</title>
 
     <link rel="icon" href="src/img/favicon.png" type="image/png" sizes="32x32">
-
+    
     <link rel="stylesheet" href="src/css/style.css">
     <link rel="stylesheet" href="src/css/al-slider.min.css">
     <link rel="stylesheet" href="src/css/al-slider-theme.min.css">
@@ -19,7 +19,7 @@
 <body>
     
     <header>
-        <div class="header static">
+        <div class="header static"><!-- Ini tamplate untuk page bukan Index.html -->
             <div class="logo-box"><a href="index.html"><img src="src/img/logo-white.png" alt="" class="logo"></a></div>
             <div class="menu-toggle">
                 <input type="checkbox" name="" class="check">
@@ -129,168 +129,34 @@
         </div>
     </div>
 
-    <div class="spacing"></div>
+    <div class="spacing">
 
-    <section class="hero-slider">
-        <div class="slider-box owl-carousel owl-theme">
-            <div class="slider-item">
-                <div class="slider-img">
-                    <img src="src/img/hero-slider.jpeg" alt="">
-                </div>
-                <a href="berita-item.html" class="slider-content">
-                    <h2>Membajak Sawah Tradisional dengan Kerbau di Desa Cilembeu</h2>
-                    <p>Maulana Sholeh / Galeri LAZ Al Azhar</p>
-                </a>
-            </div>
+    </div>
 
-            <div class="slider-item">
-                <div class="slider-img">
-                    <img src="src/img/hero-slider.jpeg" alt="">
-                </div>
-                <a href="berita-item.html" class="slider-content">
-                    <h2>Membajak Sawah Tradisional dengan Kerbau di Desa Cilembeu</h2>
-                    <p>Maulana Sholeh / Galeri LAZ Al Azhar</p>
-                </a>
-            </div>
-
-            <div class="slider-item">
-                <div class="slider-img">
-                    <img src="src/img/hero-slider.jpeg" alt="">
-                </div>
-                <a href="berita-item.html" class="slider-content">
-                    <h2>Membajak Sawah Tradisional dengan Kerbau di Desa Cilembeu</h2>
-                    <p>Maulana Sholeh / Galeri LAZ Al Azhar</p>
-                </a>
-            </div>
-
-            <div class="slider-item">
-                <div class="slider-img">
-                    <img src="src/img/hero-slider.jpeg" alt="">
-                </div>
-                <a href="berita-item.html" class="slider-content">
-                    <h2>Membajak Sawah Tradisional dengan Kerbau di Desa Cilembeu</h2>
-                    <p>Maulana Sholeh / Galeri LAZ Al Azhar</p>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <section class="berita">
-        <h2>Berita</h2>
+    <section class="mitra"> 
+        <h2>Mitra Kami</h2>
         <hr class="divider">
 
+        <ul id="mitra-tabs-nav">
+            <li><a href="#korporasi">Korporasi</a></li>
+            <li><a href="#penyaluran">Penyaluran</a></li>
+            <li><a href="#penghimpunan-mpz">Penghimpunan MPZ</a></li>
+            <li><a href="#media-partner">Media Partner</a></li>
+        </ul>
         
-        <div class="select-dropdown">
-  
-            <button></button>
-            
-            <div class="options">
-                <input id="radio-africa" type="radio" name="region" value="africa" checked>
-                <label style="--index: 1" for="radio-africa">Semua</label>
-                
-                <input id="radio-asia" type="radio" name="region" value="asia">
-                <label style="--index: 2" for="radio-asia">Kategori 1</label>
-                
-                <input id="radio-australia" type="radio" name="region" value="australia">
-                <label style="--index: 3" for="radio-australia">Kategori 2</label>
-                
-                <input id="radio-europe" type="radio" name="region" value="europe">
-                <label style="--index: 4" for="radio-europe">Kategori 3</label>
-                
+        <div id="mitra-tabs-content">
+            <div id="korporasi" class="tab-content">
+                <img src="src/img/Logo Mitra Korporasi.jpg" alt="">
             </div>
-            
-            <svg viewBox="0 0 24 24">
-                <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"></path>
-            </svg>
-            
-        </div>
-
-        <div class="search-container">
-              <input type="text" placeholder="Search.." name="search">
-              <button type="submit"><span class="iconify" data-icon="bx:bx-search-alt" data-inline="false"></span></button>
-        </div>
-        
-        <div class="berita-tabs">
-            <ul id="tabs-nav">
-                <li><a href="#semua">Semua</a></li>
-                <li><a href="#program">Program</a></li>
-                <li><a href="#inspirasi">Inspirasi</a></li>
-                <li><a href="#event">Event</a></li>
-            </ul>
-        
-            <span id="semua" class="!tab-content">
-                <div class="berita-box">
-                    
-                        <div class="berita-item">
-                            <div class="berita-img"><img src="src/img/bantu1.jpg" alt=""></div>
-                            <div class="berita-content">
-                                <a href="berita-item.html"><h3 class="blue">LAZ Al Azhar Kirimkan Tenaga Medis Untuk Korban Banjir Lebak</h3></a>
-                                <div class="tags">
-                                    <span class="iconify" data-icon="fluent:tag-24-filled" data-inline="false"></span>
-                                    <a href="" class="tag">kesehatan</a>
-                                    <a href="" class="tag">sosial</a>
-                                </div>
-                                <div class="date txt-sm">
-                                7 Mei 2021
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="berita-item">
-                            <div class="berita-img"><img src="src/img/bantu1.jpg" alt=""></div>
-                            <div class="berita-content">
-                                <a href="berita-item.html"><h3 class="blue">LAZ Al Azhar Kirimkan Tenaga Medis Untuk Korban Banjir Lebak</h3></a>
-                                <div class="tags">
-                                    <span class="iconify" data-icon="fluent:tag-24-filled" data-inline="false"></span>
-                                    <a href="" class="tag">kesehatan</a>
-                                    <a href="" class="tag">sosial</a>
-                                </div>
-                                <div class="date txt-sm">
-                                7 Mei 2021
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="berita-item">
-                            <div class="berita-img"><img src="src/img/bantu1.jpg" alt=""></div>
-                            <div class="berita-content">
-                                <a href="berita-item.html"><h3 class="blue">LAZ Al Azhar Kirimkan Tenaga Medis Untuk Korban Banjir Lebak</h3></a>
-                                <div class="tags">
-                                    <span class="iconify" data-icon="fluent:tag-24-filled" data-inline="false"></span>
-                                    <a href="" class="tag">kesehatan</a>
-                                    <a href="" class="tag">sosial</a>
-                                </div>
-                                <div class="date txt-sm">
-                                7 Mei 2021
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="berita-item">
-                            <div class="berita-img"><img src="src/img/bantu1.jpg" alt=""></div>
-                            <div class="berita-content">
-                                <a href="berita-item.html"><h3 class="blue">LAZ Al Azhar Kirimkan Tenaga Medis Untuk Korban Banjir Lebak</h3></a>
-                                <div class="tags">
-                                    <span class="iconify" data-icon="fluent:tag-24-filled" data-inline="false"></span>
-                                    <a href="" class="tag">kesehatan</a>
-                                    <a href="" class="tag">sosial</a>
-                                </div>
-                                <div class="date txt-sm">
-                                7 Mei 2021
-                                </div>
-                            </div>
-                        </div>
-                    
-                </div>
-
-                <div class="paginate">
-                    <div class="item"><span class="iconify" data-icon="eva:arrow-ios-back-outline" data-inline="false"></span></div>
-                    <div class="item">1</div>
-                    <div class="item">2</div>
-                    <div class="item">3</div>
-                    <div class="item"><span class="iconify" data-icon="eva:arrow-ios-forward-outline" data-inline="false"></span></div>
-                </div>
-            </span>
+            <div id="penyaluran" class="tab-content">
+                <img src="src/img/Logo Mitra Penyaluran.jpg" alt="">
+            </div>
+            <div id="penghimpunan-mpz" class="tab-content">
+                <img src="src/img/Logo Mitra Korporasi.jpg" alt="">
+            </div>
+            <div id="media-partner" class="tab-content">
+                <img src="src/img/Logo Mitra Penyaluran.jpg" alt="">
+            </div>
         </div>
     </section>
 

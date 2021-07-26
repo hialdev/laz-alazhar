@@ -448,7 +448,7 @@ h3, .h3, .h3 * {
 .paginate .item {
   padding: 0.3em 0.5em;
   background-color: #fff;
-  color: #bebebe;
+  color: #6d6e70;
   cursor: pointer;
   -webkit-box-shadow: 5px 10px 20px -5px rgba(0, 175, 224, 0.18);
           box-shadow: 5px 10px 20px -5px rgba(0, 175, 224, 0.18);
@@ -790,7 +790,7 @@ header {
 }
 
 .header.active .menu-box nav.menu ul li > a, .header.static .menu-box nav.menu ul li > a {
-  color: #bebebe;
+  color: #6d6e70;
 }
 
 .header.active .menu-box nav.menu ul li > a:hover, .header.static .menu-box nav.menu ul li > a:hover {
@@ -802,7 +802,7 @@ header {
 }
 
 .header.active .menu-box li.dropdown ul li > a, .header.static .menu-box li.dropdown ul li > a {
-  color: #bebebe;
+  color: #6d6e70;
 }
 
 .header.active .menu-box li.dropdown ul li > a:hover, .header.static .menu-box li.dropdown ul li > a:hover {
@@ -864,7 +864,7 @@ header {
     opacity: 0;
   }
   .header .menu-box nav.menu ul li a {
-    color: #bebebe;
+    color: #6d6e70;
     text-transform: uppercase;
     font-weight: bold;
   }
@@ -875,7 +875,7 @@ header {
     color: #02B3E5;
   }
   .header .menu-box nav.menu ul.sub-menu a {
-    color: #bebebe;
+    color: #6d6e70;
     text-transform: capitalize;
   }
   .header .menu-box nav.menu ul.sub-menu a:hover {
@@ -1003,7 +1003,7 @@ header {
 }
 
 .header nav.menu li > ul li a {
-  color: #bebebe;
+  color: #6d6e70;
   font-weight: 600;
   text-transform: capitalize;
 }

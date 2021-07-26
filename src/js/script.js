@@ -55,23 +55,17 @@ var header = $('.header');
 var textDropdown = $('nav.menu ul li.dropdown ul li a');
 var textMenu = $('nav.menu ul li a');
 var menuBox = $('.menu-box');
-var imgLogo = $('.logo-box img.logo')
 
 var width = $(window).width();
 
 $(function () {
-    if (header.hasClass('static')) {
-        imgLogo.attr('src','src/img/logo-laz.png');
-    }
     $(window).scroll(function () {
         var scroll = $(window).scrollTop();
         
         if (scroll >= 185 || header.hasClass('static')) {
             header.addClass('active');
-            imgLogo.attr('src','src/img/logo-laz.png');
         } else if(scroll < 185) {
             header.removeClass('active');
-            imgLogo.attr('src','src/img/logo-white.png');
         }
     });
 });

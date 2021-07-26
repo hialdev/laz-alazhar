@@ -399,7 +399,7 @@ h3,.h3,.h3 *{
     .item{
         padding: 0.3em 0.5em;
         background-color: $light;
-        color: #bebebe;
+        color: #6d6e70;
         cursor: pointer;
         box-shadow: $hcard-shad;
 
@@ -668,7 +668,7 @@ header{
         }
         
         .menu-box nav.menu ul li>a{
-            color: #bebebe;
+            color: #6d6e70;
             &:hover{
                 color: $blue;
             }
@@ -679,7 +679,7 @@ header{
         }
         
         .menu-box li.dropdown ul li>a{
-            color: #bebebe;
+            color: #6d6e70;
             &:hover{
                 color: $blue;
             }
@@ -723,7 +723,7 @@ header{
             nav.menu ul li{
 
                 a{
-                    color: #bebebe;
+                    color: #6d6e70;
                     text-transform: uppercase;
                     font-weight: bold;
                     &:hover{
@@ -736,7 +736,7 @@ header{
             }
             nav.menu ul.sub-menu{
                 a{
-                    color: #bebebe;
+                    color: #6d6e70;
                     text-transform: capitalize;
                     &:hover{
                         color: $blue;
@@ -817,7 +817,7 @@ header{
                     }
                     
                     a{
-                        color: #bebebe;
+                        color: #6d6e70;
                         font-weight: 600;
                         text-transform: capitalize;
                         &:hover{

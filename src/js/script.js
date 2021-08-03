@@ -1,6 +1,9 @@
 //-------------------------------
 // Components
 //-------------------------------
+//Dropdown Select
+
+//------------
 
 //Hero Slider
 $('.slider-box').owlCarousel({
@@ -59,13 +62,19 @@ var menuBox = $('.menu-box');
 var width = $(window).width();
 
 $(function () {
+    if( header.hasClass('static') ){
+        $('.logo-box img').attr('src','src/img/logo-laz.png');
+    }
     $(window).scroll(function () {
+        
         var scroll = $(window).scrollTop();
         
         if (scroll >= 185 || header.hasClass('static')) {
+            $('.logo-box img').attr('src','src/img/logo-laz.png');
             header.addClass('active');
         } else if(scroll < 185) {
             header.removeClass('active');
+            $('.logo-box img').attr('src','src/img/logo-white.png');
         }
     });
 });

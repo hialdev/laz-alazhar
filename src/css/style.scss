@@ -106,7 +106,12 @@ section{
     overflow-x: hidden;
     padding-bottom: 5em;
 }
-
+//content
+.content{
+    ul,ol{
+        margin-left: 20px;
+    }
+}
 //Dropdown
 .select-dropdown {
     position: relative;
@@ -397,30 +402,27 @@ h3,.h3,.h3 *{
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    gap:0.5em;
     
     .item{
-        padding: 0.3em 0.5em;
+        width: 2em;
+        height: 2em;
         background-color: $light;
         color: #6d6e70;
         cursor: pointer;
         box-shadow: $hcard-shad;
-
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border: 1.4px solid #cecece;
+        border-radius: $bd-rad;
+        
         .iconify{
-            margin-bottom: -2px;
-        }
-
-        &:first-child{
-            border-top-left-radius: $bd-rad;
-            border-bottom-left-radius: $bd-rad;
-        }
-        &:last-child{
-            border-top-right-radius: $bd-rad;
-            border-bottom-right-radius: $bd-rad;
         }
         &:hover{
             background-color: $blue;
             color: $light;
+            border-color: $blue;
         }
     }
 }
@@ -490,9 +492,8 @@ h3,.h3,.h3 *{
     }
 
     button {
-        background: rgb(240, 240, 240);
         padding: 1.15em 1.2em;
-        border: none;
+        border-left: 2px solid #f8f9ff;
         cursor: pointer;
         
         .iconify{
@@ -1809,6 +1810,9 @@ Home Page Section
 .donasi{
     padding: 1em $side;
     padding-bottom: 1em;
+    &.pb-4{
+        padding-bottom: 4em;
+    }
     .donasi-container{
         display: flex;
         align-items: center;
@@ -2096,7 +2100,7 @@ Donasi Page Section
 .donasi-page{
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 3em;
+    margin-bottom: 2em;
 
     > .donasi-item{
         flex: 0 0 32%;
@@ -2792,8 +2796,10 @@ Payment Page Section
 
         .col .iconify{
             font-size: 32px;
-                transform: rotate(90deg);
-                transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+            &.rotate{
+                transform: rotate(90deg) !important;
+            }
         }
     }
 
@@ -3073,35 +3079,166 @@ end Image Map
 Panduan
 --------------------------------- */
 .panduan{
-    display: flex;
-    position: relative;
+    padding: 2em $side;
+    .panduan-toggle{
+        background-color: $gray;
+        padding:1.3em 1.6em;
+        border-radius: $bd-rad;
+        margin:0.8em 0px;
+        >.title{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+            >.iconify{
+                font-size: $h3;
+                color: $blue;
+                &.rotate{
+                    transform: rotate(90deg) !important;
+                }
+            }
+        }
+        >.content{
+            margin: 0.6em 0px;
+            ol,ul{
+                margin-left: 20px;
+                margin-top: 10px;
+            }
+        }
+    }
+}
 
-    ul.box-menu{
-        list-style: none;
-        position: fixed;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
-        height: 45em;
-        width: 20em;
-        padding: 1.4em;
-        background-color: $blue;
+.panduan-zakat{
+    padding: 2em $side;
+    padding-bottom: 4em;
+    .box{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 3.5em;
+        margin: 1em 0px;
+        .items{
+            >img{
+                display: block;
+                object-fit: cover;
+                width: 100%;
+                height: 10em;
+                border-radius: $bd-rad;
+            }
+            .title{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin: 0.6em 0px;
+                >h3{
+                    padding-right: 0.3em;
+                }
+                >a.btn.btn-sec{
+                    display: inline-flex;
+                    align-items: center;
+                    margin: 0.5em 0px;
+                }
+            }
+            .content{
 
-        li>a{
-            text-decoration: none;
-            font-weight: bold;
-            font-weight: $h3;
-            color: $light;
+            }
         }
     }
 
-    .box-content{
-        margin-left: 20em;
-        padding: 2em;
+    //responsive
+    @media only screen and (max-width: $w-lg){
+        .box{
+            grid-template-columns: 1fr 1fr;
+        }
     }
+    @media only screen and (max-width: $w-sm){
+        .box{
+            grid-template-columns: 1fr;
+        }
+    }
+}
 
-    
+.panduan-zakat-lightbox{
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 80;
+    background-color: #1d70dd7a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top:3%;
+    display: none;
+
+    .data{
+        width: 90%;
+        max-width: 40em;
+        margin: 0px auto;
+        border-radius: $bd-rad;
+        background-color: $light;
+        overflow: hidden;
+        position: relative;
+        >.close{
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            .iconify{
+                font-size: $h3;
+                color: $light;
+            }
+            &:hover{
+                box-shadow: $hcard-shad;
+                transform: scale(1.1,1.1);
+            }
+        }
+        >img{
+            display: block;
+            width: 100%;
+            height: 12em;
+            object-fit: cover;
+        }
+        .data-box{
+            overflow-y: auto;
+            padding: $side;
+            max-height: 55vh;
+            .title{
+                display: flex;
+                align-items: center;
+                >img{
+                    width: 2em;
+                    margin-right: 0.4em;
+                }
+            }
+            >div{
+                margin: 0.9em 0px;
+            }
+
+            .ketentuan{
+                >.box{
+                    margin: 1em 0px;
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr;
+                    gap: 2em;
+                    .col{
+                        >img{
+                            width: 4em;
+                        }
+                    }
+                }
+            }
+            .hitungan{
+                .content{
+                    margin: 0.7em 0px;
+                    >img{
+                        display: block;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+    }
 }
 /* ---------------------------------
 End Panduan

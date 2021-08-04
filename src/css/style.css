@@ -59,6 +59,10 @@ section {
   padding-bottom: 5em;
 }
 
+.content ul, .content ol {
+  margin-left: 20px;
+}
+
 .select-dropdown {
   position: relative;
   -webkit-box-sizing: content-box;
@@ -447,34 +451,34 @@ h3, .h3, .h3 * {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  gap: 0.5em;
 }
 
 .paginate .item {
-  padding: 0.3em 0.5em;
+  width: 2em;
+  height: 2em;
   background-color: #fff;
   color: #6d6e70;
   cursor: pointer;
   -webkit-box-shadow: 5px 10px 20px -5px rgba(0, 175, 224, 0.18);
           box-shadow: 5px 10px 20px -5px rgba(0, 175, 224, 0.18);
-}
-
-.paginate .item .iconify {
-  margin-bottom: -2px;
-}
-
-.paginate .item:first-child {
-  border-top-left-radius: 15px;
-  border-bottom-left-radius: 15px;
-}
-
-.paginate .item:last-child {
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1.4px solid #cecece;
+  border-radius: 15px;
 }
 
 .paginate .item:hover {
   background-color: #02B3E5;
   color: #fff;
+  border-color: #02B3E5;
 }
 
 .notice {
@@ -552,9 +556,8 @@ h3, .h3, .h3 * {
 }
 
 .search-container button {
-  background: #f0f0f0;
   padding: 1.15em 1.2em;
-  border: none;
+  border-left: 2px solid #f8f9ff;
   cursor: pointer;
 }
 
@@ -2336,6 +2339,10 @@ Home Page Section
   padding-bottom: 1em;
 }
 
+.donasi.pb-4 {
+  padding-bottom: 4em;
+}
+
 .donasi .donasi-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2735,7 +2742,7 @@ Donasi Page Section
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-bottom: 3em;
+  margin-bottom: 2em;
 }
 
 .donasi-page > .donasi-item {
@@ -3698,10 +3705,13 @@ Payment Page Section
 
 .slide-tab .slide-title .col .iconify {
   font-size: 32px;
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+}
+
+.slide-tab .slide-title .col .iconify.rotate {
+  -webkit-transform: rotate(90deg) !important;
+          transform: rotate(90deg) !important;
 }
 
 .slide-tab .slide-content {
@@ -4032,44 +4042,213 @@ end Image Map
 Panduan
 --------------------------------- */
 .panduan {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
+  padding: 2em 5%;
 }
 
-.panduan ul.box-menu {
-  list-style: none;
-  position: fixed;
+.panduan .panduan-toggle {
+  background-color: #f0f0f0;
+  padding: 1.3em 1.6em;
+  border-radius: 15px;
+  margin: 0.8em 0px;
+}
+
+.panduan .panduan-toggle > .title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 45em;
-  width: 20em;
-  padding: 1.4em;
-  background-color: #02B3E5;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  cursor: pointer;
 }
 
-.panduan ul.box-menu li > a {
-  text-decoration: none;
-  font-weight: bold;
-  font-weight: 22px;
+.panduan .panduan-toggle > .title > .iconify {
+  font-size: 22px;
+  color: #02B3E5;
+}
+
+.panduan .panduan-toggle > .title > .iconify.rotate {
+  -webkit-transform: rotate(90deg) !important;
+          transform: rotate(90deg) !important;
+}
+
+.panduan .panduan-toggle > .content {
+  margin: 0.6em 0px;
+}
+
+.panduan .panduan-toggle > .content ol, .panduan .panduan-toggle > .content ul {
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.panduan-zakat {
+  padding: 2em 5%;
+  padding-bottom: 4em;
+}
+
+.panduan-zakat .box {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  gap: 3.5em;
+  margin: 1em 0px;
+}
+
+.panduan-zakat .box .items > img {
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 10em;
+  border-radius: 15px;
+}
+
+.panduan-zakat .box .items .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0.6em 0px;
+}
+
+.panduan-zakat .box .items .title > h3 {
+  padding-right: 0.3em;
+}
+
+.panduan-zakat .box .items .title > a.btn.btn-sec {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0.5em 0px;
+}
+
+@media only screen and (max-width: 1095px) {
+  .panduan-zakat .box {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  .panduan-zakat .box {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+.panduan-zakat-lightbox {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 80;
+  background-color: #1d70dd7a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 3%;
+  display: none;
+}
+
+.panduan-zakat-lightbox .data {
+  width: 90%;
+  max-width: 40em;
+  margin: 0px auto;
+  border-radius: 15px;
+  background-color: #fff;
+  overflow: hidden;
+  position: relative;
+}
+
+.panduan-zakat-lightbox .data > .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.panduan-zakat-lightbox .data > .close .iconify {
+  font-size: 22px;
   color: #fff;
 }
 
-.panduan .box-content {
-  margin-left: 20em;
-  padding: 2em;
+.panduan-zakat-lightbox .data > .close:hover {
+  -webkit-box-shadow: 5px 10px 20px -5px rgba(0, 175, 224, 0.18);
+          box-shadow: 5px 10px 20px -5px rgba(0, 175, 224, 0.18);
+  -webkit-transform: scale(1.1, 1.1);
+          transform: scale(1.1, 1.1);
+}
+
+.panduan-zakat-lightbox .data > img {
+  display: block;
+  width: 100%;
+  height: 12em;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.panduan-zakat-lightbox .data .data-box {
+  overflow-y: auto;
+  padding: 5%;
+  max-height: 55vh;
+}
+
+.panduan-zakat-lightbox .data .data-box .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.panduan-zakat-lightbox .data .data-box .title > img {
+  width: 2em;
+  margin-right: 0.4em;
+}
+
+.panduan-zakat-lightbox .data .data-box > div {
+  margin: 0.9em 0px;
+}
+
+.panduan-zakat-lightbox .data .data-box .ketentuan > .box {
+  margin: 1em 0px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  gap: 2em;
+}
+
+.panduan-zakat-lightbox .data .data-box .ketentuan > .box .col > img {
+  width: 4em;
+}
+
+.panduan-zakat-lightbox .data .data-box .hitungan .content {
+  margin: 0.7em 0px;
+}
+
+.panduan-zakat-lightbox .data .data-box .hitungan .content > img {
+  display: block;
+  width: 100%;
 }
 
 /* ---------------------------------

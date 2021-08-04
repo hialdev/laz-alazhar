@@ -415,6 +415,10 @@ $(document).ready(function() {
                 .siblings('.slide-content')
                     .slideUp();
     });
+    slideTab.click(function(){
+        slideTab.find('.col > .iconify').removeClass('rotate');
+        $(this).find('.col > .iconify').toggleClass('rotate');
+    });
 });
 
 //payment-item
@@ -465,4 +469,47 @@ $(document).ready(function() {
 });
 //-------------------------------
 // End Kantor Layanan / Image Map Page
+//-------------------------------
+//-------------------------------
+// Panduan
+//-------------------------------
+//panduan toggle
+var faq = $('.panduan-toggle');
+var faqContent = $('.panduan-toggle > .content');
+var arrowOpen = 'eva:arrow-ios-downward-outline';
+var arrowClose = 'eva:arrow-ios-forward-fill';
+
+faqContent.hide();
+faq.click(function(){
+    $(this).find('.title > .iconify').toggleClass('rotate');
+    $(this).find('.content').slideToggle();
+});
+
+//Excerpt Panduan Zakat
+var panjang = 23;
+$('.panduan-zakat .box .items .title > h3').each(function() {
+    if( $(this).text().length > panjang ){
+        $(this).text($(this).text().substr(0, panjang) + '...');
+    }
+});
+
+//Lightbox Panduan Zakat
+var pzLightbox = $('.panduan-zakat-lightbox');
+var pzlData = $('.panduan-zakat-lightbox .data');
+var pzBtn = $('.panduan-zakat .box .items a');
+var pzClose = $('.panduan-zakat-lightbox .data > .close');
+
+$(document).ready(function(){
+    pzBtn.click(function(){
+        var pzlId = $(this).attr('href');
+        pzLightbox.css('display','flex');
+        pzlData.hide();
+        pzLightbox.find(pzlId).show();
+    });
+    pzClose.click(function(){
+        pzLightbox.hide();
+    });
+});
+//-------------------------------
+// End Panduan
 //-------------------------------

@@ -236,53 +236,53 @@ $('.donasi-box').owlCarousel({
     }
 });
 
-//Galeri
-$(".galeri-box").owlCarousel({
-    autoplay: true,
-    lazyLoad: true,
-    dots:false,
-    loop: true,
-    margin: 0,
-    responsiveClass: true,
-    nav: false,
-    responsive: {
-        0: {
-            items: 2
-        },
+// //Galeri
+// $(".galeri-box").owlCarousel({
+//     autoplay: true,
+//     lazyLoad: true,
+//     dots:false,
+//     loop: true,
+//     margin: 0,
+//     responsiveClass: true,
+//     nav: false,
+//     responsive: {
+//         0: {
+//             items: 2
+//         },
     
-        600: {
-            items: 3
-        },
+//         600: {
+//             items: 3
+//         },
     
-        1024: {
-            items: 4
-        },
+//         1024: {
+//             items: 4
+//         },
     
-        1366: {
-            items: 4
-        }
-    }
-});
+//         1366: {
+//             items: 4
+//         }
+//     }
+// });
 
-//Brand
-$('.brand').owlCarousel({
-    loop:true,
-    margin:20,
-    dots:false,
-    nav:false,
-    autoplay:true,
-    responsive:{
-        0:{
-            items:3
-        },
-        600:{
-            items:4
-        },
-        1000:{
-            items:6
-        }
-    }
-})
+// //Brand
+// $('.brand').owlCarousel({
+//     loop:true,
+//     margin:20,
+//     dots:false,
+//     nav:false,
+//     autoplay:true,
+//     responsive:{
+//         0:{
+//             items:3
+//         },
+//         600:{
+//             items:4
+//         },
+//         1000:{
+//             items:6
+//         }
+//     }
+// })
 
 //-------------------------------
 // End Home Page
@@ -499,6 +499,8 @@ var pzlData = $('.panduan-zakat-lightbox .data');
 var pzBtn = $('.panduan-zakat .box .items a');
 var pzClose = $('.panduan-zakat-lightbox .data > .close');
 
+var zisOpt = $('#zakat select.ctg-tab option');
+
 $(document).ready(function(){
     pzBtn.click(function(){
         var pzlId = $(this).attr('href');
@@ -509,7 +511,27 @@ $(document).ready(function(){
     pzClose.click(function(){
         pzLightbox.hide();
     });
+
+    var selected = zisOpt.attr('value');
+    zisOpt.each(function() {
+        if($(this).is(':selected')){
+            console.log(selected);
+        }
+    })
 });
+
+
 //-------------------------------
 // End Panduan
 //-------------------------------
+//-------------------------------
+// Program
+//-------------------------------
+$('.hero-program .hero-box').owlCarousel({
+    autoplay: true,
+    loop:false,
+    dots:true,
+    margin:0,
+    nav:false,
+    items:1,
+});

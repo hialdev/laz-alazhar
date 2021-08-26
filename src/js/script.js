@@ -535,3 +535,13 @@ $('.hero-program .hero-box').owlCarousel({
     nav:false,
     items:1,
 });
+
+//Detail Togle List Program Menu
+var tgl_list = $('.program-detail .tgl-list');
+var ulList = $('.program-detail .side ul');
+
+$(document).ready(function(){
+    tgl_list.click(function(){
+        ulList.toggle(300);
+    })
+});

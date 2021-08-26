@@ -733,6 +733,7 @@ h3, .h3, .h3 * {
 .sosmed-box .sosmed-icon .iconify {
   font-size: 18px;
   margin-bottom: -3px;
+  color: currentColor;
 }
 
 header {
@@ -3334,6 +3335,202 @@ Program Page Section
   .program .program-box {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
+  }
+}
+
+.program-detail {
+  padding: 1em 5%;
+}
+
+.program-detail .box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 4em;
+}
+
+.program-detail .side {
+  position: relative;
+}
+
+.program-detail .side .tgl-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0.3em;
+  width: 40px;
+  height: 40px;
+  background-color: #2D67B1;
+  color: #fff;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  cursor: pointer;
+  display: none;
+}
+
+.program-detail .side .tgl-list:hover {
+  -webkit-box-shadow: 5px 10px 20px -5px rgba(0, 175, 224, 0.18);
+          box-shadow: 5px 10px 20px -5px rgba(0, 175, 224, 0.18);
+}
+
+.program-detail .side .tgl-list .iconify {
+  font-size: 18px;
+  color: currentColor;
+}
+
+.program-detail .side ul > li {
+  list-style: none;
+}
+
+.program-detail .side ul > li > .menu {
+  display: inline-block;
+  padding: 1em 1.4em;
+  color: #2F2D30;
+  text-decoration: none;
+  border-radius: 15px;
+  -webkit-box-shadow: 5px 10px 20px -5px rgba(0, 175, 224, 0.18);
+          box-shadow: 5px 10px 20px -5px rgba(0, 175, 224, 0.18);
+  margin: 0.7em 0px;
+  font-weight: bold;
+  border: 2px solid transparent;
+}
+
+.program-detail .side ul > li > .menu:hover, .program-detail .side ul > li > .menu.active {
+  border: 2px solid #02B3E5;
+  color: #02B3E5;
+}
+
+.program-detail .content-box {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.program-detail .content-box .content > img.banner {
+  display: block;
+  width: 100%;
+  border-radius: 15px;
+  margin: 1em 0px;
+  max-width: 100%;
+}
+
+.program-detail .content-box .content img.logo-program {
+  width: 100%;
+  max-width: 20em;
+}
+
+.program-detail .content-box .content img {
+  width: 100%;
+  max-width: 50em;
+  margin: 2em 0px;
+}
+
+.program-detail .content-box .sosmed {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.program-detail .content-box .sosmed > .icon a {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0.7em;
+  width: 40px;
+  height: 40px;
+  background-color: #f0f0f0;
+  color: #2D67B1;
+  border-radius: 15px;
+}
+
+.program-detail .content-box .sosmed > .icon a.wa {
+  color: #00B07C;
+}
+
+.program-detail .content-box .sosmed > .icon a.wa:hover {
+  background-color: #00B07C;
+  color: #fff;
+}
+
+.program-detail .content-box .sosmed > .icon a.ig {
+  color: #eb1451;
+}
+
+.program-detail .content-box .sosmed > .icon a.ig:hover {
+  background-color: #eb1451;
+  color: #fff;
+}
+
+.program-detail .content-box .sosmed > .icon a.fb {
+  color: #2D67B1;
+}
+
+.program-detail .content-box .sosmed > .icon a.fb:hover {
+  background-color: #2D67B1;
+  color: #fff;
+}
+
+.program-detail .content-box .sosmed > .icon a .iconify {
+  color: currentColor;
+  font-size: 18px;
+}
+
+@media only screen and (max-width: 1095px) {
+  .program-detail {
+    padding: 0px;
+    position: relative;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .program-detail .side {
+    position: fixed;
+    left: 0;
+    z-index: 100;
+  }
+  .program-detail .side .tgl-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .program-detail .side ul {
+    background-color: #fff;
+    -webkit-box-shadow: 5px 20px 60px -10px rgba(0, 112, 255, 0.4);
+            box-shadow: 5px 20px 60px -10px rgba(0, 112, 255, 0.4);
+    padding: 0.6em 2em;
+    margin-top: 1em;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    max-height: 70vh;
+    overflow-y: auto;
+    display: none;
+  }
+  .program-detail .content {
+    padding: 5%;
   }
 }
 

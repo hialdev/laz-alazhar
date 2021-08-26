@@ -621,7 +621,7 @@ h3,.h3,.h3 *{
         &.wa{background-color: rgb(36, 163, 85);}
         &.tele{background-color: rgb(0, 102, 255);}
         &.more{background-color: $blue;}
-        .iconify{font-size: 18px;margin-bottom: -3px;}
+        .iconify{font-size: 18px;margin-bottom: -3px;color: currentColor;}
     }
 }
 
@@ -2798,6 +2798,133 @@ Program Page Section
     
 }
 
+//Detail
+.program-detail{
+    padding: 1em 5%;
+    .box{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        gap: 4em;
+    }
+    .side{
+        position: relative;
+        .tgl-list{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.3em;
+            width: 40px;
+            height: 40px;
+            background-color: $darkblue;
+            color: $light;
+            border-top-right-radius: $bd-rad;
+            border-bottom-right-radius: $bd-rad;
+            cursor: pointer;
+            display: none;
+            &:hover{
+                box-shadow: $hcard-shad;
+            }
+            .iconify{
+                font-size: 18px;
+                color: currentColor;
+            }
+        }
+        ul > li { list-style: none;
+            > .menu{
+                display: inline-block;
+                padding: 1em 1.4em;
+                color: $darken;
+                text-decoration: none;
+                border-radius: $bd-rad;
+                box-shadow: $hcard-shad;
+                margin: 0.7em 0px;
+                font-weight: bold;
+                border:2px solid transparent;
+                &:hover,&.active{
+                    border:2px solid $blue;
+                    color: $blue;
+                }
+            }
+        }
+    }
+    .content-box{
+        flex: 1;
+        .content{
+            > img.banner{
+                display: block;
+                width: 100%;
+                border-radius: $bd-rad;
+                margin: 1em 0px;
+                max-width: 100%;
+            }
+            img.logo-program{
+                width: 100%;
+                max-width: 20em;
+            }
+            img{
+                width: 100%;
+                max-width: 50em;
+                margin: 2em 0px;
+            }
+        }
+        .sosmed{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            >.icon a{
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0.7em;
+                width: 40px;
+                height: 40px;
+                background-color: $gray;
+                color: $darkblue;
+                border-radius: $bd-rad;
+                &.wa{color:#00B07C;&:hover{background-color: #00B07C;color: $light;}}
+                &.ig{color: #eb1451;&:hover{background-color: #eb1451;color: $light;}}
+                &.fb{color: $darkblue;&:hover{background-color: $darkblue;color: $light;}}
+                .iconify{
+                    color: currentColor;
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: $w-lg) {
+        padding: 0px;
+        position: relative;
+        justify-content: flex-start;
+        .side{
+            position: fixed;
+            left: 0;
+            z-index: 100;
+            .tgl-list{
+                display: flex;
+            }
+            ul{
+                background-color: $light;
+                box-shadow: $box-shad;
+                padding: 0.6em 2em;
+                margin-top: 1em;
+                border-top-right-radius: $bd-rad;
+                border-bottom-right-radius: $bd-rad;
+                max-height: 70vh;
+                overflow-y: auto;
+                display: none;
+            }
+            
+        }
+        .content{
+            padding: 5%;
+        }
+    }
+    @media only screen and (max-width: $w-sm) {
+        
+    }
+}
 /* ---------------------------------
 End Program Page Section
 --------------------------------- */

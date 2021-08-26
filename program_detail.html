@@ -17,7 +17,7 @@
 </head>
 
 <body>
-
+    
     <header>
         <div class="header static">
             <div class="logo-box"><a href="index.html"><img src="src/img/logo-white.png" alt="" class="logo"></a></div>
@@ -65,7 +65,7 @@
                                 <li><a href="kantor-layanan.html">Kantor Layanan</a></li>
                             </ul>
                         </li>
-                        <li><a href="#">Panduan</a></li>
+                        <li><a href="panduan.html">Panduan</a></li>
                     </ul>
                 </nav>
                 <div class="icon-btn">
@@ -86,7 +86,7 @@
     <div class="lightbox">
         <div class="form-box">
             <div class="close"><span class="iconify" data-icon="eva:close-circle-outline" data-inline="false"></span>Tutup</div>
-
+        
             <div class="form">
                 <form class="daftar-form" id="daftar">
                     <h3 class="blue">Daftar</h3>
@@ -129,166 +129,52 @@
         </div>
     </div>
 
-    <div class="spacing"></div>
+    <div class="spacing">
 
-    <section class="hero-slider">
-        <div class="slider-box owl-carousel owl-theme">
-            <div class="slider-item">
-                <div class="slider-img">
-                    <img src="src/img/hero-slider.jpeg" alt="">
-                </div>
-                <a href="berita-item.html" class="slider-content">
-                    <h2>Membajak Sawah Tradisional dengan Kerbau di Desa Cilembeu</h2>
-                    <p>Maulana Sholeh / Galeri LAZ Al Azhar</p>
-                </a>
-            </div>
-
-            <div class="slider-item">
-                <div class="slider-img">
-                    <img src="src/img/hero-slider.jpeg" alt="">
-                </div>
-                <a href="berita-item.html" class="slider-content">
-                    <h2>Membajak Sawah Tradisional dengan Kerbau di Desa Cilembeu</h2>
-                    <p>Maulana Sholeh / Galeri LAZ Al Azhar</p>
-                </a>
-            </div>
-
-            <div class="slider-item">
-                <div class="slider-img">
-                    <img src="src/img/hero-slider.jpeg" alt="">
-                </div>
-                <a href="berita-item.html" class="slider-content">
-                    <h2>Membajak Sawah Tradisional dengan Kerbau di Desa Cilembeu</h2>
-                    <p>Maulana Sholeh / Galeri LAZ Al Azhar</p>
-                </a>
-            </div>
-
-            <div class="slider-item">
-                <div class="slider-img">
-                    <img src="src/img/hero-slider.jpeg" alt="">
-                </div>
-                <a href="berita-item.html" class="slider-content">
-                    <h2>Membajak Sawah Tradisional dengan Kerbau di Desa Cilembeu</h2>
-                    <p>Maulana Sholeh / Galeri LAZ Al Azhar</p>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Ini lightbox ketika item galery di click -->
-    <div class="gallery-lightbox">
-        <div class="close"><span class="iconify" data-icon="eva:close-circle-outline" data-inline="false"></span>Tutup</div>
-        <div class="gal">
-            <img id="gallery-lightbox" src="src/img/galeri (1).jpg" alt="">
-            <div class="content">
-                <div class="btn-box">
-                    <a href=""><span class="iconify" data-icon="akar-icons:download" data-inline="false"></span></a>
-                    <a href=""><span class="iconify" data-icon="fa-regular:share-square" data-inline="false"></span></a>
-                    <a href=""><span class="iconify" data-icon="carbon:content-view" data-inline="false"></span></a>
-                </div>
-                <div class="desc">
-                    <h3 id="title"></h3><!--Diambil dari attribut title pada class gallery-item -->
-                    <p class="txt-sm" id="author"></p><!--Diambil dari attribut author pada class gallery-item -->
-                </div>
-            </div>
-        </div>
     </div>
-    <!-- end Lightbox gallery -->
 
-    <section class="gallery">
-        <h2>Galeri</h2>
-        <hr class="divider">
-
-
-        <div class="select-dropdown">
-
-            <button></button>
-
-            <div class="options">
-                <input id="radio-africa" type="radio" name="region" value="africa" checked>
-                <label style="--index: 1" for="radio-africa">Semua</label>
-
-                <input id="radio-asia" type="radio" name="region" value="asia">
-                <label style="--index: 2" for="radio-asia">Kategori 1</label>
-
-                <input id="radio-australia" type="radio" name="region" value="australia">
-                <label style="--index: 3" for="radio-australia">Kategori 2</label>
-
-                <input id="radio-europe" type="radio" name="region" value="europe">
-                <label style="--index: 4" for="radio-europe">Kategori 3</label>
-
+    <section class="program-detail">
+        <div class="box">
+            <div class="side">
+                <div class="tgl-list"><span class="iconify" data-icon="bi:list-ul"></span></div>
+                <ul><h2>Program</h2>
+                    <hr class="divider">
+                    <!-- Konsepnya Make Slug Enak keknya om -->
+                    <li><a class="menu active" href="">Rumah Gemilang Indonesia</a></li>
+                    <li><a class="menu" href="">Rumah Gemilang Indonesia</a></li>
+                    <li><a class="menu" href="">Rumah Gemilang Indonesia</a></li>
+                </ul>
             </div>
-
-            <svg viewBox="0 0 24 24">
-                <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"></path>
-            </svg>
-
-        </div>
-
-        <div class="search-container">
-              <input type="text" placeholder="Search.." name="search">
-              <button type="submit"><span class="iconify" data-icon="bx:bx-search-alt" data-inline="false"></span></button>
-        </div>
-
-        <div class="berita-tabs">
-            <ul id="tabs-nav">
-                <li><a href="#semua">Semua</a></li>
-                <li><a href="#program">Program</a></li>
-                <li><a href="#inspirasi">Inspirasi</a></li>
-                <li><a href="#event">Event</a></li>
-            </ul>
-
-            <span id="semua" class="!tab-content"> <!-- ini tab content-->
-                <div class="gallery-box">
-
-                    <!-- item gallery -->
-                    
-                        <div class="gallery-item" title="This Title for Image 1" author="Author Satu">
-                            <img src="src/img/galeri (1).jpg" alt="">
-                            <div class="gallery-hover">
-                                <span class="iconify" data-icon="fa-regular:eye" data-inline="false"></span>
-                            </div>
+            <div class="content-box">
+                <div class="content" id="rgi">
+                    <p><strong>Beranda / Program / <span class="blue">Rumah Gemilang Indonesia</span></strong></p>
+                    <img class="banner" src="src/img/Halaman Program [Photo2].jpg" alt="">
+                    <div class="sosmed">
+                        <div class="icon">
+                            <strong><span>Follow Media Sosial :</span></strong>
+                            <a href="" class="wa"><span class="iconify" data-icon="cib:whatsapp"></span></a>
+                            <a href="" class="fb"><span class="iconify" data-icon="brandico:facebook"></span></a>
+                            <a href="" class="ig"><span class="iconify" data-icon="bi:instagram"></span></a>
                         </div>
-                        <div class="gallery-item" title="This Title for Image 2" author="Author Dua">
-                            <img src="src/img/galeri (5).jpg" alt="">
-                            <div class="gallery-hover">
-                                <span class="iconify" data-icon="fa-regular:eye" data-inline="false"></span>
-                            </div>
-                        </div>
-                        <div class="gallery-item" title="This Title for Image 3" author="Author Tiga">
-                            <img src="src/img/galeri (6).jpg" alt="">
-                            <div class="gallery-hover">
-                                <span class="iconify" data-icon="fa-regular:eye" data-inline="false"></span>
-                            </div>
-                        </div>
-                        <div class="gallery-item" title="This Title for Image 4" author="Author Empat">
-                            <img src="src/img/galeri (2).jpg" alt="">
-                            <div class="gallery-hover">
-                                <span class="iconify" data-icon="fa-regular:eye" data-inline="false"></span>
-                            </div>
-                        </div>
-                        <div class="gallery-item" title="This Title for Image 5" author="Author Lima">
-                            <img src="src/img/galeri (3).jpg" alt="">
-                            <div class="gallery-hover">
-                                <span class="iconify" data-icon="fa-regular:eye" data-inline="false"></span>
-                            </div>
-                        </div>
-                        <div class="gallery-item" title="This Title for Image 6" author="Author Enam">
-                            <img src="src/img/galeri (4).jpg" alt="">
-                            <div class="gallery-hover">
-                                <span class="iconify" data-icon="fa-regular:eye" data-inline="false"></span>
-                            </div>
-                        </div>
+                        <div class="btn-donasi"><a href="" class="btn btn-prm">Donasi Program</a></div>
+                    </div>
+                    <img class="logo-program" src="src/img/rumah-gemilang.png" alt="">
+                    <div class="text">
+                        <h1>Rumah Gemilang Indonesia</h1>
+                        <p><i><span class="blue">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                            nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute iru”</span></i></p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                            dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem
+                            ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                            nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum do
+                        </p>
+                        <img src="src/img/suasana-wisuda-akhir-2017-ruma-gemilang-_171230233825-370.jpeg" alt="">
+                    </div>
                 </div>
-
-                <div class="paginate">
-                    <div class="item"><span class="iconify" data-icon="eva:arrow-ios-back-outline" data-inline="false"></span></div>
-                    <div class="item">1</div>
-                    <div class="item">2</div>
-                    <div class="item">3</div>
-                    <div class="item"><span class="iconify" data-icon="eva:arrow-ios-forward-outline" data-inline="false"></span></div>
-                </div>
-            </span>
+            </div>
         </div>
     </section>
 

@@ -1413,180 +1413,180 @@ footer{
     }
 }
 
-// /* 
-// post Page
-// --------------------------------- */
-// .post{
-//     padding: 1em $side;
-//     padding-bottom: 6em;
+//post Page
+/* 
+--------------------------------- */
+.post{
+    padding: 1em $side;
+    padding-bottom: 6em;
 
-//     .head-post{
-//         display: flex;
-//         justify-content: space-between;
-//         align-items: center;
-//         padding: 1em 0px;
+    .head-post{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1em 0px;
 
-//         @media only screen and (max-width: $w-sm) {
-//             flex-direction: column;
-//         }
+        @media only screen and (max-width: $w-sm) {
+            flex-direction: column;
+        }
 
-//         .content{
-//             margin-bottom: 0.8em;
-//             >strong{
-//                 margin-right: 0.3em;
-//                 margin-bottom: 0.4em;
-//             }
-//             > a span.bg-blue{
-//                 margin-right: 0.3em;
-//             }
-//         }
-//         .btn-post{
-//             display: flex;
-//             justify-content: space-evenly;
-//             align-items: center;
-//             > a {
-//                 padding: 0.4em;
-//                 text-align: center;
-//                 background-color: $gray;
-//                 color: $blue;
-//                 margin: 0.2em;
-//                 &:hover{
-//                     background-color: $blue;
-//                     color: $light;
-//                 }
+        .content{
+            margin-bottom: 0.8em;
+            >strong{
+                margin-right: 0.3em;
+                margin-bottom: 0.4em;
+            }
+            > a span.bg-blue{
+                margin-right: 0.3em;
+            }
+        }
+        .btn-post{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            > a {
+                padding: 0.4em;
+                text-align: center;
+                background-color: $gray;
+                color: $blue;
+                margin: 0.2em;
+                &:hover{
+                    background-color: $blue;
+                    color: $light;
+                }
 
-//                 .iconify{
-//                     margin-bottom: -3px;
-//                     font-size: 18px;
-//                 }
-//             }
+                .iconify{
+                    margin-bottom: -3px;
+                    font-size: 18px;
+                }
+            }
 
-//             .box-sosmed{
-//                 background-color: $blue;
-//                 display: flex;
-//                 justify-content: center;
-//                 align-items: center;
-//                 margin-left: 0.2em;
-//                 padding: 0.3em;
-                
-//                 .icon{
-//                     display: inline-block;
-//                     color: $light;
-//                     &:not(:last-child){
-//                         margin-right: 0.4em;
-//                     }
-//                     .iconify{
-//                         border: 1.2px solid $light;
-//                         border-radius: 50px;
-//                         padding: 0.2em;
-//                         font-size: 20px;
-//                         margin-bottom: -4px;
-                        
-//                         &:hover{
-//                             background-color: $light;
-//                             color: $blue;
-//                         }
-//                     }
-//                 }
-//             }
-//         }
-//     }
-    
-//     .img-banner{
-//         display: block;
+            .box-sosmed{
+                background-color: $blue;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-left: 0.2em;
+                padding: 0.3em;
+            
+                .icon{
+                    display: inline-block;
+                    color: $light;
+                    &:not(:last-child){
+                        margin-right: 0.4em;
+                    }
+                    .iconify{
+                        border: 1.2px solid $light;
+                        border-radius: 50px;
+                        padding: 0.2em;
+                        font-size: 20px;
+                        margin-bottom: -4px;
+                    
+                        &:hover{
+                            background-color: $light;
+                            color: $blue;
+                        }
+                    }
+                }
+            }
+        }
+    }
 
-//         img{
-//             width: 100%;
-//             margin: 0px auto;
-//         }
-//     }
+    .img-banner{
+        display: block;
 
-//     .post-box{
-//         display: flex;
-//         justify-content: space-between;
-//         margin:3em 0px;
-//         align-items: flex-start;
+        img{
+            width: 100%;
+            margin: 0px auto;
+        }
+    }
 
-//         .content-post{
-//             border: 0px solid $dark;
-//             border-radius: $bd-rad;
-//             box-shadow: $box-shad;
-//             padding: 5%;
-//             flex: 0 0 70%;
-//             @media only screen and (max-width: $w-sm) {
-//                 flex: 0 0 100%;
-//             }
+    .post-box{
+        display: flex;
+        justify-content: space-between;
+        margin:3em 0px;
+        align-items: flex-start;
 
-//             img.header-img{
-//                 width: 100%;
-//             }
-//             .tag-box{
-//                 margin: 1em 0px;
-//                 .tag{
-//                     padding: 0.1em 0.5em;
-//                     background-color: $green;
-//                     color: $light;
-//                     border-radius: 5px;
-//                 }
-//             }
-//             .meta{
-//                 display: flex;
-//                 justify-content: space-between;
-//                 align-items: center;
-//                 margin-bottom: 0.4em;
-//             }
-//             .sosmed-box{
-//                 display: flex;
-                
-//                 .sosmed-icon{
-//                     color:$light;
-//                     padding:0.8em 1.1em;
+        .content-post{
+            border: 0px solid $dark;
+            border-radius: $bd-rad;
+            box-shadow: $box-shad;
+            padding: 5%;
+            flex: 0 0 70%;
+            @media only screen and (max-width: $w-sm) {
+                flex: 0 0 100%;
+            }
 
-//                     &.fb{background-color: $darkblue;}
-//                     &.tw{background-color: $blue;}
-//                     &.mail{background-color: rgb(230, 16, 62);}
-//                     &.wa{background-color: rgb(36, 163, 85);}
-//                     &.tele{background-color: rgb(0, 102, 255);}
-//                     &.more{background-color: $blue;}
-//                     .iconify{font-size: 18px;margin-bottom: -3px;}
-//                 }
-//             }
+            img.header-img{
+                width: 100%;
+            }
+            .tag-box{
+                margin: 1em 0px;
+                .tag{
+                    padding: 0.1em 0.5em;
+                    background-color: $green;
+                    color: $light;
+                    border-radius: 5px;
+                }
+            }
+            .meta{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 0.4em;
+            }
+            .sosmed-box{
+                display: flex;
+            
+                .sosmed-icon{
+                    color:$light;
+                    padding:0.8em 1.1em;
 
-//             .content .mobile-banner{
-//                 display: none;
-//                 margin: 2em 0px;
-//                 @media only screen and (max-width: $w-sm) {
-//                     display: block;
-//                 }
-//                 a img{
-//                     margin: 0.4em auto;
-//                 }
-//                 .hori{
-//                     width: 100%;
-//                     max-height: 10em;
-//                 }
-                
-//                 .vertic{
-//                     width: 100%;
-//                     max-width: 10em;
-//                 }
-//             }
-//         }
-//         .sidebar-post{
-//             padding: 0px 2em;
+                    &.fb{background-color: $darkblue;}
+                    &.tw{background-color: $blue;}
+                    &.mail{background-color: rgb(230, 16, 62);}
+                    &.wa{background-color: rgb(36, 163, 85);}
+                    &.tele{background-color: rgb(0, 102, 255);}
+                    &.more{background-color: $blue;}
+                    .iconify{font-size: 18px;margin-bottom: -3px;}
+                }
+            }
 
-//             @media only screen and (max-width: $w-sm) {
-//                 display: none;
-//             }
+            .content .mobile-banner{
+                display: none;
+                margin: 2em 0px;
+                @media only screen and (max-width: $w-sm) {
+                    display: block;
+                }
+                a img{
+                    margin: 0.4em auto;
+                }
+                .hori{
+                    width: 100%;
+                    max-height: 10em;
+                }
+            
+                .vertic{
+                    width: 100%;
+                    max-width: 10em;
+                }
+            }
+        }
+        .sidebar-post{
+            padding: 0px 2em;
 
-//             > img{
-//                 width: 100%;
-//                 margin-bottom: 2em;
-//             }
-//         }
-//     }
+            @media only screen and (max-width: $w-sm) {
+                display: none;
+            }
 
-// }
+            > img{
+                width: 100%;
+                margin-bottom: 2em;
+            }
+        }
+    }
+
+}
 
 // /* ---------------------------------
 // End post */
@@ -2228,19 +2228,28 @@ Tentang Page Section
             
         }
     }
-
+    
     .pengurus-box{
         margin:2em 0px;
+        overflow: hidden;
+        padding: 2em 0px;
+        .owl-stage-outer{
+            overflow: visible;
+        }
         .pengurus-item{
             display: flex;
-            flex-direction: column;
+            justify-content: space-evenly;
             align-items: center;
             overflow: hidden;
+            gap: 1em;
+            padding:2em;
+            border-radius: $bd-rad;
+            box-shadow: $hcard-shad;
             .pengurus-img{
                 display: block;
                 border-radius: 99px;
-                width: 10em;
-                height: 10em;
+                width: 100px;
+                height: 100px;
                 object-fit: cover;
                 overflow: hidden;
                 img{
@@ -2248,13 +2257,99 @@ Tentang Page Section
                 }
             }
             .pengurus-content{
-                text-align: center;
             }
         }
     }
 
 }
 
+//Lightbox Pengurus
+.lightbox-pengurus{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #0000002f;
+    z-index: 63;
+    display: none;
+    .box{
+        border-radius: $bd-rad;
+        overflow: hidden;
+        background-color: $light;
+        width: 95%;
+        max-width: 60em;
+        overflow-y: auto;
+        height: auto;
+        max-height: 85vh;
+        position: relative;
+        .close{
+            background-color: $gray;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: #eb1431;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            border-radius: $bd-rad;
+            &:hover{
+                background-color: #eb1431;
+                color: $light;
+            }
+            .iconify{
+                font-size: 18px;
+                color: currentColor;
+            }
+        }
+    }
+    .content{
+        padding: 2em;
+        border-left: 5px solid $blue;
+        .pengurus{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin: 1em 0px;
+            gap: 1.3em;
+            .pengurus-img{
+                display: block;
+                border-radius: 99px;
+                width: 100px;
+                height: 100px;
+                object-fit: cover;
+                overflow: hidden;
+                img{
+                    width: 100%;
+                }
+            }
+        }
+        >.icon{ margin: 1.4em 0px;
+            a{
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.7em;
+            width: 40px;
+            height: 40px;
+            background-color: $gray;
+            color: $darkblue;
+            border-radius: $bd-rad;
+            &.wa{color:#00B07C;&:hover{background-color: #00B07C;color: $light;}}
+            &.ig{color: #eb1451;&:hover{background-color: #eb1451;color: $light;}}
+            &.fb{color: $darkblue;&:hover{background-color: $darkblue;color: $light;}}
+            .iconify{
+                color: currentColor;
+                font-size: 18px;
+                }
+            }
+        }
+    }
+}
 /* ---------------------------------
 End Tentang Page Section
 --------------------------------- */
@@ -2920,9 +3015,6 @@ Program Page Section
         .content{
             padding: 5%;
         }
-    }
-    @media only screen and (max-width: $w-sm) {
-        
     }
 }
 /* ---------------------------------

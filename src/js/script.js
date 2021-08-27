@@ -313,24 +313,26 @@ imgOn.click(function(){
 //-------------------------------
 var pengurus = $('.pengurus-box');
 pengurus.owlCarousel({
-    loop:true,
+    autoWidth:true,
     margin:10,
     dots:false,
     nav:false,
     autoplay:true,
-    responsive:{
-        0:{
-            items:2
-        },
-        600:{
-            items:3
-        },
-        1000:{
-            items:4
-        }
-    }
 })
 
+//Lightbox Pengurus
+var Lpengurus = $('.lightbox-pengurus');
+var LpClose = $('.lightbox-pengurus .close');
+var btnPengurus = $('.btn-pengurus');
+$(document).ready(function(){
+    btnPengurus.click(function(){
+        Lpengurus.css('display','flex');
+    });
+    LpClose.click(function(){
+        Lpengurus.fadeOut(200);
+        Lpengurus.css('display','close');
+    });
+});
 //-------------------------------
 // End Tentang Page
 //-------------------------------

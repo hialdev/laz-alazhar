@@ -142,6 +142,22 @@ adaftar.click(function(){
         masukform.slideUp(900);
     }
 });
+
+//Convert to IDR Format
+var calcZiswaf = $('.ziswaf-hitung');
+var zisTab = $('.ziswaf-tabs #tabs-nav li');
+const rupiah = (number)=>{
+    return new Intl.NumberFormat("id-ID", {
+      style: "currency",
+      currency: "IDR"
+    }).format(number);
+}
+
+calcZiswaf.find('fieldset input').keyup(function(e) {
+    var val = $(this).val();
+    var idr = rupiah(val);
+    $('.ziswaf-hitung span#idr').text(idr);
+});
 //-------------------------------
 // End Components
 //-------------------------------
@@ -156,7 +172,7 @@ adaftar.click(function(){
 $('.tab-content').hide();
 
 //Tab Content Zakat
-$('.zakat-tabs #tabs-nav li:first-child').addClass('tab-active');
+$('.ziswaf-tabs #tabs-nav li:first-child').addClass('tab-active');
 $('#zakat').show();
 
 
@@ -169,8 +185,6 @@ $('#semua').show();
 $('.donate-tab #tabs-nav li:last-child').addClass('tab-active');
 $('#donatur').show();
 
-$(".tab-button").hide();
-$("#zakat.tab-button").show();
 // Click function
 $('#tabs-nav li').click(function(){
   $('#tabs-nav li').removeClass('tab-active');
@@ -179,8 +193,6 @@ $('#tabs-nav li').click(function(){
   
   var activeTab = $(this).find('a').attr('href');
   $(activeTab).fadeIn();
-  $(".tab-button").hide();
-  $(activeTab+".tab-button").fadeIn();
   
   //ZISWAF TAB
   if(activeTab=="#infaq"){

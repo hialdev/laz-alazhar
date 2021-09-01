@@ -280,14 +280,11 @@ section {
       -ms-flex-align: center;
           align-items: center;
   margin: 0.5em 0px;
+  gap: 1em;
 }
 
 @media only screen and (max-width: 1095px) {
   .ziswaf-hitung .ziswaf-tabs #tabs-content fieldset {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
@@ -304,18 +301,27 @@ section {
   width: 100%;
 }
 
-.ziswaf-hitung .ziswaf-tabs #tabs-content fieldset > div span {
-  background-color: #02B3E5;
-  color: #fff;
-  padding: 1em;
+.ziswaf-hitung .ziswaf-tabs #tabs-content fieldset > div #kalkulator {
+  padding: 0.8em;
+  color: #02B3E5;
+  cursor: pointer;
 }
 
-.ziswaf-hitung .ziswaf-tabs #tabs-content fieldset > div input[type=number] {
+.ziswaf-hitung .ziswaf-tabs #tabs-content fieldset > div #kalkulator .iconify {
+  font-size: 24px;
+}
+
+.ziswaf-hitung .ziswaf-tabs #tabs-content fieldset > div #kalkulator:hover {
+  background-color: #02B3E5;
+  color: #fff;
+}
+
+.ziswaf-hitung .ziswaf-tabs #tabs-content fieldset > div input {
   padding: 1em;
   width: 100%;
 }
 
-.ziswaf-hitung .ziswaf-tabs #tabs-content fieldset > div input[type=number]::-webkit-inner-spin-button {
+.ziswaf-hitung .ziswaf-tabs #tabs-content fieldset > div input::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
 
@@ -497,6 +503,10 @@ h3, .h3, .h3 * {
 
 .blue {
   color: #02B3E5;
+}
+
+.red {
+  color: #eb1431;
 }
 
 .green {

@@ -278,8 +278,8 @@ section{
                 justify-content: space-between;
                 align-items: center;
                 margin: 0.5em 0px;
+                gap: 1em;
                 @media only screen and (max-width: $w-lg) {
-                    flex-direction: column;
                     align-items: flex-start;
                 }
                 > div{
@@ -288,12 +288,19 @@ section{
                     border-radius: $bd-rad;
                     overflow: hidden;
                     width: 100%;
-                    span{
-                        background-color: $blue;
-                        color: $light;
-                        padding: 1em;
+                    #kalkulator{
+                        padding: 0.8em;
+                        color: $blue;
+                        cursor: pointer;
+                        .iconify{
+                            font-size: 24px;
+                        }
+                        &:hover{
+                            background-color: $blue;
+                            color: $light;
+                        }
                     }
-                    input[type=number]{
+                    input{
                         padding: 1em;
                         width: 100%;
                         &::-webkit-inner-spin-button {
@@ -443,6 +450,9 @@ h3,.h3,.h3 *{
 }
 .blue{
     color: $blue;
+}
+.red{
+    color: #eb1431;
 }
 .green{
     color:$green;

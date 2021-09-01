@@ -308,13 +308,12 @@
                     </ul><!-- END tabs-nav -->
                     <div id="tabs-content">
                         <div id="zakat" class="tab-content">
-                            <p>Kami akan menghitung jumlah zakat anda.</p>
-                            <br><i>*masukkan angka tanpa titik</i><br>
-                            <br><span class="blue">Total kekayaan anda dalam 1 tahun :</span>
+                            <p>Total penghasilan zakat.</p>
+                            <p class="txt-sm blue"><strong><span id="idr"></span></strong></p>
                             <fieldset>
                                 <div>
-                                    <span><strong>Rp</strong></span>
-                                    <input type="number" name="kekayaan" id="kekayaan">
+                                    <input  type="number" name="kekayaan" id="kekayaan">
+                                    <div id="kalkulator"><span class="iconify" data-icon="zondicons:calculator"></span></div>
                                 </div>
                                 <select class="ctg-tab" name="ctg-zakat">
                                     <option value="0" selected>Pilih Zakat</option>
@@ -325,16 +324,15 @@
                                     <option value="pertanian">Pertanian</option>
                                 </select>
                             </fieldset>
+                            <div class="txt-sm red">*Klik icon kalkulator untuk menghitung. <br> minimum : Rp. 10.000</div>
                         </div>
-                        
                         <div id="infaq" class="tab-content">
-                            <p>Keluarkan infak terbaik anda!</p>
-                            <br><i>*masukkan angka tanpa titik</i><br>
-                            <br><span class="blue">Masukan jumlah & tentukan program yang anda infaqkan :</span>
+                            <p>Jumlah Infaq :</p>
+                            <p class="txt-sm blue"><strong><span id="idr"></span></strong></p>
                             <fieldset>
                                 <div>
-                                    <span><strong>Rp</strong></span>
                                     <input type="number" name="kekayaan" id="kekayaan">
+                                    <div id="kalkulator"><span class="iconify" data-icon="zondicons:calculator"></span></div>
                                 </div>
                                 <select class="ctg-tab" name="ctg-infaq">
                                     <option value="1" selected>Sedekah Umum</option>
@@ -346,15 +344,15 @@
                                     <option value="7">Sembako COVID-19</option>
                                 </select>
                             </fieldset>
+                            <div class="txt-sm red">*Klik icon kalkulator untuk menghitung. <br> minimum : Rp. 10.000</div>
                         </div>
                         <div id="wakaf" class="tab-content">
-                            <p>Berikan wakaf terbaik anda!</p>
-                            <br><i>*masukkan angka tanpa titik</i><br>
-                            <br><span class="blue">Masukan jumlah & tentukan wakaf anda :</span>
+                            <p>Jumlah wakaf.</p>
+                            <p class="txt-sm blue"><strong><span id="idr"></span></strong></p>
                             <fieldset>
                                 <div>
-                                    <span><strong>Rp</strong></span>
-                                    <input type="number" name="kekayaan" id="kekayaan">
+                                    <input type="text" name="kekayaan" id="kekayaan">
+                                    <div id="kalkulator"><span class="iconify" data-icon="zondicons:calculator"></span></div>
                                 </div>
                                 <select class="ctg-tab" name="ctg-wakaf">
                                     <option value="1" selected>Kategori</option>
@@ -364,32 +362,18 @@
                                     <option value="5">Kategori4</option>
                                 </select>
                             </fieldset>
+                            <div class="txt-sm red">*Klik icon kalkulator untuk menghitung. <br> minimum : Rp. 10.000</div>
                         </div>
                         
                     </div>
                 </div>
             </div>
             <div class="div"></div>
-            <div class="zakat-hitung-col2">
-                <div id="zakat" class="tab-button">
+            <div class="ziswaf-hitung-col2">
+                <div class="tab-button">
                     <p>Zakat anda sebesar</p>
                     <h2>Rp. 0</h2>
-                    <a href="#" class="btn btn-prm">Zakat sekarang</a>
-                </div>
-                <div id="infaq" class="tab-button">
-                    <p>Infaq anda sebesar</p>
-                    <h2>Rp. 0</h2>
-                    <a href="#" class="btn btn-prm">Infaq sekarang</a>
-                </div>
-                <div id="wakaf" class="tab-button">
-                    <p>Wakaf anda sebesar</p>
-                    <h2>Rp. 0</h2>
-                    <a href="#" class="btn btn-prm">Wakaf sekarang</a>
-                </div>
-                <div id="fidyah" class="tab-button">
-                    <p>Fidyah anda sebesar</p>
-                    <h2>Rp. 0</h2>
-                    <a href="#" class="btn btn-prm">Fidyah sekarang</a>
+                    <a href="#" class="btn btn-prm">Lanjut Bayar</a>
                 </div>
             </div>
         </div>

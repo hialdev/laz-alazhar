@@ -1597,6 +1597,124 @@ footer .footer-credit {
   border-radius: 15px;
 }
 
+.lightbox-calc {
+  position: fixed;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background-color: #0000002f;
+  display: none;
+}
+
+.lightbox-calc .box {
+  background-color: #fff;
+  width: 90%;
+  max-width: 50em;
+  border-radius: 15px;
+  -webkit-box-shadow: 5px 10px 20px -5px rgba(0, 175, 224, 0.18);
+          box-shadow: 5px 10px 20px -5px rgba(0, 175, 224, 0.18);
+  overflow: hidden;
+}
+
+.lightbox-calc .box .head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #02B3E5;
+  padding: 0.6em 1.5em;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.lightbox-calc .box .head .close {
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #c5c5c5;
+}
+
+.lightbox-calc .box .head .close:hover {
+  color: #eb1431;
+}
+
+.lightbox-calc .box .head .close .iconify {
+  color: currentColor;
+  font-size: 24px;
+}
+
+.lightbox-calc .box .content {
+  padding: 1.5em;
+}
+
+.lightbox-calc .box .content .form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  gap: 1em;
+  margin: 1em 0px;
+}
+
+.lightbox-calc .box .content .form fieldset input {
+  padding: 1em;
+  font-size: 14px;
+  border: 1px solid #393939;
+  border-radius: 15px;
+}
+
+.lightbox-calc .box ul {
+  list-style: none;
+}
+
+.lightbox-calc .box .foot {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1.5em;
+  background-color: #f0f0f0;
+}
+
+.lightbox-calc .box .foot > div:first-child {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
 #tabs-nav {
   display: -webkit-box;
   display: -ms-flexbox;

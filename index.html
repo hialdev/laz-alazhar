@@ -312,6 +312,44 @@
             </div>
         </div>
         <!-- End Lightbox panduan zakat -->
+        <!-- lightbox zakat -->
+        <div class="lightbox-calc">
+            <div class="box" id="profesi">
+                <div class="head">
+                    <h2>Kalkulator Zakat Penghasilan</h2>
+                    <div class="close"><span class="iconify" data-icon="ci:off-close"></span></div>
+                </div>
+                <div class="content">
+                    <form action="" class="form">
+                        <fieldset>
+                            <label class="txt-sm">Penghasilan</p>
+                            <input type="text" placeholder="Penghasilan">
+                        </fieldset>
+                        <fieldset>
+                            <label class="txt-sm">Pendapatan Lain</p>
+                            <input type="text" placeholder="(opsional)">
+                        </fieldset>
+                        <fieldset>
+                            <label class="txt-sm">Hutang / Cicilan</p>
+                            <input type="text" placeholder="(opsional)">
+                        </fieldset>
+                    </form>
+                    <div>
+                        <ul>Catatan :
+                            <li>- Harga beras saat ini : Rp 12.000 (sumber: BPS)</li>
+                            <li>- Nishab (520 kg beras) : Rp 6.500.000</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="foot">
+                    <div>
+                        <p class="txt-sm">Total Zakat</p>
+                        <h3>Rp 0</h3>
+                    </div>
+                    <div class="btn btn-prm">Gunakan Nominal</div>
+                </div>
+            </div>        
+        </div>
         <!-- end Lightbox Ziswaf -->
         <div class="zakat">
             
@@ -326,32 +364,30 @@
                         </ul><!-- END tabs-nav -->
                         <div id="tabs-content">
                             <div id="zakat" class="tab-content">
-                                <p>Kami akan menghitung jumlah zakat anda.</p>
-                                <br><i>*masukkan angka tanpa titik</i><br>
-                                <br><span class="blue">Total kekayaan anda dalam 1 tahun :</span>
+                                <p>Total penghasilan zakat.</p>
+                                <p class="txt-sm blue"><strong><span id="idr"></span></strong></p>
                                 <fieldset>
                                     <div>
-                                        <span><strong>Rp</strong></span>
                                         <input type="number" name="kekayaan" id="kekayaan">
+                                        <div id="kalkulator"><span class="iconify" data-icon="zondicons:calculator"></span></div>
                                     </div>
-                                    <select class="ctg-tab" name="ctg-zakat">
-                                        <option value="0" selected>Pilih Zakat</option>
-                                        <option value="mall">Maal</option>
+                                    <select class="ctg-tab" name="ctg-zakat" id="ctg-zakat">
+                                        <option value="0">Pilih Zakat</option>
+                                        <option value="maal">Maal</option>
                                         <option value="profesi">Profesi</option>
                                         <option value="pertambangan">Pertambangan</option>
-                                        <option value="Perniagaan">Perniagaan</option>
+                                        <option value="perniagaan">Perniagaan</option>
                                         <option value="pertanian">Pertanian</option>
                                     </select>
                                 </fieldset>
+                                <div class="txt-sm red">*Klik icon kalkulator untuk menghitung. <br> minimum : Rp. 10.000</div>
                             </div>
                             
                             <div id="infaq" class="tab-content">
                                 <p>Keluarkan infak terbaik anda!</p>
-                                <br><i>*masukkan angka tanpa titik</i><br>
-                                <br><span class="blue">Masukan jumlah & tentukan program yang anda infaqkan :</span>
+                                <p class="txt-sm blue"><strong><span id="idr"></span></strong></p>
                                 <fieldset>
                                     <div>
-                                        <span><strong>Rp</strong></span>
                                         <input type="number" name="kekayaan" id="kekayaan">
                                     </div>
                                     <select class="ctg-tab" name="ctg-infaq">
@@ -367,11 +403,9 @@
                             </div>
                             <div id="wakaf" class="tab-content">
                                 <p>Berikan wakaf terbaik anda!</p>
-                                <br><i>*masukkan angka tanpa titik</i><br>
-                                <br><span class="blue">Masukan jumlah & tentukan wakaf anda :</span>
+                                <p class="txt-sm blue"><strong><span id="idr"></span></strong></p>
                                 <fieldset>
                                     <div>
-                                        <span><strong>Rp</strong></span>
                                         <input type="number" name="kekayaan" id="kekayaan">
                                     </div>
                                     <select class="ctg-tab" name="ctg-wakaf">
@@ -393,21 +427,6 @@
                         <p>Zakat anda sebesar</p>
                         <h2>Rp. 0</h2>
                         <a href="#" class="btn btn-prm">Zakat sekarang</a>
-                    </div>
-                    <div id="infaq" class="tab-button">
-                        <p>Infaq anda sebesar</p>
-                        <h2>Rp. 0</h2>
-                        <a href="#" class="btn btn-prm">Infaq sekarang</a>
-                    </div>
-                    <div id="wakaf" class="tab-button">
-                        <p>Wakaf anda sebesar</p>
-                        <h2>Rp. 0</h2>
-                        <a href="#" class="btn btn-prm">Wakaf sekarang</a>
-                    </div>
-                    <div id="fidyah" class="tab-button">
-                        <p>Fidyah anda sebesar</p>
-                        <h2>Rp. 0</h2>
-                        <a href="#" class="btn btn-prm">Fidyah sekarang</a>
                     </div>
                 </div>
             </div>

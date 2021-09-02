@@ -1353,6 +1353,81 @@ footer{
     }
 }
 
+//Lightbox Calculator
+.lightbox-calc{
+    position: fixed;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background-color: #0000002f;
+    display: none;
+    .box{
+        background-color: $light;
+        width:90%;
+        max-width: 50em;
+        border-radius: $bd-rad;
+        box-shadow: $hcard-shad;
+        overflow: hidden;
+        .head{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: $blue;
+            padding: 0.6em 1.5em;
+            border-bottom: 2px solid $gray;
+            .close{
+                cursor: pointer;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                color: #c5c5c5;
+                &:hover{
+                    color:#eb1431;
+                }
+                .iconify{
+                    color: currentColor;
+                    font-size: 24px;
+                }
+            }
+        }
+        .content{
+            padding: 1.5em;
+            .form{
+                display: flex;
+                align-items: flex-start;
+                justify-content: space-evenly;
+                gap: 1em;
+                margin:1em 0px;
+                fieldset{
+                    input{
+                        padding: 1em;
+                        font-size: $txt;
+                        border: 1px solid $dark;
+                        border-radius: $bd-rad;
+                    }
+                }
+            }
+        }
+        ul{list-style: none;}
+        .foot{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.5em;
+            background-color: $gray;
+            >div:first-child{
+                flex: 1;
+            }
+        }
+    }
+
+}
 
 //----
 #tabs-nav{

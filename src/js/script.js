@@ -192,7 +192,10 @@ var btnClac = $('#kalkulator');
 test.change(function(){
     lbCalc.find('box').hide();
     var i = $(this).children("option:selected").val();
-    
+    $('.panduan-zakat-lightbox .data').hide();
+    $('.panduan-zakat-lightbox').find('.data#'+i).show();
+    $('.panduan-zakat-lightbox').css('display','flex');
+
     return i;
 });
 btnClac.click(function(){

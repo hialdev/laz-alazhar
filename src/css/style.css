@@ -548,7 +548,7 @@ h3, .h3, .h3 * {
   padding: 0px;
   overflow: hidden;
   border-radius: 55px;
-  border: 2px solid #f8f9ff;
+  border: 2px solid #393939;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

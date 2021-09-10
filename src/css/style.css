@@ -1026,7 +1026,7 @@ header {
   border-radius: 10px;
 }
 
-.header .btn-menu li.dropdown .item > li.lang.active {
+.header .btn-menu li.dropdown .item > li.lang.active, .header .btn-menu li.dropdown .item > li.lang:hover {
   background-color: #f0f0f0;
 }
 

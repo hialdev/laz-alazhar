@@ -829,7 +829,7 @@ header{
                         justify-content: start;
                         gap:1em;
                         border-radius: 10px;
-                        &.active{
+                        &.active,&:hover{
                             background-color: $gray;
                         }
                         >img{

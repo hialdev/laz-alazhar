@@ -771,6 +771,92 @@ header{
             }
         }
     }
+    .btn-menu{
+        position: relative;
+        display: flex;
+        li.dropdown{
+            cursor: pointer;
+            .item{
+                list-style: none;
+                display: flex;
+                text-align: center;
+                justify-content: center;
+                flex-direction: column;
+                text-decoration: none;
+                color: $dark;
+                position: absolute;
+                margin-top: 0.7em;
+                min-width: 13em;
+                margin-left: -75%;
+                background-color: $light;
+                border-radius: $bd-rad;
+                box-shadow: $box-shad;
+                /* speech bubble 10 */
+                &:before {
+                    content: "";
+                    width: 0px;
+                    height: 0px;
+                    position: absolute;
+                    border-left: 10px solid transparent;
+                    border-right: 10px solid transparent;
+                    border-top: 10px solid transparent;
+                    border-bottom: 0 solid #00bfb6;
+                    right: 50%;
+                    top: -23px;
+                }
+                &:after {
+                    content: "";
+                    width: 0px;
+                    height: 0px;
+                    position: absolute;
+                    border-left: 10px solid transparent;
+                    border-right: 10px solid transparent;
+                    border-top: 10px solid transparent;
+                    border-bottom: 10px solid #fff;
+                    right: 50%;
+                    top: -18px;
+                }
+                display: none;
+                > li{
+                    padding: 0.8em;
+                    &:first-child{
+                        border-bottom: 2px solid $gray;
+                    }
+                    &.lang{
+                        margin: 0.3em 0.4em;
+                        display: flex;
+                        align-items: center;
+                        justify-content: start;
+                        gap:1em;
+                        border-radius: 10px;
+                        &.active{
+                            background-color: $gray;
+                        }
+                        >img{
+                            width: 30px;
+                            object-fit: cover;
+                            border-radius: 5px;
+                        }
+                    }
+                }
+            }
+            &:hover .item{
+                display: flex;
+            }
+        }
+        @media only screen and (max-width: $w-lg){
+            li.dropdown {
+                padding-top: 1em;
+                .item{
+                    bottom: 3em;
+                    /* speech bubble madep bawah */
+                    &:before,&:after {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
     &.active, &.static{
         background: $light;
 

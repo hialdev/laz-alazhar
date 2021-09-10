@@ -1820,6 +1820,18 @@ footer .footer-credit {
   border-radius: 15px;
 }
 
+@media only screen and (max-width: 760px) {
+  .lightbox-calc .box .content .form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .lightbox-calc .box .content .form fieldset, .lightbox-calc .box .content .form input {
+    width: 100%;
+  }
+}
+
 .lightbox-calc .box ul {
   list-style: none;
 }

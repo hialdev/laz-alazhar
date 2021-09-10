@@ -217,8 +217,9 @@ section{
     }
 
     &-col1{
-        padding: 1.5em;
+        padding-top: 1.5em;
         flex: 0 0 50%;
+        width: 100%;
     }
     .div{
         background-color: $blue;
@@ -272,7 +273,7 @@ section{
         }
         #tabs-content{
             padding: 1em;
-            
+            overflow: hidden;
             fieldset{
                 display: flex;
                 justify-content: space-between;
@@ -288,6 +289,8 @@ section{
                     border-radius: $bd-rad;
                     overflow: hidden;
                     width: 100%;
+                    min-width: 15em;
+
                     #kalkulator{
                         padding: 0.8em;
                         color: $blue;
@@ -307,6 +310,7 @@ section{
                         -webkit-appearance: none;
                         }
                     }
+
                 }
 
                 select.ctg-tab{
@@ -322,6 +326,9 @@ section{
                             display: none;
                         }
                     }
+                }
+                @media only screen and (max-width: $w-sm){
+                    flex-direction: column;
                 }
             }
         }           

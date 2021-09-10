@@ -193,10 +193,11 @@ section {
 }
 
 .ziswaf-hitung-col1 {
-  padding: 1.5em;
+  padding-top: 1.5em;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 50%;
           flex: 0 0 50%;
+  width: 100%;
 }
 
 .ziswaf-hitung .div {
@@ -267,6 +268,7 @@ section {
 
 .ziswaf-hitung .ziswaf-tabs #tabs-content {
   padding: 1em;
+  overflow: hidden;
 }
 
 .ziswaf-hitung .ziswaf-tabs #tabs-content fieldset {
@@ -299,6 +301,7 @@ section {
   border-radius: 15px;
   overflow: hidden;
   width: 100%;
+  min-width: 15em;
 }
 
 .ziswaf-hitung .ziswaf-tabs #tabs-content fieldset > div #kalkulator {
@@ -340,6 +343,15 @@ section {
 
 .ziswaf-hitung .ziswaf-tabs #tabs-content fieldset select.ctg-tab option:first-child {
   display: none;
+}
+
+@media only screen and (max-width: 760px) {
+  .ziswaf-hitung .ziswaf-tabs #tabs-content fieldset {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .center {

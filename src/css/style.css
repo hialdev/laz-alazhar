@@ -1102,20 +1102,6 @@ header {
   color: #02B3E5;
 }
 
-@media only screen and (max-width: 1095px) {
-  .header.active nav.menu li.dropdown, .header.static nav.menu li.dropdown {
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
-  }
-  .header.active nav.menu li.dropdown:hover, .header.static nav.menu li.dropdown:hover {
-    background-color: #02B3E5;
-    color: #fff;
-  }
-  .header.active nav.menu li.dropdown:hover > a, .header.active nav.menu li.dropdown:hover > a:hover, .header.static nav.menu li.dropdown:hover > a, .header.static nav.menu li.dropdown:hover > a:hover {
-    color: #fff;
-  }
-}
-
 .header .logo {
   width: 10em;
 }
@@ -1191,12 +1177,30 @@ header {
   width: auto;
 }
 
+.header .menu-box.slide-menu nav.menu li.dropdown {
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.header .menu-box.slide-menu nav.menu li.dropdown:hover {
+  background-color: #02B3E5;
+  color: #fff;
+}
+
+.header .menu-box.slide-menu nav.menu li.dropdown:hover > a, .header .menu-box.slide-menu nav.menu li.dropdown:hover > a:hover {
+  color: #fff;
+}
+
 .header .menu-box.slide-menu nav.menu ul > li.dropdown:hover > a {
   color: #fff;
 }
 
 .header .menu-box.slide-menu .btn-box .btn-sec {
   color: #02B3E5;
+}
+
+.header .menu-box.slide-menu .lang-box .item {
+  display: none !important;
 }
 
 .header .icon-btn {
@@ -1542,6 +1546,136 @@ footer .footer-credit {
   color: #fff;
   padding: 0.9em 5%;
   text-align: center;
+}
+
+.lightbox-lang {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #02b4e59c;
+  display: none;
+}
+
+.lightbox-lang .box {
+  position: relative;
+  background-color: #fff;
+  border-radius: 15px;
+  -webkit-box-shadow: 5px 20px 60px -10px rgba(0, 112, 255, 0.4);
+          box-shadow: 5px 20px 60px -10px rgba(0, 112, 255, 0.4);
+  width: 15em;
+  margin: 1em auto;
+  display: block;
+}
+
+.lightbox-lang .box .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  color: #cecece;
+}
+
+.lightbox-lang .box .close:hover {
+  color: #eb1431;
+}
+
+.lightbox-lang .box .close .iconify {
+  font-size: 18px;
+  color: currentColor;
+}
+
+.lightbox-lang .box .item {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: left;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-decoration: none;
+  color: #393939;
+}
+
+.lightbox-lang .box .item > li {
+  padding: 0.8em;
+}
+
+.lightbox-lang .box .item > li:first-child {
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.lightbox-lang .box .item > li.lang {
+  margin: 0.3em 0.4em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  gap: 1em;
+  border-radius: 10px;
+}
+
+.lightbox-lang .box .item > li.lang.active, .lightbox-lang .box .item > li.lang:hover {
+  background-color: #f0f0f0;
+}
+
+.lightbox-lang .box .item > li.lang > a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+  gap: 1em;
+  color: #393939;
+}
+
+.lightbox-lang .box .item > li.lang > a img {
+  width: 30px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 5px;
+}
+
+.lightbox-lang .box:hover .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media only screen and (max-width: 1095px) {
+  .lightbox-lang li.dropdown {
+    padding-top: 1em;
+  }
+  .lightbox-lang li.dropdown .item {
+    bottom: 3em;
+    /* speech bubble madep bawah */
+  }
+  .lightbox-lang li.dropdown .item:before, .lightbox-lang li.dropdown .item:after {
+    display: none;
+  }
 }
 
 .lightbox {

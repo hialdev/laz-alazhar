@@ -899,21 +899,6 @@ header{
                 color: $blue;
             }
         }
-        @media only screen and (max-width: $w-lg){
-            nav.menu{
-                li.dropdown{
-                    border-top-right-radius:$bd-rad ;
-                    border-bottom-right-radius: $bd-rad;
-                    &:hover{
-                        background-color: $blue;
-                        color: $light;
-                        >a, >a:hover{
-                            color: $light;
-                        }
-                    }
-                }
-            }
-        }
     }
     .logo{
         width: 10em;
@@ -971,12 +956,25 @@ header{
             transform: translateX(0);
             transition: all 0.3s;
             width: auto;
-            
+            nav.menu li.dropdown{
+                border-top-right-radius:$bd-rad ;
+                border-bottom-right-radius: $bd-rad;
+                &:hover{
+                    background-color: $blue;
+                    color: $light;
+                    >a, >a:hover{
+                        color: $light;
+                    }
+                }
+            }
             nav.menu ul>li.dropdown:hover>a{
                 color: $light;
             }
             .btn-box .btn-sec{
                 color: $blue;
+            }
+            .lang-box .item{
+                display: none !important;
             }
         }
     }
@@ -1312,6 +1310,98 @@ footer{
         color: $light;
         padding: 0.9em $side;
         text-align: center;
+    }
+}
+
+//Lang Lightbox
+.lightbox-lang{
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #02b4e59c;
+    display: none;
+    .box{
+        position: relative;
+        background-color: $light;
+        border-radius: $bd-rad;
+        box-shadow: $box-shad;
+        width: 15em;
+        margin: 1em auto;
+        display: block;
+        .close{
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            color: #cecece;
+            &:hover{
+                color: #eb1431;
+            }
+            .iconify{
+                font-size: 18px;
+                color: currentColor;
+            }
+        }
+        .item{
+            list-style: none;
+            display: flex;
+            text-align: left;
+            justify-content: center;
+            flex-direction: column;
+            text-decoration: none;
+            color: $dark;
+            > li{
+                padding: 0.8em;
+                &:first-child{
+                    border-bottom: 2px solid $gray;
+                }
+                &.lang{
+                    margin: 0.3em 0.4em;
+                    display: flex;
+                    align-items: center;
+                    justify-content: start;
+                    gap:1em;
+                    border-radius: 10px;
+                    &.active,&:hover{
+                        background-color: $gray;
+                    }
+                    >a {
+                        display: flex;
+                        align-items: center;
+                        text-decoration: none;
+                        gap: 1em;
+                        color: $dark;
+                        img{
+                            width: 30px;
+                            object-fit: cover;
+                            border-radius: 5px;
+                        }
+                    }
+                }
+            }
+        }
+        &:hover .item{
+            display: flex;
+        }
+    }
+    @media only screen and (max-width: $w-lg){
+        li.dropdown {
+            padding-top: 1em;
+            
+            .item{
+                bottom: 3em;
+                /* speech bubble madep bawah */
+                &:before,&:after {
+                    display: none;
+                }
+            }
+        }
     }
 }
 

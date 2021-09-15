@@ -206,6 +206,19 @@ lbCalcX.click(function(){
     lbCalc.fadeOut(200);
 });
 
+//Language Lightbox
+var langLbx = $('.lightbox-lang');
+var langLbxClose = $('.lightbox-lang .close');
+var langBtn = $('.lang-box');
+
+langBtn.click(function() {
+    langLbx.css('display','flex');
+    langLbx.fadeIn(100);
+});
+
+langLbxClose.click(function(){
+    langLbx.hide();
+});
 //-------------------------------
 // End Components
 //-------------------------------

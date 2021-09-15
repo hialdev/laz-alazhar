@@ -823,7 +823,7 @@ header {
         -ms-flex-pack: center;
             justify-content: center;
     text-align: center;
-    width: 100%;
+    width: 15em;
   }
 }
 
@@ -848,6 +848,23 @@ header {
         -ms-flex-pack: center;
             justify-content: center;
     text-align: center;
+  }
+  .header nav.menu ul li.dropdown {
+    position: relative;
+    width: 10em;
+  }
+  .header nav.menu ul li.dropdown:hover {
+    background-color: #02B3E5;
+    color: #fff;
+  }
+  .header nav.menu ul li.dropdown:hover > a, .header nav.menu ul li.dropdown:hover > a:hover {
+    color: #fff;
+  }
+  .header nav.menu ul li.dropdown > ul {
+    position: absolute;
+    top: -15px;
+    right: 9em;
+    width: 13em;
   }
 }
 
@@ -1080,28 +1097,26 @@ header {
   color: #6d6e70;
 }
 
-.header.active .menu-box nav.menu ul li > a:hover, .header.static .menu-box nav.menu ul li > a:hover {
-  color: #02B3E5;
-}
-
-.header.active .menu-box nav.menu > ul > li:hover > a, .header.static .menu-box nav.menu > ul > li:hover > a {
-  color: #02B3E5;
-}
-
-.header.active .menu-box li.dropdown ul li > a, .header.static .menu-box li.dropdown ul li > a {
-  color: #6d6e70;
-}
-
-.header.active .menu-box li.dropdown ul li > a:hover, .header.static .menu-box li.dropdown ul li > a:hover {
-  color: #02B3E5;
-}
-
 .header.active .btn-box .btn-sec, .header.static .btn-box .btn-sec {
   color: #02B3E5;
 }
 
 .header.active .btn-box .btn-sec:hover, .header.static .btn-box .btn-sec:hover {
   color: #02B3E5;
+}
+
+@media only screen and (max-width: 1095px) {
+  .header.active li.dropdown, .header.static li.dropdown {
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+  .header.active li.dropdown:hover, .header.static li.dropdown:hover {
+    background-color: #02B3E5;
+    color: #fff;
+  }
+  .header.active li.dropdown:hover > a, .header.active li.dropdown:hover > a:hover, .header.static li.dropdown:hover > a, .header.static li.dropdown:hover > a:hover {
+    color: #fff;
+  }
 }
 
 .header .logo {
@@ -1150,9 +1165,6 @@ header {
             transform: translateX(100%);
     opacity: 0;
   }
-  .header .menu-box nav.menu {
-    overflow-y: auto;
-  }
   .header .menu-box nav.menu ul li a {
     color: #6d6e70;
     text-transform: uppercase;
@@ -1179,6 +1191,11 @@ header {
           transform: translateX(0);
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+  width: auto;
+}
+
+.header .menu-box.slide-menu nav.menu ul > li.dropdown:hover > a {
+  color: #fff;
 }
 
 .header .menu-box.slide-menu .btn-box .btn-sec {

@@ -678,7 +678,7 @@ header{
             flex-direction: column;
             justify-content: center;
             text-align: center;
-            width: 100%;
+            width: 15em;
         }
         ul{
             list-style: none;
@@ -690,6 +690,24 @@ header{
                 position: relative;
                 justify-content: center;
                 text-align: center;
+
+                li.dropdown{
+                    position: relative;
+                    width: 10em;
+                    &:hover{
+                        background-color: $blue;
+                        color: $light;
+                        >a, >a:hover{
+                            color: $light;
+                        }
+                    }
+                    >ul{
+                        position: absolute;
+                        top: -15px;
+                        right: 9em;
+                        width: 13em;
+                    }
+                }
             }
 
         }
@@ -854,6 +872,7 @@ header{
         @media only screen and (max-width: $w-lg){
             li.dropdown {
                 padding-top: 1em;
+                
                 .item{
                     bottom: 3em;
                     /* speech bubble madep bawah */
@@ -873,26 +892,25 @@ header{
         
         .menu-box nav.menu ul li>a{
             color: #6d6e70;
-            &:hover{
-                color: $blue;
-            }
-        }
-
-        .menu-box nav.menu>ul>li:hover>a{
-            color: $blue;
-        }
-        
-        .menu-box li.dropdown ul li>a{
-            color: #6d6e70;
-            &:hover{
-                color: $blue;
-            }
         }
         
         .btn-box .btn-sec{
             color: $blue;
             &:hover{
                 color: $blue;
+            }
+        }
+        @media only screen and (max-width: $w-lg){
+            li.dropdown{
+                border-top-right-radius:$bd-rad ;
+                border-bottom-right-radius: $bd-rad;
+                &:hover{
+                    background-color: $blue;
+                    color: $light;
+                    >a, >a:hover{
+                        color: $light;
+                    }
+                }
             }
         }
     }
@@ -925,7 +943,6 @@ header{
             opacity: 0;
 
             nav.menu{
-                overflow-y: auto;
                 ul li a{
                     color: #6d6e70;
                     text-transform: uppercase;
@@ -952,7 +969,11 @@ header{
             opacity: 1;
             transform: translateX(0);
             transition: all 0.3s;
-    
+            width: auto;
+            
+            nav.menu ul>li.dropdown:hover>a{
+                color: $light;
+            }
             .btn-box .btn-sec{
                 color: $blue;
             }

@@ -679,13 +679,7 @@ header{
             justify-content: center;
             text-align: center;
             width: 15em;
-        }
-        ul{
-            list-style: none;
-            display: flex;
-            flex-wrap: wrap;
-            position: absolute;
-            @media only screen and (max-width: $w-lg) {
+            ul{
                 flex-direction: column;
                 position: relative;
                 justify-content: center;
@@ -701,7 +695,7 @@ header{
                             color: $light;
                         }
                     }
-                    >ul{
+                    >ul.sub-menu{
                         position: absolute;
                         top: -15px;
                         right: 9em;
@@ -709,7 +703,12 @@ header{
                     }
                 }
             }
-
+        }
+        ul{
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            position: absolute;
         }
         ul.sub-menu{
             border-radius: 10px;
@@ -901,14 +900,16 @@ header{
             }
         }
         @media only screen and (max-width: $w-lg){
-            li.dropdown{
-                border-top-right-radius:$bd-rad ;
-                border-bottom-right-radius: $bd-rad;
-                &:hover{
-                    background-color: $blue;
-                    color: $light;
-                    >a, >a:hover{
+            nav.menu{
+                li.dropdown{
+                    border-top-right-radius:$bd-rad ;
+                    border-bottom-right-radius: $bd-rad;
+                    &:hover{
+                        background-color: $blue;
                         color: $light;
+                        >a, >a:hover{
+                            color: $light;
+                        }
                     }
                 }
             }

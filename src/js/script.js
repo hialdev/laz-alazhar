@@ -12,6 +12,9 @@ $('.slider-box').owlCarousel({
     loop:true,
     margin:1,
     nav:false,
+    autoplay:true,
+    autoplayTimeout:5000,
+    autoplayHoverPause:true,
     responsive:{
         0:{
             items:1
@@ -65,14 +68,18 @@ $(function () {
     if( header.hasClass('static') ){
         $('.logo-box img').attr('src','src/img/logo-laz.png');
     }
+    
     $(window).scroll(function () {
-        
+
         var scroll = $(window).scrollTop();
-        
-        if (scroll >= 185 || header.hasClass('static')) {
+
+        if ((scroll >= 185) && (!header.hasClass('dashboard'))) {
             $('.logo-box img').attr('src','src/img/logo-laz.png');
             header.addClass('active');
-        } else if(scroll < 185) {
+        }else if (header.hasClass('static')) {
+            $('.logo-box img').attr('src','src/img/logo-laz.png');
+            header.addClass('active');
+        }else if(scroll < 185 && !header.hasClass('dashboard')) {
             header.removeClass('active');
             $('.logo-box img').attr('src','src/img/logo-white.png');
         }
@@ -251,10 +258,10 @@ $('#tabs-nav li').click(function(){
   $('#tabs-nav li').removeClass('tab-active');
   $(this).addClass('tab-active');
   $('.tab-content').hide();
-  
+
   var activeTab = $(this).find('a').attr('href');
   $(activeTab).fadeIn();
-  
+
   //ZISWAF TAB
   if(activeTab=="#infaq"){
         $('.ziswaf-hitung-col1>h3').text("Ayo Rutin Berinfak!");
@@ -270,17 +277,18 @@ $('#tabs-nav li').click(function(){
 
 //Mitra Tabs Content
 $('#mitra-tabs-nav li a:first').addClass('active');
-$('#korporasi').show();
+$('#mitra-tabs-content >div:first-child').show();
 $('#mitra-tabs-nav li').click(function(){
     $('#mitra-tabs-nav li').find('a').removeClass('active');
     $(this).find('a').addClass('active');
     $('#mitra-tabs-content .tab-content').hide();
-    
-    var activeTab = $(this).find('a').attr('href');
+
+    var activeTab = $(this).find('a').attr('data-mitra');
     $(activeTab).fadeIn();
+    console.log(activeTab);
     return false;
 });
-    
+
 //Donasi
 var owl = $('.donasi-box');
 // Go to the next item
@@ -322,15 +330,15 @@ $('.donasi-box').owlCarousel({
 //         0: {
 //             items: 2
 //         },
-    
+
 //         600: {
 //             items: 3
 //         },
-    
+
 //         1024: {
 //             items: 4
 //         },
-    
+
 //         1366: {
 //             items: 4
 //         }
@@ -395,15 +403,22 @@ pengurus.owlCarousel({
 
 //Lightbox Pengurus
 var Lpengurus = $('.lightbox-pengurus');
+var lbPengurusItem = $('.lightbox-pengurus .box .content');
 var LpClose = $('.lightbox-pengurus .close');
 var btnPengurus = $('.btn-pengurus');
+
 $(document).ready(function(){
+    lbPengurusItem.hide();
     btnPengurus.click(function(){
         Lpengurus.css('display','flex');
+        var id = $(this).attr('data-pengurus');
+        var lbContent = $('.lightbox-pengurus .content#'+id);
+        lbContent.show();
     });
     LpClose.click(function(){
         Lpengurus.fadeOut(200);
-        Lpengurus.css('display','close');
+        lbPengurusItem.hide();
+        Lpengurus.css('display','none');
     });
 });
 //-------------------------------
@@ -578,7 +593,7 @@ var zisOpt = $('#zakat select.ctg-tab option');
 
 $(document).ready(function(){
     pzBtn.click(function(){
-        var pzlId = $(this).attr('href');
+        var pzlId = $(this).attr('data-popup');
         pzLightbox.css('display','flex');
         pzlData.hide();
         pzLightbox.find(pzlId).show();
@@ -619,4 +634,33 @@ $(document).ready(function(){
     tgl_list.click(function(){
         ulList.toggle(300);
     })
+});
+
+//Dropdown
+var ctg_drop = $('.ctg-dropdown');
+var ctg_btn = $('.ctg-btn');
+var ctg_list = $('.ctg-list');
+var ctg_item = $('.ctg-list>li>a')
+$(document).ready(function(){
+    ctg_drop.click(function(){
+        $(this).parent().find('.iconify').toggleClass('rotateicon');
+        $(this).parent().find('.ctg-list').slideToggle(280);
+    });
+
+    var beritaTitle = $('.berita-item .berita-content > a > h3');
+    var strMax = 63;
+
+    beritaTitle.each(function() {
+        var strLength = $(this).text().length;
+        if(strLength > strMax){
+            $(this).text($(this).text().substr(0, strMax) + '...');
+        }
+    });
+});
+
+//-------------------------
+//Dashboard
+//-------------------------
+$('aside .btn-sidebar').click(function(){
+    $('aside').toggleClass('active');
 });

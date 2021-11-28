@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap');
-
 /* ---------------------------------
 Variables
 --------------------------------- */
@@ -66,7 +64,7 @@ Reset
     border: 0px solid transparent;
     transition: all 0.1s;
 }
-
+a{cursor:pointer};
 input[type=checkbox]{
     cursor: pointer;
 }
@@ -81,7 +79,7 @@ input[type=checkbox]{
 ::-webkit-scrollbar {
     width: 10px;
 }
- 
+
 ::-webkit-scrollbar-track {
     background-color: #f8f9ff;
     -webkit-border-radius: 10px;
@@ -112,6 +110,10 @@ section{
         margin-left: 20px;
     }
 }
+//Alignment / Position
+.center{
+    display: flex;
+}
 //Dropdown
 .select-dropdown {
     position: relative;
@@ -124,11 +126,11 @@ section{
     padding: $padding;
     background-color: $bg; // necessary for overlaying hover bg-color of selected option
     box-shadow: $card-shad;
-    
+
     &:hover svg {
         transform: scale(1.1);
     }
-    
+
     button {
         position: absolute;
         width: 100%;
@@ -140,7 +142,7 @@ section{
         outline: none;
         background: none;
         cursor: pointer;
-        
+
         &:focus {
             & ~ svg {
             transform: rotate(-180deg);
@@ -148,17 +150,17 @@ section{
             }
         }
     }
-    
+
     .options {
         position: absolute;
         width: 100%;
         top: 0;
         left: 0;
     }
-    
+
     input {
         display: none;
-      
+
         &:checked + label {
             display: block;
             z-index: 2;
@@ -166,7 +168,7 @@ section{
             transform: none !important;
         }
     }
-    
+
     label {
         position: absolute;
         width: 100%;
@@ -176,20 +178,20 @@ section{
         background-color: $bg;
         cursor: pointer;
         transition: background-color 0.2s, transform 0.2s ease ;
-      
+
       &:hover {
             background-color: $bg-hover;
       }
     }
-    
+
     button:focus + .options input:not(:checked) + label, .options label:active, .options label:active ~ label {
         transform: translateY(calc(var(--index) * 100%));
     }
-  
+
     button:focus + .options input:checked + label ~ label, .options input:checked ~ label:active, .options input:checked ~ label:active ~ label {
         transform: translateY(calc((var(--index) - 1) * 100%));
     }
-      
+
     svg {
         position: absolute;
         width: 21px;
@@ -200,6 +202,59 @@ section{
         transition: transform 0.1s;
     }
 }
+
+//Ctg-Dropdown
+.ctg-dropdown{
+    position: relative;
+    max-width: 14em;
+    margin-left: auto;
+    font-weight: bold;
+    .ctg-btn{
+        padding: 1em 1.5em;
+        border-radius: $bd-rad;
+        box-shadow: $card-shad;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #fff;
+        cursor: pointer;
+        .rotateicon{
+            transform: rotate(180deg) !important;
+        }
+    }
+    .ctg-list{
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        z-index: 10;
+        list-style: none;
+        margin-top: 1em;
+        border-radius: $bd-rad;
+        background-color: #fff;
+        box-shadow: $card-shad;
+        display: none;
+        li{
+            width: 100%;
+            border-bottom: 2px solid $gray;
+            color: #6e6e6e;
+            &:hover{
+                color: $blue;
+            }
+            &:last-child{
+                border-bottom: 0px;
+            }
+            > a{
+                padding: 1em 1.4em;
+                display: block;
+                width: 100%;
+                text-decoration: none;
+                color: currentColor;
+            }
+        }
+    }
+}
+
 //Ziswaf
 .ziswaf-hitung{
     border-radius: $bd-rad;
@@ -210,7 +265,7 @@ section{
     justify-content: space-evenly;
     align-items: center;
     padding: 1em;
-    
+
     @media only screen and (max-width: $w-sm) {
         flex-direction: column;
         width: 100%;
@@ -237,7 +292,7 @@ section{
         padding: 1em;
         @media only screen and (max-width: $w-sm) {
             text-align: center;
-        }  
+        }
     }
 
     .ziswaf-tabs{
@@ -331,7 +386,7 @@ section{
                     flex-direction: column;
                 }
             }
-        }           
+        }
     }
 }
 //centering
@@ -418,7 +473,7 @@ h3,.h3,.h3 *{
     justify-content: center;
     align-items: center;
     gap:0.5em;
-    
+
     .item{
         width: 2em;
         height: 2em;
@@ -431,7 +486,7 @@ h3,.h3,.h3 *{
         justify-content: center;
         border: 1.4px solid #cecece;
         border-radius: $bd-rad;
-        
+
         .iconify{
         }
         &:hover{
@@ -513,12 +568,12 @@ h3,.h3,.h3 *{
         padding: 1.15em 1.2em;
         border-left: 2px solid #f8f9ff;
         cursor: pointer;
-        
+
         .iconify{
             font-size: 24px;
             color: $blue;
             margin-bottom: -4px;
-            
+
         }
         &:hover {
             background: $blue;
@@ -627,7 +682,7 @@ h3,.h3,.h3 *{
 //Sosmed
 .sosmed-box{
     display: flex;
-    
+
     .sosmed-icon{
         color:$light;
         padding:0.8em 1.1em;
@@ -717,7 +772,7 @@ header{
             margin-top: 1em;
 
             li{
-                background-color: $light;    
+                background-color: $light;
             }
         }
         li{
@@ -726,7 +781,7 @@ header{
             &:hover ul{
                 display: flex;
             }
-            
+
             a{
                 color: $light;
                 font-weight: bold;
@@ -748,7 +803,7 @@ header{
                         background-color: #eb1431;
                     }
                 }
-                
+
             }
             > ul{
                 display: none;
@@ -761,7 +816,7 @@ header{
                     &:not(:last-child){
                         border-bottom: 1px solid $gray;
                     }
-                    
+
                     a{
                         color: #6d6e70;
                         font-weight: 600;
@@ -792,6 +847,92 @@ header{
                 box-shadow: $box-shad;
                 background-color: $light;
                 color: $blue;
+            }
+        }
+    }
+    .header-user{
+        background-color: $blue;
+        padding: 0.7em 1.2em;
+        border-radius: $bd-rad;
+        color: #Fff;
+        >a{
+            display: inline-flex;
+            align-items: center;
+            gap: 1em;
+            color: currentColor;
+            >img{
+                width: 3em;
+                height: 3em;
+                border-radius: 25px;
+                border: 3px solid #fff;
+            }
+        }
+    }
+
+    //Dashboard
+    .notify{
+        justify-content: flex-end;
+        margin-left: auto;
+        margin-right: 1em;
+        color: #212121;
+        position: relative;
+        >a,.iconify{color: currentColor;}
+        >a{
+            padding: 0.3em;
+            position: relative;
+            .iconify{
+                font-size: 24px;
+            }
+            &.on::after{
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                height: 0.5em;
+                width: 0.5em;
+                border-radius: $bd-rad;
+                background-color: $blue;
+            }
+        }
+        &:hover {
+            a{
+                padding: 1em;
+                background-color: $light;
+                box-shadow: $card-shad;
+            }
+            .notify-list{
+                display: block;
+            }
+        }
+        .notify-list{
+            margin-top: 0.7em;
+            display: none;
+            position: absolute;
+            top: 100%;
+            width: 20em;
+            right: 0;
+            background-color: $light;
+            list-style: none;
+            border-radius: $bd-rad;
+            overflow: hidden;
+            box-shadow: $box-shad;
+            > li{
+                >a{
+                    display: block;
+                    padding: 1em 1.3em;
+                    border-bottom: 2px solid $gray;
+                    text-decoration: none;
+                    color: #212121;
+
+                    &:hover{
+                        background-color: #f2f7ff;
+                        color: $darkblue;
+                    }
+                }
+            }
+
+            @media only screen and (max-width: $w-sm){
+                right:-8.5em;
             }
         }
     }
@@ -871,7 +1012,7 @@ header{
         @media only screen and (max-width: $w-lg){
             li.dropdown {
                 padding-top: 1em;
-                
+
                 .item{
                     bottom: 3em;
                     /* speech bubble madep bawah */
@@ -888,11 +1029,11 @@ header{
         .menu-toggle span{
             background-color: $blue;
         }
-        
+
         .menu-box nav.menu ul li>a{
             color: #6d6e70;
         }
-        
+
         .btn-box .btn-sec{
             color: $blue;
             &:hover{
@@ -978,7 +1119,7 @@ header{
             }
         }
     }
-    
+
     .icon-btn{
         display: flex;
         align-items: center;
@@ -1004,7 +1145,7 @@ header{
             object-fit: contain;
             margin-bottom: -3px;
         }
-        
+
     }
     .menu-toggle{
         position: relative;
@@ -1058,7 +1199,7 @@ header{
             }
         }
     }
-    
+
 }
 
 .centering{
@@ -1152,7 +1293,7 @@ header{
 
     .slider-box{
         display: block;
-        
+
         .slider-item{
             overflow: hidden;
             width: 70em;
@@ -1247,7 +1388,7 @@ footer{
             text-decoration: none;
             background-color: #444444;
             margin: 0.3em 0px;
-
+            max-width: 35em;
             .src .iconify{
                 font-size: $h1;
                 margin-right: 0.3em;
@@ -1264,15 +1405,15 @@ footer{
                 color: $light;
             }
             > a{
-                
+
                 text-decoration: none;
                 &:hover{
                     color: $light;
                 }
-                
+
             }
         }
-        
+
     }
 
     .footer-icon{
@@ -1393,7 +1534,7 @@ footer{
     @media only screen and (max-width: $w-lg){
         li.dropdown {
             padding-top: 1em;
-            
+
             .item{
                 bottom: 3em;
                 /* speech bubble madep bawah */
@@ -1417,7 +1558,7 @@ footer{
     z-index: 100;
     height: 100vh;
     background-color: #02b4e5d7;
-    
+
     .form-box{
         display: flex;
         flex-direction: column;
@@ -1536,7 +1677,7 @@ footer{
         padding:0.3em 0.6em;
         width: 6em;
         border-radius: 5px;
-        
+
         .iconify{
             color: $light;
             font-size: 22px;
@@ -1710,7 +1851,7 @@ footer{
 }
 
 //post Page
-/* 
+/*
 --------------------------------- */
 .post{
     padding: 1em $side;
@@ -1764,7 +1905,7 @@ footer{
                 align-items: center;
                 margin-left: 0.2em;
                 padding: 0.3em;
-            
+
                 .icon{
                     display: inline-block;
                     color: $light;
@@ -1777,7 +1918,7 @@ footer{
                         padding: 0.2em;
                         font-size: 20px;
                         margin-bottom: -4px;
-                    
+
                         &:hover{
                             background-color: $light;
                             color: $blue;
@@ -1833,7 +1974,7 @@ footer{
             }
             .sosmed-box{
                 display: flex;
-            
+
                 .sosmed-icon{
                     color:$light;
                     padding:0.8em 1.1em;
@@ -1861,7 +2002,7 @@ footer{
                     width: 100%;
                     max-height: 10em;
                 }
-            
+
                 .vertic{
                     width: 100%;
                     max-width: 10em;
@@ -1915,7 +2056,7 @@ Home Page Section
                 @media only screen and (max-width: $w-lg) {
                    font-size: 32px;
                 }
-        
+
                 @media only screen and (max-width: $w-sm) {
                    font-size: 24px;
                 }
@@ -1947,7 +2088,7 @@ Home Page Section
             width: 100%!important;
             height: 100%;
             object-fit: cover;
-            object-position: top;            
+            object-position: top;
         }
         >.content{
             position: absolute;
@@ -1960,7 +2101,7 @@ Home Page Section
             @media only screen and (max-width: $w-lg) {
                 margin-bottom: 60px;
             }
-    
+
             @media only screen and (max-width: $w-sm) {
                 margin-bottom: 30px;
             }
@@ -1972,7 +2113,7 @@ Home Page Section
         margin-top: -100px;
         position: relative;
         z-index: 10;
-        
+
         @media only screen and (max-width: $w-lg) {
             margin-top: -80px;
         }
@@ -1990,7 +2131,7 @@ Home Page Section
             justify-content: space-evenly;
             align-items: center;
             padding: 1em;
-            
+
             @media only screen and (max-width: $w-sm) {
                 flex-direction: column;
                 width: 100%;
@@ -2016,7 +2157,7 @@ Home Page Section
                 padding: 1em;
                 @media only screen and (max-width: $w-sm) {
                     text-align: center;
-                }  
+                }
             }
 
             .zakat-tabs{
@@ -2025,7 +2166,7 @@ Home Page Section
                     display: flex;
                     justify-content: space-evenly;
                     border-bottom: 2px solid $gray;
-        
+
                     li{
                         list-style: none;
                         padding: 0.5em 1.3em;
@@ -2052,7 +2193,7 @@ Home Page Section
                 }
                 #tabs-content{
                     padding: 1em;
-                    
+
                     fieldset{
                         display: flex;
                         justify-content: space-between;
@@ -2096,7 +2237,7 @@ Home Page Section
                             }
                         }
                     }
-                }           
+                }
             }
         }
     }
@@ -2141,7 +2282,7 @@ Home Page Section
         }
     }
     &-box{
-        
+
         @media only screen and (max-width: $w-sm) {
             max-width: 27em;
             margin: 0px auto;
@@ -2163,7 +2304,7 @@ Home Page Section
             position: relative;
             padding: 0;
             margin: 0;
-            
+
             img{
                 width: 100%;
                 height: 100%;
@@ -2248,7 +2389,7 @@ Home Page Section
         margin: 2em auto;
         @media only screen and (max-width: $w-sm) {
             flex-direction: column;
-        }  
+        }
     }
 
     .berita-item{
@@ -2262,7 +2403,7 @@ Home Page Section
             width: 100%;
             margin: 0.5em auto;
         }
-        
+
         &:hover{
             box-shadow: $card-shad;
         }
@@ -2297,7 +2438,7 @@ Home Page Section
         .tags{
             display: flex;
             align-items: center;
-            
+
             a{
                 color: $green;
                 padding: 2px;
@@ -2398,7 +2539,8 @@ Donasi Page Section
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 2em;
-
+    align-items: flex-start;
+    justify-content: flex-end;
     > .donasi-item{
         flex: 0 0 32%;
         @media only screen and (max-width: $w-lg) {
@@ -2488,7 +2630,7 @@ Tentang Page Section
                 margin-left: auto;
                 margin-right: 0;
             }
-            
+
         }
     }
 
@@ -2521,10 +2663,10 @@ Tentang Page Section
                 margin-left: auto;
                 margin-right: 0;
             }
-            
+
         }
     }
-    
+
     .pengurus-box{
         margin:2em 0px;
         overflow: hidden;
@@ -2694,7 +2836,7 @@ Donate Page Section
                     cursor: pointer;
                     object-fit: cover;
                     margin: 5px;
-                    
+
                     @media only screen and (max-width: $w-lg) {
                         width: 4em;
                         height: 4em;
@@ -2710,7 +2852,7 @@ Donate Page Section
                     box-shadow: $box-shad;
                     margin-bottom: 1.3em;
                 }
-            }            
+            }
         }
         .donate-content{
             .share{
@@ -2748,7 +2890,7 @@ Donate Page Section
         }
     }
     .donate-tab{
-        
+
         .tabs-content{
             padding: 1em;
             background-color: #f8f9ff;
@@ -2884,7 +3026,7 @@ Galerry Page Section
         font-weight: bold;
         margin: 0.5em 0px;
         cursor: pointer;
-        
+
         .iconify{
             color: $light;
             font-size: 22px;
@@ -3008,7 +3150,7 @@ Rekening Page Section
         align-items: flex-start;
         justify-content: center;
         flex-wrap: wrap;
-        
+
         .rekening-item{
             flex: 0 0 47%;
             margin: 0.4em auto;
@@ -3047,14 +3189,14 @@ Rekening Page Section
             }
             >.rek-col{
                 flex:0 0 50%;
-                
+
                 >img{
                     width: 10em;
                     display: block;
                     margin: 0px auto;
                 }
-                
-            }    
+
+            }
         }
     }
 }
@@ -3137,9 +3279,12 @@ Program Page Section
         }
     }
     .hero-box{
-        >img{
+        img{
             display:block;
             width: 100%;
+            max-height: 40em;
+            object-fit: contain;
+            background-color: #f2f2f2;
         }
     }
 
@@ -3157,6 +3302,7 @@ Program Page Section
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 1.5em;
+        align-items: flex-start;
         .program-item{
             padding: 1em;
             border-radius: $bd-rad;
@@ -3166,12 +3312,17 @@ Program Page Section
                 width: 100%;
                 border-radius: $bd-rad;
                 margin-bottom: 1em;
+                max-height: 12em;
+                object-fit: contain;
+                background: #f1f2ff;
+                margin-bottom: 1em;
             }
             .btn-box{
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
                 gap:1em;
+                margin-top: 1.3em;
             }
         }
     }
@@ -3186,7 +3337,7 @@ Program Page Section
             grid-template-columns: 1fr;
         }
     }
-    
+
 }
 
 //Detail
@@ -3232,6 +3383,7 @@ Program Page Section
                 margin: 0.7em 0px;
                 font-weight: bold;
                 border:2px solid transparent;
+                max-width: 17em;
                 &:hover,&.active{
                     border:2px solid $blue;
                     color: $blue;
@@ -3248,10 +3400,15 @@ Program Page Section
                 border-radius: $bd-rad;
                 margin: 1em 0px;
                 max-width: 100%;
+                max-height: 35em;
+                object-fit: cover;
+                background-color: #f2f2f2;
             }
             img.logo-program{
                 width: 100%;
                 max-width: 20em;
+                max-height: 15em;
+                object-fit: contain;
             }
             img{
                 width: 100%;
@@ -3306,7 +3463,7 @@ Program Page Section
                 overflow-y: auto;
                 display: none;
             }
-            
+
         }
         .content{
             padding: 5%;
@@ -3363,7 +3520,7 @@ Payment Page Section
                 font-weight: bold;
                 margin: 0.2em;
                 cursor: pointer;
-                
+
                 &.active,&:hover{
                     background-color: $blue;
                     color: $light;
@@ -3421,7 +3578,7 @@ Payment Page Section
 
             }
         }
-    } 
+    }
 }
 
 .detail{
@@ -3437,7 +3594,7 @@ Payment Page Section
         display: flex;
         flex-direction: column;
         align-items: center;
-        
+
         table{
             width: 90%;
             padding: 1.4em;
@@ -3516,7 +3673,7 @@ Upload Page Section
             flex: 0 0 46%;
             &.preview{
                 display: none;
-                
+
                 img{
                     height: 14em;
                     width: 14em;
@@ -3536,8 +3693,8 @@ Upload Page Section
             padding: 1.4em;
             max-width: 25em;
             margin: 0px auto;
-            
-    
+
+
             input[type=file]{
                 position: absolute;
                 top: 0;
@@ -3551,7 +3708,7 @@ Upload Page Section
             }
         }
     }
-    
+
 }
 
 /* ---------------------------------
@@ -3576,7 +3733,7 @@ Image Map
     overflow-y: auto;
     padding-top: 5em;
     max-width: 50em;
-    
+
     >img{
         display: block;
         max-width: 50em;
@@ -3588,7 +3745,7 @@ Image Map
         position: absolute;
         z-index: 10;
         bottom: 0;
-        
+
         //wilayah
         &.kebayoran-baru{
             margin-bottom: 6.4em;
@@ -3876,3 +4033,269 @@ section.mitra{
 /* ---------------------------------
 End Mitra Kami
 --------------------------------- */
+
+/* ---------------------------------
+Dashboard
+--------------------------------- */
+.dash-warp{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    gap: 1em;
+    padding: 1em;
+    //sidebar
+    aside{
+        flex: 0 0 15%;
+        margin-top: 1em;
+        background-color: $light;
+        border-radius: $bd-rad;
+        .btn-sidebar{
+            padding: 0.3em;
+            border-radius: 10px;
+            background-color: $blue;
+            color:$light;
+            position: absolute;
+            cursor: pointer;
+            right: -2.8em;
+            display: none;
+            .iconify{font-size: 24px;color: currentColor;}
+
+        }
+        ul.side{
+            list-style: none;
+            padding: 1em;
+            li{
+                &.active a{
+                    background-color: $blue;
+                    border-radius: $bd-rad;
+                    color: $light;
+                    font-weight: bold;
+                    border: none;
+                }
+                a{  
+                    position: relative;
+                    text-decoration: none;
+                    padding: 1.2em 1.2em;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+                    gap: 1em;
+                    color: currentColor;
+                    border-bottom: 2px solid $gray;
+                    &.logout{
+                        color: #eb1431;
+                    }
+                    .iconify{font-size: 18px;}
+
+                    &.new::after{
+                        content:'';
+                        position: absolute;
+                        width: 0.5em;
+                        height: 0.5em;
+                        border-radius: $bd-rad;
+                        background-color: $blue;
+                        top: 10px;
+                        left: 10px;
+                    }
+                }
+            }
+        }
+    }
+    main{
+        background-color: #fff;
+        margin-top: 1em;
+        border-radius: $bd-rad;
+        flex: 0 0 85%;
+    }
+    @media only screen and (max-width: $w-lg){
+        aside{
+            flex: 0 0 25%;
+        }
+        main{
+            flex: 0 0 75%;
+        }
+    }
+    @media only screen and (max-width: $w-sm){
+        padding: 1em 0px;
+        aside{
+            position: fixed;
+            left: 0;
+            z-index: 10;
+            transform: translateX(-100%);
+            &.active{
+                transform: translateX(0);
+                box-shadow: $box-shad;
+            }
+            .btn-sidebar{display: block;}
+        }
+        main{
+            flex: 0 0 100%;
+        }
+    }
+
+
+    //Setting Akun
+    .setting{
+        padding: 1.2em 5%;
+        position: relative;
+        .edit{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: $blue;
+            padding: 0.7em;
+            border-radius: 10px;
+            color: $light;
+            text-decoration: none;
+            position: absolute;
+            top: 1em;
+            right: 1em;
+            .iconify{font-size: 32px;}
+
+        }
+        .save{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: $green;
+            padding: 0.7em;
+            border-radius: 10px;
+            color: $light;
+            text-decoration: none;
+            position: absolute;
+            top: 1em;
+            right: 1em;
+            .iconify{font-size: 32px;}
+        }
+        .setting-box{
+
+            .img-profile{
+                border-radius: $bd-rad;
+                width: 14em;
+                height: 14em;
+                object-fit: cover;
+                display: block;
+                margin: 1em auto;
+            }
+            #up-img{
+                padding: 1em;
+                border: 1px solid $dark;
+                border-radius: $bd-rad;
+                display: block;
+                margin: 0.7em auto;
+            }
+            ul.data{
+                list-style: none;
+                li{
+                    padding: 0.7em 1.2em;
+                    border-bottom: 2px solid $gray;
+                    position: relative;
+                    &:last-child{border-width: 0px;}
+                
+                    &.wrap{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+
+                        >a{
+                            width: 100%;
+                            display: inline-flex;
+                            justify-content: space-between;
+                            .iconify{
+                                font-size: 24px;
+                            }
+                        }
+                    }
+                    width: 100%;
+                }
+
+                .badge{
+                    position: absolute;
+                    right: 10px;
+                    top: 35%;
+                    float: right;
+                    padding: 0.2em 0.5em;
+                    background-color: #eb1431;
+                    border-radius: 10px;
+                    color: #fff;
+                    >a{color: currentColor;}
+                }
+
+                input{color: $blue; font-weight: bold;width: 100%;}
+                input::-webkit-outer-spin-button,
+                input::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+                }
+
+                /* Firefox */
+                input[type=number] {
+                -moz-appearance: textfield;
+                }
+            }
+
+            /* The switch - the box around the slider */
+            .switch {
+                position: relative;
+                display: inline-block;
+                width: 60px;
+                height: 34px;
+            }
+            
+            /* Hide default HTML checkbox */
+            .switch input {
+                opacity: 0;
+                width: 0;
+                height: 0;
+            }
+            
+            /* The slider */
+            .slider {
+                position: absolute;
+                cursor: pointer;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: #ccc;
+                -webkit-transition: .4s;
+                transition: .4s;
+            }
+            
+            .slider:before {
+                position: absolute;
+                content: "";
+                height: 26px;
+                width: 26px;
+                left: 4px;
+                bottom: 4px;
+                background-color: white;
+                -webkit-transition: .4s;
+                transition: .4s;
+            }
+            
+            input:checked + .slider {
+                background-color: #2196F3;
+            }
+            
+            input:focus + .slider {
+                box-shadow: 0 0 1px #2196F3;
+            }
+            
+            input:checked + .slider:before {
+                -webkit-transform: translateX(26px);
+                -ms-transform: translateX(26px);
+                transform: translateX(26px);
+            }
+            
+            /* Rounded sliders */
+            .slider.round {
+                border-radius: 34px;
+            }
+            
+            .slider.round:before {
+                border-radius: 50%;
+            }
+        }
+    }
+}

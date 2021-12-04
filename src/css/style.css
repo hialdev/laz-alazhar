@@ -485,6 +485,7 @@ fieldset.currency input::-webkit-inner-spin-button {
 
 p {
   margin-bottom: 0.4em;
+  line-height: 150%;
 }
 
 h1, h2 {
@@ -5268,6 +5269,438 @@ section.mitra #mitra-tabs-content .tab-content img {
 
 /* ---------------------------------
 End Mitra Kami
+--------------------------------- */
+/* ---------------------------------
+Repport
+--------------------------------- */
+.report {
+  padding: 2em 5%;
+}
+
+.report .annual-report-featured {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  gap: 2em;
+  margin: 2em auto;
+}
+
+.report .annual-report-featured img {
+  display: block;
+  border-radius: 15px;
+  -webkit-box-shadow: 5px 20px 60px -10px rgba(0, 112, 255, 0.4);
+          box-shadow: 5px 20px 60px -10px rgba(0, 112, 255, 0.4);
+  width: 20em;
+}
+
+.report .annual-report-featured .content {
+  max-width: 30em;
+}
+
+.report .annual-report-featured .content .tema {
+  font-style: italic;
+  color: #b4b4b4;
+  margin-bottom: 1em;
+}
+
+@media only screen and (max-width: 760px) {
+  .report .annual-report-featured {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.annual-report {
+  padding: 4em 5%;
+  background-color: #f8f9ff;
+  position: relative;
+}
+
+.annual-report .next {
+  position: absolute;
+  top: 49%;
+  padding: 0.5em;
+  border-radius: 50px;
+  background-color: #fff;
+  color: #02B3E5;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 10;
+  right: 3em;
+  -webkit-box-shadow: 5px 10px 20px -5px rgba(0, 175, 224, 0.1);
+          box-shadow: 5px 10px 20px -5px rgba(0, 175, 224, 0.1);
+  cursor: pointer;
+}
+
+.annual-report .next:hover {
+  background-color: #2D67B1;
+  color: #fff;
+}
+
+.annual-report .next .iconify {
+  font-size: 24px;
+  color: currentColor;
+}
+
+.annual-report .annual-report-box .annual-item .tema {
+  margin-bottom: 1em;
+}
+
+.annual-report .annual-report-box .annual-item .thumbnail {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.annual-report .annual-report-box .annual-item .thumbnail .icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #02b4e5d7;
+  display: none;
+}
+
+.annual-report .annual-report-box .annual-item .thumbnail .icon .iconify {
+  background-color: #fff;
+  color: #02B3E5;
+  font-size: 32px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0.3em;
+  border-radius: 15px;
+}
+
+.annual-report .annual-report-box .annual-item .thumbnail img {
+  max-height: 25em;
+  display: block;
+}
+
+.annual-report .annual-report-box .annual-item .thumbnail:hover .icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media only screen and (max-width: 1095px) {
+  .annual-report .next {
+    right: 0.7em;
+  }
+}
+
+.care {
+  padding: 3em 5%;
+}
+
+.care .care-box {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  gap: 1em;
+}
+
+.care .care-box .care-item {
+  margin-bottom: 2em;
+}
+
+.care .care-box .care-item .tema {
+  margin-bottom: 1em;
+}
+
+.care .care-box .care-item .thumbnail {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.care .care-box .care-item .thumbnail .icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #02b4e5d7;
+  display: none;
+}
+
+.care .care-box .care-item .thumbnail .icon .iconify {
+  background-color: #fff;
+  color: #02B3E5;
+  font-size: 32px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0.3em;
+  border-radius: 15px;
+}
+
+.care .care-box .care-item .thumbnail img {
+  width: 100%;
+  display: block;
+}
+
+.care .care-box .care-item .thumbnail:hover .icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media only screen and (max-width: 1095px) {
+  .care .care-box {
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  .care .care-box {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+}
+
+.care-show {
+  padding: 3em 5%;
+}
+
+.care-show .care-show-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  gap: 2em;
+  margin-bottom: 4em;
+}
+
+.care-show .care-show-box > img {
+  display: block;
+  max-height: 25em;
+  border-radius: 15px;
+  -webkit-box-shadow: 5px 20px 60px -10px rgba(0, 112, 255, 0.4);
+          box-shadow: 5px 20px 60px -10px rgba(0, 112, 255, 0.4);
+}
+
+.care-show .care-show-box .content {
+  max-width: 30em;
+}
+
+.care-show .care-show-box .content .tema {
+  font-style: italic;
+  color: #6e6e6e;
+  margin-bottom: 1em;
+}
+
+@media only screen and (max-width: 760px) {
+  .care-show .care-show-box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .care-show .care-show-box > img {
+    margin: 2em auto;
+  }
+}
+
+.comment {
+  padding: 2em 5%;
+}
+
+.comment .comment-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  gap: 1em;
+}
+
+.comment .comment-box > img {
+  height: 5em;
+  width: 5em;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 15px;
+}
+
+.comment .comment-box .content {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 80%;
+          flex: 0 0 80%;
+}
+
+.comment .comment-box .content textarea {
+  background-color: #f8f9ff;
+  width: 100%;
+  border-radius: 15px;
+  padding: 1.3em 1.5em;
+}
+
+.comment .comment-box .content button {
+  float: right;
+}
+
+.comment ul.comments {
+  list-style: none;
+}
+
+.comment ul.comments .say {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  gap: 1em;
+}
+
+.comment ul.comments .say > img {
+  display: block;
+  border-radius: 15px;
+  height: 5em;
+  width: 5em;
+}
+
+.comment ul.comments .say .data {
+  max-width: 40em;
+}
+
+.comment ul.comments .say .data .name {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  gap: 1em;
+}
+
+.comment ul.comments .say .data .name p {
+  color: #6e6e6e;
+}
+
+.comment ul.comments .say .data .reply {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0.3em 0.5em;
+  gap: 0.3em;
+  background-color: #f8f9ff;
+  cursor: pointer;
+}
+
+.comment ul.comments .say .data .reply:hover .iconify {
+  color: #2D67B1;
+}
+
+.comment ul.comments .say .data textarea {
+  background-color: #f8f9ff;
+  padding: 1.3em 1.5em;
+  border-radius: 15px;
+  margin-top: 1em;
+  width: 100%;
+  display: block;
+}
+
+.comment ul.comments ul.reply-on li {
+  list-style: none;
+  padding: 2em;
+  border-left: 5px solid #f8f9ff;
+}
+
+@media only screen and (max-width: 760px) {
+  .comment .comment-box img {
+    width: 3em;
+    height: 3em;
+  }
+  .comment ul li .say img {
+    width: 2.5em !important;
+    height: 2.5em !important;
+  }
+}
+
+/* ---------------------------------
+End Report
 --------------------------------- */
 /* ---------------------------------
 Dashboard

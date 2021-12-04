@@ -4,6 +4,31 @@
 //Dropdown Select
 
 //------------
+var annual = $('.annual-report-box');
+// Go to the next item
+$('.annual-report .next').click(function() {
+    annual.trigger('next.owl.carousel');
+});
+
+annual.owlCarousel({
+    loop:true,
+    margin:10,
+    nav:false,
+    autoplay:true,
+    autoplayTimeout:5000,
+    autoplayHoverPause:true,
+    responsive:{
+        0:{
+            items:2
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:4
+        }
+    }
+});
 
 //Hero Slider
 $('.slider-box').owlCarousel({
@@ -663,4 +688,10 @@ $(document).ready(function(){
 //-------------------------
 $('aside .btn-sidebar').click(function(){
     $('aside').toggleClass('active');
+});
+
+//Balas Comment Majalah Care
+$('.comments .say #reply').hide();
+$('.comments .say .reply').click(function(){
+    $('.comments .say #reply').slideToggle();
 });

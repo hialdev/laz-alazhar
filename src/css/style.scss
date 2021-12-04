@@ -434,6 +434,7 @@ fieldset.currency{
 //Typography
 p{
     margin-bottom: 0.4em;
+    line-height: 150%;
 }
 h1,h2{
     line-height: 115%;
@@ -4033,7 +4034,305 @@ section.mitra{
 /* ---------------------------------
 End Mitra Kami
 --------------------------------- */
+/* ---------------------------------
+Repport
+--------------------------------- */
+.report{
+    padding: 2em $side;
+    .annual-report-featured{
+        display: flex;
+        width: auto;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 2em;
+        margin: 2em auto;
+        img{
+            display: block;
+            border-radius: $bd-rad;
+            box-shadow: $box-shad;
+            width: 20em;
+        }
+        .content{
+            max-width: 30em;
+            .tema{
+                font-style: italic;
+                color: #b4b4b4;
+                margin-bottom: 1em;
+            }
+        }
+    }
+    @media only screen and (max-width: $w-sm){
+        .annual-report-featured{
+            flex-direction: column;
+        }
+    }
+}
+.annual-report{
+    padding: 4em $side;
+    background-color: #f8f9ff;
+    position: relative;
+    .next{
+        position: absolute;
+        top: 49%;
+        padding: 0.5em;
+        border-radius: 50px;
+        background-color: $light;
+        color: $blue;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 10;
+        right: 3em;
+        box-shadow: $card-shad;
+        cursor: pointer;
+        &:hover{
+            background-color: $darkblue;
+            color: $light;
+        }
+        .iconify{
+            font-size: 24px;
+            color: currentColor;
+        }
+    }
+    .annual-report-box{
 
+        .annual-item{
+            .tema{
+                margin-bottom: 1em;
+            }
+            .thumbnail{
+                position: relative;
+                border-radius: $bd-rad;
+                overflow: hidden;
+                .icon{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    height: 100%;
+                    width: 100%;
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    background-color: #02b4e5d7;
+                    display: none;
+                    .iconify{
+                        background-color: $light;
+                        color: $blue;
+                        font-size: 32px;
+                        display: inline-flex;
+                        align-items: center;
+                        justify-content: center;
+                        padding: 0.3em;
+                        border-radius: $bd-rad;
+                    }
+                }
+                img{
+                    max-height: 25em;
+                    display: block;
+                }
+
+                &:hover .icon{display: flex;}
+            }
+        }
+    }
+
+    @media only screen and (max-width: $w-lg){
+        .next{
+            right: 0.7em;
+        }
+    }
+}
+
+.care{
+    padding: 3em $side;
+    .care-box{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 1em;
+        .care-item{
+            margin-bottom: 2em;
+            .tema{
+                margin-bottom: 1em;
+            }
+            .thumbnail{
+                position: relative;
+                border-radius: $bd-rad;
+                overflow: hidden;
+                .icon{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    height: 100%;
+                    width: 100%;
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    background-color: #02b4e5d7;
+                    display: none;
+                    .iconify{
+                        background-color: $light;
+                        color: $blue;
+                        font-size: 32px;
+                        display: inline-flex;
+                        align-items: center;
+                        justify-content: center;
+                        padding: 0.3em;
+                        border-radius: $bd-rad;
+                    }
+                }
+                img{
+                    width: 100%;
+                    display: block;
+                }
+
+                &:hover .icon{display: flex;}
+            }
+        }
+    }
+    @media only screen and (max-width: $w-lg){
+        .care-box{
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+    @media only screen and (max-width: $w-sm){
+        .care-box{
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+}
+.care-show{
+    padding: 3em $side;
+    .care-show-box{
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 2em;
+        >img{
+            display: block;
+            max-height: 25em;
+            border-radius: $bd-rad;
+            box-shadow: $box-shad;
+        }
+        .content{
+            .tema{
+                font-style: italic;
+                color: #6e6e6e;
+                margin-bottom: 1em;
+            }
+            max-width: 30em;
+        }
+    margin-bottom: 4em;
+
+    }
+
+    @media only screen and (max-width: $w-sm){
+        .care-show-box{
+            flex-direction: column;
+            >img{
+                margin: 2em auto;
+            }
+        }
+    }
+}
+
+.comment{
+    padding:2em $side;
+    .comment-box{
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 1em;
+        >img{
+            height: 5em;
+            width: 5em;
+            object-fit: cover;
+            border-radius: $bd-rad;
+        }
+        .content{
+            flex: 0 0 80%;
+            textarea{
+                background-color: #f8f9ff;
+                width: 100%;
+                border-radius: $bd-rad;
+                padding: 1.3em 1.5em;
+            }
+            button{
+                float: right;
+            }
+        }
+    }
+
+    ul.comments{
+        list-style: none;
+        .say{
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            gap: 1em;
+            >img{
+                display: block;
+                border-radius: $bd-rad;
+                height: 5em;
+                width: 5em;
+            }
+            .data{
+                max-width: 40em;
+                .name{
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: flex-start;
+                    gap: 1em;
+                    p{color: #6e6e6e;}
+                }
+                .reply{
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 0.3em 0.5em;
+                    gap: 0.3em;
+                    background-color: #f8f9ff;
+                    cursor: pointer;
+                    &:hover .iconify{color:$darkblue}
+                }
+
+                textarea{
+                    background-color: #f8f9ff;
+                    padding:1.3em 1.5em;
+                    border-radius: $bd-rad;
+                    margin-top:1em;
+                    width: 100%;
+                    display: block;
+                }
+            }
+        }
+        
+        ul.reply-on li{
+            list-style: none;
+            padding: 2em;
+            border-left: 5px solid #f8f9ff;
+        }
+    }
+
+    @media only screen and (max-width: $w-sm){
+        .comment-box img{
+            width: 3em;
+            height: 3em;
+        }
+        ul li .say img{
+            width: 2.5em !important;
+            height: 2.5em !important;
+        }
+    }
+}
+/* ---------------------------------
+End Report
+--------------------------------- */
 /* ---------------------------------
 Dashboard
 --------------------------------- */
